@@ -1,0 +1,48 @@
+.tabs
+	&-inline
+		.tabs-nav
+			font-family: "Ptrootui", sans-serif
+			font-weight: normal
+			ul li
+				padding: 8px 0
+				margin-right: 40px
+				&:last-child
+					margin-right: 0
+				&.is-active .link
+					opacity: 1
+				.link
+					opacity: 0.4
+					&:hover
+						opacity: 1
+	&-tile
+		.tabs-nav ul
+			li
+				flex: 1
+				flex-shrink: 0
+				border: 1px solid #E0E0E0
+				border-right-width: 0
+				text-align: center
+				&:first-child
+					border-radius: 4px 0 0 4px
+				&:last-child
+					border-radius: 0 4px 4px 0
+					border-right-width: 1px
+				&.is-active
+					background-color: #F2F2F2
+				.link
+					display: flex
+					align-items: center
+					justify-content: center
+					padding: 12px
+					padding-bottom: 10px
+					letter-spacing: 0.2px
+					&-icon
+						display: flex
+						margin-right: 8px
+	&-nav
+		width: 100%
+		ul
+			display: flex
+			align-items: flex-start
+	&-content
+		padding: 32px 0

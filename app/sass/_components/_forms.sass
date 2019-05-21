@@ -1,0 +1,239 @@
+.form
+	display: block
+	width: 100%
+	line-height: 0
+	&-inline
+		display: inline-block
+		width: auto
+	&-group
+		display: block
+		width: 100%
+		margin-top: 16px
+		&:first-child
+			margin-top: 0
+		&.is-error
+			.form-control
+				border-color: var(--red)
+		&.is-valid
+			.form-control
+				border-color: var(--green)
+		&-inline
+			display: inline-block
+			width: auto
+			margin-top: 0
+			.form-group-label
+				margin-right: 16px
+				margin-bottom: 0
+			.input-group
+				display: inline-block
+				vertical-align: middle
+		&-label
+			display: inline-block
+			vertical-align: middle
+			font-size: 10px
+			line-height: 16px
+			letter-spacing: 0.2px
+			text-transform: uppercase
+			color: var(--medium-grey)
+			margin-bottom: 8px
+			font-weight: 500
+	.group-wrap
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
+		margin-top: 16px
+		&:first-child
+			margin-top: 0
+		.form-group
+			max-width: 240px
+			margin-top: 0
+			margin-right: 24px
+			&:nth-child(2n)
+				margin-right: 0
+	.input-group
+		position: relative
+		&--append
+			display: flex
+			align-items: center	
+			.form-control
+				padding-right: 38px
+		&-append
+			position: absolute
+			top: 1px
+			right: 1px
+			padding: 0 8px 0 12px
+			height: 100%
+			height: calc(100% - 2px)
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: #fff
+		&-double
+			display: flex
+			align-items: flex-start
+			flex-wrap: wrap
+			.w-half
+				width: calc(100% / 2 - 8px + 8px / 2)
+				margin-right: 8px
+				&:nth-child(2n)
+					margin-right: 0
+				&:first-child, &:nth-child(2)
+					margin-top: 0
+	&-control
+		display: block
+		width: 100%
+		height: 40px
+		padding: 0 12px
+		border: 1px solid var(--stroke)
+		border-radius: 4px
+		font-size: 14px
+		line-height: 24px
+		letter-spacing: 0.02em
+		color: var(--dark-grey)
+		+placeholder-color(var(--medium-grey))
+		transition: border-color .25s ease
+		font-family: "Circle", sans-serif
+		font-weight: 300
+		&[type='password']
+			font-size: 22px
+		&:focus
+			border-color: #BDBDBD
+	&-custom, &-btn
+		margin-top: 24px
+	&-custom
+		&-input
+			display: none
+			&:disabled + .form-custom-label
+				pointer-events: none
+				&:before
+					background-color: #F3EDED
+			&:checked + .form-custom-label
+				&:before
+					border-color: #E0E0E0
+				&:after
+					opacity: 1
+		&-label
+			position: relative
+			cursor: pointer
+			user-select: none
+			&.fz-sm
+				&:before, &:after
+					top: 2px
+					width: 16px
+					height: 16px
+				&:after
+					font-size: 8px
+	&-check
+		&-label
+			padding-left: 32px
+			&:before, &:after
+				position: absolute
+				top: -2px
+				left: 0
+				width: 24px
+				height: 24px
+			&:before
+				content: ''
+				border-radius: 4px
+				border: 1px solid var(--stroke)
+				transition: border-color .25s ease
+			&:after
+				content: '\e918'
+				display: flex
+				align-items: center
+				justify-content: center
+				font-size: 12px
+				opacity: 0
+				color: var(--main)
+				transition: opacity .25s ease
+				font-family: vertera!important;
+				speak: none;
+				font-style: normal;
+				font-weight: 400;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+	&-radio
+		&.tile
+			cursor: pointer
+			&.is-active .form-radio-label:after
+				opacity: 1
+				visibility: visible
+			.form-radio-label
+				position: static
+				&:after
+					content: '\e918'
+					position: absolute
+					bottom: 24px
+					left: 50%
+					transform: translateX(-50%)
+					width: 23px
+					height: 23px
+					border-radius: 50%
+					display: flex
+					align-items: center
+					justify-content: center
+					margin: 20px auto 0
+					background-color: var(--stroke)
+					font-size: 12px
+					color: #000
+					opacity: 0
+					visibility: hidden
+					transition: .25s ease
+					font-family: vertera!important;
+					speak: none;
+					font-style: normal;
+					font-weight: 400;
+					font-variant: normal;
+					text-transform: none;
+					line-height: 1;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				
+
+	&-datepicker
+		position: relative
+		.form-control
+			+placeholder-color(var(--dark-grey))
+		&:after
+			content: '\e919';
+			top: 50%;
+			transform: translateY(-50%);
+			right: 12px;
+			width: 8px;
+			height: 8px;
+			font-size: 6px;
+			text-align: center; 
+			position: absolute;
+			font-family: vertera!important;
+			speak: none;
+			font-style: normal;
+			font-weight: 400;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+	&-btn
+		display: block
+		width: 100%
+		&.double-col
+			display: flex
+			align-items: flex-start
+			flex-wrap: wrap
+			.btn
+				width: calc(100% / 2 - 16px + 16px / 2)
+				max-width: 240px
+				margin-right: 16px
+				min-width: auto
+				&:nth-child(2n)
+					margin-right: 0
+
+
+
+
+// --------------------------------------------------
+//                      MEDIA
+// --------------------------------------------------

@@ -1,0 +1,75 @@
+.tiles
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	margin-top: -24px
+	margin-left: -24px
+	width: calc(100% + 24px)
+	&.yellow-theme .tile
+		&.is-active
+			border-color: var(--yellow)
+			background-color: var(--yellow)
+			box-shadow: 0px 8px 32px rgba(0, 56, 71, 0.1), 0px 12px 16px rgba(0, 35, 55, 0.048)
+	.tile
+		width: 240px
+		height: 200px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+		padding: 24px
+		margin-top: 24px
+		margin-left: 24px
+		box-shadow: 0px 8px 32px rgba(0, 56, 71, 0), 0px 12px 16px rgba(0, 35, 55, 0)
+		transition: box-shadow .25s ease, border-color .25s ease, background-color .25s ease
+		border-radius: 4px
+		overflow: hidden
+		background-color: var(--white)
+		border: 1px solid var(--stroke)
+		position: relative
+		&:hover
+			border-color: #fff
+			box-shadow: 0px 8px 32px rgba(0, 56, 71, 0.1), 0px 12px 16px rgba(0, 35, 55, 0.048)
+		&-image
+			margin-bottom: 14px
+			display: flex
+			align-items: center
+			justify-content: center
+		&-icon
+			display: flex
+			align-items: center
+			justify-content: center
+			margin: 0 auto 8px
+			width: 32px
+			height: 32px
+			font-size: 32px
+			line-height: 1
+		&-add
+			border: none
+			.tile-image
+				margin-bottom: 12px
+			.tile-info-title
+				font-family: "Circle", sans-serif
+				font-weight: 300
+		&-info
+			&-pretitle
+				margin-bottom: 4px
+			&-subtitle
+				margin-top: 8px
+			a.tile-info-title
+				position: static
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+		&-controls
+			position: absolute
+			top: 0
+			right: 0
+			padding: 12px
+			.control
+				line-height: 1

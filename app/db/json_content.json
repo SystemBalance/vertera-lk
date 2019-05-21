@@ -1,0 +1,73 @@
+{
+	"0": {
+		"type": "AddressCollection",
+		"addresses": [{
+				"id": 0,
+				"geometry": {
+					"type": "Point",
+					"clusterCaption": "Еще одна метка",
+					"coordinates": [55.75709104673489,37.62306082656765]
+				},
+				"properties": {
+					"address": "Москва, м. Добрынинская,ул. Коровий вал, д. 1А, стр. 1, 7 этаж, помещение XIX",
+					"number": "1",
+					"owner": "Путин В.В",
+					"phone": "+7 909 620-68-69",
+					"email": "verteramockva@mail.ru",
+					"schedule": "с 10.00 до 21.00, без обеда и выходных"
+				}
+			},
+			{
+				"id": 1,
+				"geometry": {
+					"type": "Point",
+					"clusterCaption": "Еще одна метка",
+					"coordinates": [55.75851277709923,37.62367237022305]
+				},
+				"properties": {
+					"address": "Москва, м. Добрынинская,ул. Коровий вал, д. 1А, стр. 1, 7 этаж, помещение XIX",
+					"number": "2",
+					"owner": "Путин В.В",
+					"phone": "+7 909 620-68-69",
+					"email": "verteramockva@mail.ru",
+					"schedule": "с 10.00 до 21.00, без обеда и выходных"
+				}
+			},
+			{
+				"id": 2,
+				"geometry": {
+					"type": "Point",
+					"clusterCaption": "Еще одна метка",
+					"coordinates": [55.75731551307632,37.62092944995789]
+				},
+				"properties": {
+					"address": "Москва, м. Добрынинская,ул. Коровий вал, д. 1А, стр. 1, 7 этаж, помещение XIX",
+					"number": "3",
+					"owner": "Путин В.В",
+					"phone": "+7 909 620-68-69",
+					"email": "verteramockva@mail.ru",
+					"schedule": "с 10.00 до 21.00, без обеда и выходных"
+				}
+			}
+		]
+	},
+	"1": {
+		"type": "My collections",
+		"addresses": [{
+			"id": 0,
+			"geometry": {
+				"type": "Point",
+				"clusterCaption": "Еще одна метка",
+				"coordinates": [55.451903, 37.251961]
+			},
+			"properties": {
+				"address": "Москва, м. Добрынинская,ул. Коровий вал, д. 1А, стр. 1, 7 этаж, помещение XIX",
+				"number": "1",
+				"owner": "Путин В.В",
+				"phone": "+7 909 620-68-69",
+				"email": "verteramockva@mail.ru",
+				"schedule": "с 10.00 до 21.00, без обеда и выходных"
+			}
+		}]
+	}
+}

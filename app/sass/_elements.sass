@@ -1,0 +1,749 @@
+@import "vars"
+@media only screen and (max-width : 1024px)		
+	body
+		cursor: pointer
+*:root
+	--headerHeight: 96px
+	
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus
+	-webkit-box-shadow: 0 0 0px 1000px white inset
+	background-color: transparent !important
+input::-ms-clear
+	display: none
+*, *:hover, *:focus, *:active
+	outline: none !important
+*, *::before, *::after
+	box-sizing: border-box
+b, strong
+	font-weight: bold
+a
+	transition: color .25s ease
+a, a:hover, a:focus, a:active
+	color: var(--white)
+	text-decoration: none
+ul, ol
+	margin: 0
+	padding: 0
+	list-style-type: none
+h1,h2,h3,h4,h5,h6
+	font-weight: normal
+img
+	display: inline-block
+	max-width: 100%
+	max-height: 100%
+	height: auto
+input:not([type='radio']):not([type='checkbox'])
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+input, textarea, button
+	transition: border-color .25s ease,background-color .25s ease, color .25s ease
+	outline: none
+svg path,
+svg polygon,
+svg rect,
+	transition: all .25s ease
+label, p, dl, dd
+	margin-bottom: 0
+
+
+.pre-line
+	white-space: pre-line
+.btn-wrap
+	line-height: 0
+.ttu
+	text-transform: uppercase
+.ls
+	letter-spacing: 0.2px
+.t-center
+	text-align: center
+.t-right
+	text-align: right
+.w-100
+	display: block
+
+
+
+#preloadedImages
+	width: 0px
+	height: 0px
+	display: inline
+	background-image: url('../img/icons/ic-share-hover.svg')
+
+.ic
+	display: inline-block
+	vertical-align: middle
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+
+
+
+button.btn
+	line-height: 1 	// Important for button tag
+
+
+
+.link
+	display: inline
+	color: var(--main)
+	transition: opacity .25s ease, color .25s ease, border-color .25s ease, background-color .25s ease
+	&:focus
+		color: var(--main)
+	&:hover
+		color: var(--red)
+	&-text, &-icon
+		display: inline-block
+		vertical-align: middle
+	&-text + .link-icon
+		margin-left: 8px
+	&-icon .ic
+		line-height: 1
+	&-green
+		color: var(--green)
+		&:focus
+			color: var(--green)
+		&:hover
+			color: var(--red)
+	&-grey
+		color: var(--grey)
+		&:focus
+			color: var(--grey)
+		&:hover
+			color: var(--main)
+	&-medium-grey
+		color: var(--medium-grey)
+		&:focus
+			color: var(--medium-grey)
+		&:hover
+			color: var(--dark-grey)
+	&-dark-grey
+		color: var(--dark-grey)
+		&:focus
+			color: var(--dark-grey)
+		&:hover
+			color: var(--red)
+	&-black
+		color: var(--black)
+		&:focus
+			color: var(--black)
+		&:hover
+			color: var(--red)
+	&-go
+		.link-icon, .link-text
+			display: inline-block
+			vertical-align: middle
+		.link-icon
+			& + .link-text
+				margin-left: 12px
+		.link-text + .link-icon
+			margin-left: 12px
+		&:hover
+			.link-icon
+				.circle
+					color: var(--white)
+					background-color: var(--green)
+				.corner-outline
+					color: var(--white)
+					&:after
+						opacity: 1
+
+.btn
+	display: inline-block
+	font-size: 14px
+	height: 40px
+	line-height: 40px
+	border-radius: 4px
+	position: relative
+	z-index: 1
+	border: none
+	cursor: pointer
+	text-align: center
+	transition: .25s ease
+	overflow: hidden
+	white-space: nowrap
+	padding: 0 12px
+	letter-spacing: 0.04em
+	font-family: "Circle", sans-serif
+	font-weight: 300
+	&-green
+		background-color: var(--green)
+		color: var(--white)
+		&:focus
+			color: var(--white)
+			background-color: var(--green)
+		&:hover
+			@media only screen and (min-width: 1025px)
+				background-color: #00BEA8
+		&.is-selected
+			color: var(--white)
+			background-color: #00BEA8
+		&.btn-outline
+			color: var(--dark-grey)
+			border-color: var(--green)
+			&:after
+				background-color: var(--green)
+			&:focus
+				color: var(--white)
+				border-color: var(--green)
+			&:hover
+				color: var(--dark-grey)
+				@media only screen and (min-width: 1025px)
+					color: var(--white)
+					border-color: var(--medium-grey)
+	&-red
+		background-color: var(--red)
+		color: var(--white)
+		&:focus
+			color: var(--white)
+			background-color: var(--red)
+		&:hover
+			@media only screen and (min-width: 1025px)
+				background-color: var(--red)
+		&.btn-outline
+			border-color: var(--red)
+			color: var(--red)
+			&:after
+				background-color: var(--red)
+			&:focus
+				color: var(--white)
+				border-color: var(--red)
+			&:hover
+				color: var(--white)
+	&-outline
+		background-color: transparent
+		color: var(--dark-grey)
+		z-index: 1
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border: 1px solid
+			border-color: inherit
+			border-radius: 4px
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border-radius: 4px
+			transform: translateX(-100%)
+			opacity: 0
+			transition: transform .25s ease, opacity .25s ease
+			z-index: -1
+		&:hover
+			@media only screen and (min-width: 1025px)
+				background-color: transparent
+				&:after
+					opacity: 1
+					transform: translateX(0)
+					transition: transform .25s ease
+	&.wm-sm
+		min-width: 168px
+	&.wm-md
+		min-width: 240px
+	&.w-lg
+		padding: 0 34px
+	&.w-md
+		padding: 0 28px
+	&.h-sm
+		height: 32px
+		line-height: 32px
+
+.circle
+	display: inline-block
+	flex-shrink: 0
+	border-radius: 50%
+	text-align: center
+	color: var(--white)
+	font-weight: bold
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	transition: border-color .25s ease, background-color .25s ease, color .25s ease
+	&.fz-xs
+		padding-top: 1px
+	&-outline
+		border: 1px solid var(--green)
+		color: var(--green)
+	&.sz-md
+		width: 40px
+		height: 40px
+		line-height: 40px
+		border-radius: 50%
+		font-size: 10px
+		.ic
+			position: relative
+			top: -2px
+			left: -1px
+	&.sz-sm
+		width: 16px
+		height: 16px
+	&.sz-xs
+		width: 8px
+		height: 8px
+	&.sz-xxs
+		width: 6px
+		height: 6px
+
+.lang
+	display: inline-block
+	vertical-align: middle
+	cursor: pointer
+	&-flag
+		display: inline-block
+		width: 16px
+		height: 16px
+		border-radius: 50%
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		+ .lang-name
+			padding-left: 8px
+	&-name
+		text-transform: capitalize
+
+.flag-ru
+	background-image: url('../img/icons/flags/flag-ru.svg')
+
+.dropdown
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	&:hover
+		&:after
+			display: block
+		.dropdown-menu
+			opacity: 1
+			visibility: visible
+			transform: translateX(-50%)
+			transition: .25s ease-in
+			&.float-right
+				transform: none
+	&:after
+		content: ''
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		height: 25px
+		z-index: 1000
+		display: none
+	&-angle
+		.dropdown-toggle
+			padding-right: 10px
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 0
+				background-image: url('../img/icons/ic-angle-down.svg')
+				background-repeat: no-repeat
+				background-position: center
+				background-size: cover
+	&-toggle
+		cursor: pointer
+		position: relative
+	&-menu
+		position: absolute
+		top: 100%
+		left: 50%
+		transform: translateX(-50%)
+		background: var(--white)FFF
+		border-radius: 4px
+		padding: 8px 16px
+		margin-top: 21px
+		z-index: 1000
+		box-shadow: 0px 8px 24px rgba(0, 56, 71, 0.15)
+		opacity: 0
+		visibility: hidden
+		transform: translateX(-50%) translateY(-5px)
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 25px
+			background-color: var(--white)
+			z-index: -1
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate(-50%, -50%) rotate(45deg)
+			width: 20px
+			height: 20px
+			background-color: var(--white)
+			box-shadow: 0px 2px 20px rgba(0, 56, 71, 0.1)
+			z-index: -2
+		&.float-right
+			right: 0
+			left: auto
+			transform: none
+		&.float-left
+			left: 0
+			transform: none
+		&.list-divider
+			.dropdown-item
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					height: 1px
+					opacity: 0.1
+					background-color: #000000
+				&:last-child
+					&:after
+						display: none
+		.dropdown-item
+			&:first-child
+				margin-top: 0
+			&:last-child
+				margin-bottom: 0
+			&.t-center .link
+				justify-content: center
+			.link
+				display: block
+				width: 100%
+				color: #002337
+				color: var(--main)
+				font-size: 14px
+				line-height: 18px
+				padding: 8px 0
+				letter-spacing: 0
+				white-space: nowrap
+			&.active, &:hover
+				.link
+					color: #E94267
+					color: var(--tomato)
+	
+.status
+	display: inline-block
+	white-space: nowrap
+	.circle, .status-text
+		display: inline-block
+		vertical-align: middle
+	&-text
+		padding-left: 4px
+
+.play
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	background-image: url('../img/cornerPlay.svg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+	color: var(--white)
+	padding-left: 3px
+	&.sz-lg
+		width: 72px
+		height: 72px
+		font-size: 24px
+		padding-left: 6px
+	&.sz-md
+		width: 60px
+		height: 60px
+	&.sz-sm
+		width: 48px
+		height: 48px
+
+.corner
+	display: inline-block
+	vertical-align: middle
+	text-align: center
+	position: relative
+	transition: color .25s ease
+	svg
+		position: relative
+		image
+			width: auto
+			height: 100%
+	&-outline
+		background-image: url('../img/cornerOutline.svg')
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center
+		z-index: 1
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-image: url('../img/cornerRadius.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			z-index: -1
+			opacity: 0
+			transition: opacity .25s ease
+		&:hover
+			color: var(--white)
+			&:after
+				opacity: 1
+			
+
+
+	&.sz-md
+		width: 48px
+		height: 48px
+		line-height: 42px
+		font-size: 22px
+	&.sz-sm
+		width: 40px
+		height: 40px
+		line-height: 40px
+		font-size: 18px
+		.ic
+			position: relative
+			top: -2px
+
+.cornerExample
+	position: absolute
+	top: -9999px
+	left: -9999px
+	opacity: 0
+
+.counter
+	display: inline-block
+	vertical-align: middle
+	user-select: none
+	white-space: nowrap
+	border-radius: 4px
+	&-control
+		display: inline-block
+		vertical-align: top
+		width: 30px
+		height: 100%
+		position: relative
+		font-size: 0
+		line-height: 0
+		cursor: pointer
+		&.minus, &.plus
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) 
+				width: 9px
+				height: 2px
+				background-color: var(--white)
+		&.plus
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) rotate(90deg)
+				width: 9px
+				height: 2px
+				background-color: var(--white)
+	&-field
+		display: inline-block
+		vertical-align: top
+		margin: 0 -4px
+		height: 100%
+		&-text, &-count
+			display: inline-block
+			vertical-align: middle
+	&-accent
+		.counter-field
+			padding: 0 6px
+	&-default
+		background: var(--white)FFF
+		border: 1px solid #E0E0E0
+		.counter-field
+			padding: 0
+			.form-control
+				width: 55px
+				height: 38px
+				border-width: 0 1px 0 1px
+				border-radius: 0
+				text-align: center
+				background-color: #FBFBFB
+				padding: 0
+				&:focus
+					background-color: var(--white)
+					border-color: #e0e0e0
+		.counter-control
+			width: 28px
+			height: 38px
+			&.minus:before, &.plus:before, &.plus:after
+				background-color: var(--green)
+	&.sz-xs
+		.counter-field .form-control,
+		.counter-control
+			height: 30px
+		.counter-field .form-control
+			width: 45px
+
+hr.divider
+	display: block
+	width: 100%
+	height: 1px
+	background-color: var(--stroke)
+	border: none
+	margin: 24px 0
+
+
+.grids
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	margin-top: -24px
+	margin-left: -24px
+	width: calc(100% + 24px)
+	.item
+		width: calc(100% / 6 - 24px)
+		min-width: 240px
+		margin-top: 24px
+		margin-left: 24px
+		box-shadow: 0px 8px 32px rgba(0, 56, 71, 0), 0px 12px 16px rgba(0, 35, 55, 0)
+		transition: box-shadow .25s ease, border-color .25s ease
+		border-radius: 4px
+		overflow: hidden
+		@media only screen and (min-width : 2100px)
+			width: calc(100% / 7 - 24px)
+		@media only screen and (max-width : 1835px)
+			width: calc(100% / 5 - 24px)
+		@media only screen and (max-width : 1570px)
+			min-width: 239px
+			width: calc(100% / 4 - 24px)
+		&:nth-child
+			margin-right: 0
+		&:hover
+			box-shadow: 0px 8px 32px rgba(0, 56, 71, 0.1), 0px 12px 16px rgba(0, 35, 55, 0.048)
+
+.stroke-lines
+	&.offset-lg .item
+		padding-top: 12px
+		padding-bottom: 12px
+	.item, td
+		padding-top: 8px
+		padding-bottom: 8px
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: var(--stroke)
+
+.price
+	display: inline-block
+	vertical-align: middle
+	font-weight: bold
+	letter-spacing: 0
+	font-weight: 300
+	&-old, &-new
+		display: inline-block
+		vertical-align: middle
+	&-old
+		color: #828282
+		font-weight: normal
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: -5px
+			width: 130%
+			height: 2px
+			margin-top: -1px
+			background-color: var(--red)
+			transform: translateY(-50%) rotate(-15deg)
+	&-new, &-main
+		font-weight: bold
+	&-new
+		margin-right: 6px
+		&.w-100
+			margin-right: 0
+	&-column
+		display: flex
+		flex-direction: column
+		.price-new, .price-old
+			display: inline
+			line-height: 1
+		.price-new
+			margin-right: 0
+		.price-old
+			top: -8px
+		.price-main
+			margin-bottom: 6px
+		.price-partner
+			margin-bottom: 4px
+			&:last-child
+				margin-bottom: 0
+
+.list
+	display: block
+	width: 100%
+	li
+		display: block
+		width: 100%
+		position: relative
+	&-double
+		column-count: 2
+		column-gap: 24px
+		max-width: calc(240px * 2 + 24px)
+	&-dotted
+		li
+			padding-left: 13px
+			&:before
+				content: ''
+				width: 5px
+				height: 5px
+				border-radius: 50%
+				position: absolute
+				top: 10px
+				left: 0
+		&.green-theme li:before
+			background-color: var(--green)
+	&-report
+		.li
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			width: 100%
+			margin-bottom: 4px
+			&:last-child
+				margin-bottom: 0
+			&-name
+				color: #828282
+				margin-right: auto
+				letter-spacing: 0.2px
+	.item
+		margin-top: 16px
+		break-inside: avoid
+		&:first-child
+			margin-top: 0 
+		&-name
+			margin-bottom: 4px
+		&-name, &-text
+			display: block
+			width: 100%

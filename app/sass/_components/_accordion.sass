@@ -1,0 +1,54 @@
+.beefup
+	border: none
+	border-radius: 0
+	margin: 0
+	&:last-child .beefup__head
+		border-bottom: 1px solid var(--stroke)
+	&.is-open
+		.beefup__head
+			border-bottom-color: transparent
+			&:after
+				content: '\e901'
+	&__head
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		border-top: 1px solid var(--stroke)
+		padding: 14px 0
+		transition: border-color .25s ease
+		user-select: none
+		.title
+			margin-right: 24px
+		&:after
+			content: '\e904'
+			border: none
+			right: -4px
+			margin-top: 0
+			transform: translateY(-50%)
+			width: 26px
+			height: 26px
+			font-size: 26px
+			line-height: 1
+			font-family: vertera!important;
+			speak: none;
+			font-style: normal;
+			font-weight: 400;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+	&__body
+		display: none
+		padding: 8px 8px 16px 0
+		.list
+			font-family: "Ptrootui", sans-serif
+			font-weight: normal
+		.point
+			&-content
+				width: calc(100% - 487px)
+				padding-right: 24px
+			&-map
+				width: 487px
+				height: 207px
+		

@@ -1,0 +1,39 @@
+.message
+	&-list
+		.item
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			cursor: pointer
+			&:hover .item-title-text .link
+				color: var(--red)
+			&-new .item-title-text
+				font-weight: 400
+			&-preview
+				display: flex
+				flex-shrink: 0
+				padding-left: 8px
+			&-title
+				display: flex
+				padding-left: 48px
+				position: relative
+				flex: 2
+				flex-shrink: 0
+				margin-right: auto
+				&-status
+					display: flex
+					line-height: 0
+					position: absolute
+					top: 50%
+					left: 24px
+					transform: translateY(-50%)
+				&-text
+					padding-top: 1px
+			&-status
+				flex-shrink: 0
+				text-align: right
+				margin-right: 24px
+			&-date
+				display: inline-block
+				min-width: 64px
+				text-align: right

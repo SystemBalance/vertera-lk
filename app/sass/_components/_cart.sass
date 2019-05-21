@@ -1,0 +1,152 @@
+.cart
+	display: flex
+	flex-wrap: wrap
+	.content-wrap
+		width: calc(100% - 240px)
+		padding-right: 24px
+		.sect
+			margin-top: 32px
+			padding-bottom: 24px
+			border-bottom: 1px solid rgba(0,0,0,.1)
+			&:first-child
+				margin-top: 0
+			&:last-child
+				padding-bottom: 0
+				border-bottom: none
+			&-head
+				margin-bottom: 24px
+	.navbar-wrap
+		width: 240px
+		position: relative
+		.form-custom
+			margin-top: 16px
+	&-list
+		margin-top: -16px
+		.card
+			display: flex
+			align-items: flex-start
+			margin-top: 16px
+			flex-wrap: wrap
+			border-radius: 4px
+			padding: 15px 24px 15px
+			background: #FFFFFF
+			border: 1px solid var(--stroke)
+			&-photo
+				width: 100px
+				height: 100px
+			&-info
+				flex: 2
+				padding-left: 15px
+				padding-top: 4px
+				&-title
+					letter-spacing: 0.2px
+				&-status
+					display: block
+					width: 100%
+					margin-top: 11px
+					letter-spacing: 0.2px
+			&-count
+				margin-left: auto
+			&-price
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+				text-align: right
+				width: 108px
+				margin-top: 6px
+				.price-new
+					margin-top: 6px
+			&-controls
+				display: flex
+				align-items: flex-start
+				padding-top: 6px
+				padding-left: 30px
+				.item
+					display: inline-block
+					vertical-align: middle
+					&-icon
+						width: 16px
+						height: 16px
+						line-height: 16px
+						text-align: center
+						color: #212121
+						opacity: 0.2
+						transition: opacity .25s ease
+						&:hover
+							opacity: .5
+						.link
+							display: inline-block
+							max-height: 100%
+							color: inherit
+		&-total
+			display: flex
+			align-items: center
+			padding-right: 16px
+			.name
+				font-size: 12px
+				line-height: 16px
+				text-align: right
+				letter-spacing: 0.5px
+				text-transform: uppercase
+				color: #4F4F4F
+				padding-right: 16px
+			.amount
+				width: 120px
+				font-size: 24px
+				line-height: 32px
+				text-align: right
+				letter-spacing: 0.2px
+				font-weight: bold
+				color: #212121
+
+	&-navbar
+		width: 100%
+		background: #FFFFFF
+		border: 1px solid var(--stroke)
+		border-radius: 4px
+		padding: 16px
+		.title
+			margin-bottom: 16px
+		.cart-list
+			margin-top: 0
+			margin-bottom: 24px
+			.card
+				margin-top: 16px
+				padding: 0
+				border: none
+				&-photo
+					width: 68px
+					height: 68px
+				&-info
+					text-align: left
+					&-title
+						display: flex
+						width: 100%
+						.link
+							line-height: 18px
+					&-status
+						margin-top: 0
+						font-size: 12px
+						line-height: 16px
+						color: #212121
+						opacity: 0.4
+						text-transform: uppercase
+				&-price
+					display: block
+					width: auto
+					margin-top: 2px
+					letter-spacing: 0.2px
+					.price-new
+						margin-right: 12px
+					.price-old
+						position: relative
+						top: -1px
+		.list
+			margin-top: 8px
+			&-report .li-val
+				color: #212121
+		.divider
+			margin-bottom: 16px
+		&-accept
+			display: flex
+			margin-top: 24px
