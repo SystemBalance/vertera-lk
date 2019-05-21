@@ -1,9 +1,9 @@
 cssVars()
 
-computedStyle = function (vElement) {
+let computedStyle = function (vElement) {
 	return window.getComputedStyle ? window.getComputedStyle(vElement, null) : vElement.currentStyle //IE 8 and less
 }
-isVisible = function (vElement) {
+let isVisible = function (vElement) {
 	return !(vElement.offsetWidth == 0 && vElement.offsetHeight == 0) && computedStyle(vElement).visibility != "hidden";
 }
 
@@ -31,7 +31,6 @@ Array.from(mainHeadElements).forEach(el => {
 		mainHead = getAbsoluteHeight(el)
 	}
 })
-
 
 $(document).ready(function () {
 	jQuery.fn.exists = function () {
@@ -154,6 +153,7 @@ $(document).ready(function () {
 		const aside = panel.hasClass('panel-aside') || $(this).attr('data-target') === 'aside'
 		const action = $(this).attr('data-action')
 		togglePanel(aside, action)
+		console.log(dataPanel)
 		if (dataPanel) {
 			$('.page-aside .panel').hide()
 			$('#' + dataPanel).show()

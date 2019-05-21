@@ -38,7 +38,9 @@ gulp.task('js', function() {
 		'app/js/common.js'
 	])
 	.pipe(concat('scripts.min.js'))
-	.pipe(babel())
+	.pipe(babel({
+		presets: ['@babel/env']
+	}))
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });

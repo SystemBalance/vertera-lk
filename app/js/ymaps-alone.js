@@ -1,6 +1,6 @@
 ymaps.ready(function () {
 	const myMapElements = document.querySelectorAll('.ymap-alone')
-	Array.from(myMapElements).forEach(el => {
+	Array.from(myMapElements).forEach(function(el) {
 		ymaps.geocode('Россия, Нижний Новгород, улица Юлиуса Фучика, 10к2', {
 			results: 1
 		}).then(function (res) {

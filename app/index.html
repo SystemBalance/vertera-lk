@@ -83,6 +83,7 @@
 									</dl>
 
 									<dl class="list list-nav list-bottom">
+										<dt class="is-hidden"></dt>
 										<dd>
 											<a href="#" class="link link-grey">
 												<span class="link-icon">
@@ -101,7 +102,7 @@
 										</dd>
 									</dl>
 
-									<div class="btn-wrap">
+									<div class="btn-wrap w-100">
 										<a href="#" class="btn btn-green btn-outline">Стать партнером</a>
 									</div>
 								</nav>
@@ -1720,36 +1721,36 @@
 											<div class="form-custom form-radio tile">
 												<input class="form-radio-input form-custom-input" type="radio" id="defaultRadio6">
 												<label class="form-radio-label form-custom-label" for="defaultRadio6">
-													<div class="tile-icon">
+													<span class="tile-icon">
 														<i class="ic ic-wallet"></i>
-													</div>
-													<div class="tile-info">
-														<div class="tile-info-title h5 w-100 ls c-dark-grey">Обычный заказ</div>
-													</div>
+													</span>
+													<span class="tile-info">
+														<span class="tile-info-title h5 w-100 ls c-dark-grey">Обычный заказ</span>
+													</span>
 												</label>
 											</div>
 		
 											<div class="form-custom form-radio tile">
 												<input class="form-radio-input form-custom-input" type="radio" id="defaultRadio7">
 												<label class="form-radio-label form-custom-label" for="defaultRadio7">
-													<div class="tile-icon">
+													<span class="tile-icon">
 														<i class="ic ic-man"></i>
-													</div>
-													<div class="tile-info">
-														<div class="tile-info-title h5 w-100 ls c-dark-grey">«Бонус лояльности»</div>
-													</div>
+													</span>
+													<span class="tile-info">
+														<span class="tile-info-title h5 w-100 ls c-dark-grey">«Бонус лояльности»</span>
+													</span>
 												</label>
 											</div>
 		
 											<div class="form-custom form-radio tile">
 												<input class="form-radio-input form-custom-input" type="radio" id="defaultRadio5">
 												<label class="form-radio-label form-custom-label" for="defaultRadio5">
-													<div class="tile-icon">
+													<span class="tile-icon">
 														<i class="ic ic-certificate"></i>
-													</div>
-													<div class="tile-info">
-														<div class="tile-info-title h5 w-100 ls c-dark-grey">Использовать сертификат</div>
-													</div>
+													</span>
+													<span class="tile-info">
+														<span class="tile-info-title h5 w-100 ls c-dark-grey">Использовать сертификат</span>
+													</span>
 												</label>
 											</div>
 										</div>
@@ -2508,7 +2509,7 @@
 								</div>
 								<div class="main-head-info">
 									<div class="btn-wrap">
-										<a href="#" class="link h6 jq-togglePanel" data-target="aside" data-action="open">
+										<a href="#" class="link h6 jq-togglePanel" data-panel="jq-orders-filter" data-target="aside" data-action="open">
 											<span class="link-text">Фильтр</span>
 											<span class="link-icon">
 												<i class="ic ic-filter h3"></i>
@@ -2716,36 +2717,36 @@
 									<div class="form-custom form-radio tile">
 										<input class="form-radio-input form-custom-input" type="radio" id="defaultRadio3">
 										<label class="form-radio-label form-custom-label" for="defaultRadio3">
-											<div class="tile-icon">
+											<span class="tile-icon">
 												<i class="ic ic-wallet"></i>
-											</div>
-											<div class="tile-info">
-												<div class="tile-info-title h5 w-100 ls c-dark-grey">Обычный заказ</div>
-											</div>
+											</span>
+											<span class="tile-info">
+												<span class="tile-info-title h5 w-100 ls c-dark-grey">Обычный заказ</span>
+											</span>
 										</label>
 									</div>
 
 									<div class="form-custom form-radio tile">
 										<input class="form-radio-input form-custom-input" type="radio" id="defaultRadio4">
 										<label class="form-radio-label form-custom-label" for="defaultRadio4">
-											<div class="tile-icon">
+											<span class="tile-icon">
 												<i class="ic ic-man"></i>
-											</div>
-											<div class="tile-info">
-												<div class="tile-info-title h5 w-100 ls c-dark-grey">«Бонус лояльности»</div>
-											</div>
+											</span>
+											<span class="tile-info">
+												<span class="tile-info-title h5 w-100 ls c-dark-grey">«Бонус лояльности»</span>
+											</span>
 										</label>
 									</div>
 
 									<div class="form-custom form-radio tile">
 										<input class="form-radio-input form-custom-input" type="radio" id="defaultRadio2">
 										<label class="form-radio-label form-custom-label" for="defaultRadio2">
-											<div class="tile-icon">
+											<span class="tile-icon">
 												<i class="ic ic-certificate"></i>
-											</div>
-											<div class="tile-info">
-												<div class="tile-info-title h5 w-100 ls c-dark-grey">Использовать сертификат</div>
-											</div>
+											</span>
+											<span class="tile-info">
+												<span class="tile-info-title h5 w-100 ls c-dark-grey">Использовать сертификат</span>
+											</span>
 										</label>
 									</div>
 								</div>
@@ -3386,6 +3387,7 @@
 												<button type="submit" class="btn btn-green btn-outline w-lg">Найти</button>
 											</div>
 										</div>
+									</form>
 								</div>
 								<div class="catalog-list">
 									<div class="products-list">
@@ -3935,73 +3937,6 @@
 		</div>
 
 		<div class="page-aside">
-			<div class="panel panel-toggle panel-aside" id="jq-points-filter">
-				<div class="panel-head">
-					<div class="title h2 c-dark-grey">Фильтр</div>
-					<a href="#" class="hamburger hamburger--spin is-active jq-togglePanel" data-action="close">
-						<span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-						</span>
-					</a>
-				</div>
-				<div class="panel-content">
-					<!-- Контейнер для стилизации скролла -->
-					<div class="baron baron__root baron__clipper _simple">
-						<div class="baron__scroller">
-							<!-- Your content here -->
-							<form action="#" class="form">
-								<div class="form-group">
-									<label for="numberField" class="form-group-label w-100">Номер</label>
-									<div class="input-group w-100">
-										<input type="text" id="numberField" class="form-control">
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label for="countryField7" class="form-group-label w-100">Страна</label>
-									<div class="input-group w-100">
-										<select id="countryField7" class="form-control jq-select">
-											<option value="Россия">Россия</option>
-											<option value="Россия 1">Россия 1</option>
-											<option value="Россия 2">Россия 2</option>
-											<option value="Россия 3">Россия 3</option>
-											<option value="Россия 4">Россия 4</option>
-											<option value="Россия 5">Россия 5</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label for="cityField2" class="form-group-label w-100">Город</label>
-									<div class="input-group w-100">
-										<select id="cityField2" class="form-control jq-select">
-											<option value="Москва">Москва</option>
-											<option value="Москва 1">Москва 1</option>
-											<option value="Москва 2">Москва 2</option>
-											<option value="Москва 3">Москва 3</option>
-											<option value="Москва 4">Москва 4</option>
-											<option value="Москва 5">Москва 5</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="form-btn offset-top btn-wrap">
-									<button type="submit" class="btn btn-green btn-outline w-100">Применить</button>
-								</div>
-							</form>
-						</div>
-
-						<div class="baron__track">
-							<div class="baron__control baron__up">▲</div>
-								<div class="baron__free">
-									<div class="baron__bar"></div>
-								</div>
-							<div class="baron__control baron__down">▼</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<div class="panel panel-toggle panel-aside" id="jq-orders-filter">
 				<div class="panel-head">
 					<div class="title h2 c-dark-grey">Фильтр</div>
@@ -4080,6 +4015,73 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="panel panel-toggle panel-aside" id="jq-points-filter">
+				<div class="panel-head">
+					<div class="title h2 c-dark-grey">Фильтр</div>
+					<a href="#" class="hamburger hamburger--spin is-active jq-togglePanel" data-action="close">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</a>
+				</div>
+				<div class="panel-content">
+					<!-- Контейнер для стилизации скролла -->
+					<div class="baron baron__root baron__clipper _simple">
+						<div class="baron__scroller">
+							<!-- Your content here -->
+							<form action="#" class="form" autocomplete="off">
+								<div class="form-group">
+									<label for="numberField" class="form-group-label w-100">Номер1</label>
+									<div class="input-group w-100">
+										<input type="text" id="numberField" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="countryField7" class="form-group-label w-100">Страна</label>
+									<div class="input-group w-100">
+										<select id="countryField7" class="form-control jq-select">
+											<option value="Россия">Россия</option>
+											<option value="Россия 1">Россия 1</option>
+											<option value="Россия 2">Россия 2</option>
+											<option value="Россия 3">Россия 3</option>
+											<option value="Россия 4">Россия 4</option>
+											<option value="Россия 5">Россия 5</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="cityField2" class="form-group-label w-100">Город</label>
+									<div class="input-group w-100">
+										<select id="cityField2" class="form-control jq-select">
+											<option value="Москва">Москва</option>
+											<option value="Москва 1">Москва 1</option>
+											<option value="Москва 2">Москва 2</option>
+											<option value="Москва 3">Москва 3</option>
+											<option value="Москва 4">Москва 4</option>
+											<option value="Москва 5">Москва 5</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-btn offset-top btn-wrap">
+									<button type="submit" class="btn btn-green btn-outline w-100">Применить</button>
+								</div>
+							</form>
+						</div>
+
+						<div class="baron__track">
+							<div class="baron__control baron__up">▲</div>
+								<div class="baron__free">
+									<div class="baron__bar"></div>
+								</div>
+							<div class="baron__control baron__down">▼</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -4119,9 +4121,10 @@
 	<script src="libs/BeefUp-master/dist/js/jquery.beefup.min.js"></script>
 	<script src="libs/air-datepicker-master/dist/js/datepicker.min.js"></script>
 	<script src="libs/hc-sticky-master/dist/hc-sticky.js"></script>
+	<script src="libs/Polyfills/ArrayFrom.js"></script>
 	<script src="js/scripts.min.js"></script>
 
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=edc7c9fd-3fc1-483f-95f1-3d4a4704b78a&lang=ru_RU" type="text/javascript"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=edc7c9fd-3fc1-483f-95f1-3d4a4704b78a&lang=ru_RU"></script>
 	<script src="js/ymaps.js"></script>
 	<script src="js/ymaps-alone.js"></script>
 	<!-- Include JS End -->

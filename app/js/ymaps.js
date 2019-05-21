@@ -1,5 +1,5 @@
 
-function toJSONString(form) {
+function formSerialize(form) {
 	var obj = {};
 	var elements = form.querySelectorAll("input, select, textarea")
 	for (var i = 0; i < elements.length; ++i) {
@@ -11,7 +11,6 @@ function toJSONString(form) {
 			obj[name] = value;
 		}
 	}
-
 	return JSON.stringify(obj);
 }
 
@@ -76,10 +75,8 @@ $(document).ready(function () {
 			hideIconOnBalloonOpen: false
 		})
 
-		
-
 		const myMapElements = document.querySelectorAll('.ymap-multi')
-		Array.from(myMapElements).forEach(el => {
+		Array.from(myMapElements).forEach(function(el) {
 			// Обработчик добавления адреса на карту
 			const addForm = document.querySelector(".jq-formAddAddress")
 			if (addForm) {
@@ -88,7 +85,7 @@ $(document).ready(function () {
 					e.preventDefault()
 					addCounter = addCounter + 1
 					const form = this
-					const formData = JSON.parse(toJSONString(form))
+					const formData = JSON.parse(formSerialize(form))
 					const fullAddress = formData.country + ' ' + formData.city + ' ' + formData.address
 					let newObj
 
@@ -113,7 +110,6 @@ $(document).ready(function () {
 								schedule: "с 10.00 до 21.00, без обеда и выходных"
 							}
 						}
-						console.log(newObj)
 						objectManager.add([newObj])
 						clearForm(form)
 					}, function (err) {
@@ -131,15 +127,9 @@ $(document).ready(function () {
 			}).done(function (data) {
 				DB = data
 				for (i in data) {
-					console.log(data[i].addresses)
 					objectManager.add(data[i].addresses)
 				}
 			})
-			
-			// Добавление адреса на карту
-			function addAddress(formData) {
-				console.log(formData)
-			}
 
 			myMap = new ymaps.Map(el, {
 				center: [55.75669587833707,37.62240572007821],
@@ -155,7 +145,8 @@ $(document).ready(function () {
 				clusterize: true,
 				// ObjectManager принимает те же опции, что и кластеризатор.
 				gridSize: 32,
-				clusterDisableClickZoom: false
+				clusterDisableClickZoom: false,
+				openBalloonOnClick: false
 			}),
 	
 			MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
@@ -365,6 +356,7 @@ $(document).ready(function () {
 		
 			// Отслеживание клика по балуну и проверка на открытость содержимого
 			objectManager.objects.events.add('click', function (e) {
+				e.preventDefault()
 				var objectId = e.get('objectId')
 				if (objectManager.objects.balloon.isOpen(objectId)) {
 					objectManager.objects.balloon.close()
@@ -375,12 +367,26 @@ $(document).ready(function () {
 					objectManager.objects.setObjectOptions(objectId, {
 						preset: 'custom#active'
 					})
+					object = objectManager.objects.getById(objectId)
+
+					myMap.panTo([object.geometry.coordinates[0], object.geometry.coordinates[1]])
+						.then(function () {
+							let pixelCenter = myMap.getGlobalPixelCenter(myMap.getCenter())
+							pixelCenter = [
+								pixelCenter[0],
+								pixelCenter[1] - 200
+							]
+							var geoCenter = myMap.options.get('projection').fromGlobalPixels(pixelCenter, myMap.getZoom());
+							myMap.setCenter(geoCenter, myMap.getZoom(), {
+								duration: 500
+							})
+							setTimeout(function() {
+								objectManager.objects.balloon.open(objectId);
+							}, 500);
+						}, function (err) {
+							alert('Произошла ошибка ' + err);
+						}, this);
 				}
-				object = objectManager.objects.getById(objectId)
-				var state = myMap.action.getCurrentState()
-				myMap.setCenter([object.geometry.coordinates[0], object.geometry.coordinates[1]], state.zoom, {
-					duration: 500
-				})
 			})
 	
 			// Отслеживание закрытия содержимого балуна и сброс активной иконки
