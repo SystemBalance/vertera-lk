@@ -1,0 +1,96 @@
+// Your content here
+.panel-head
+	a.logo(href='#')
+		img.logo-img(src='img/logo.svg', alt='Vertera')
+	.lang.jq-togglePanel(data-action='open')
+		.link
+			span.link-icon
+				i.lang-flag.flag-ru
+
+.panel-content
+	nav.navbar-nav.h6
+		dl.list.list-nav
+			dt.list-title.fz-xs.ttu Заказы
+			dd
+				a.link(href='#') Новый заказ
+			dd
+				a.link(href='#')
+					| Корзина 
+					span.circle.f-red.sz-sm.fz-xs 2
+			dd
+				a.link(href='#') История заказов
+			dd
+				a.link(href='#') VIP наборы
+
+		dl.list.list-nav
+			dt.list-title.fz-xs.ttu Мой бизнес
+			dd
+				a.link(href='#') Доход
+			dd
+				a.link(href='#') Аналитика
+			dd
+				a.link(href='#') Управление счетами
+			dd
+				a.link(href='#') Бинар
+			dd
+				a.link(href='#') Структура
+			dd
+				a.link(href='#') Список клиентов
+
+		dl.list.list-nav
+			dt.list-title.fz-xs.ttu Бонусные программы
+			dd
+				a.link(href='#') Автопрограмма
+			dd
+				a.link(href='#') Билеты
+			dd
+				a.link(href='#') Промоушены
+		dl.list.list-nav
+			dt.list-title.fz-xs.ttu Профиль
+			dd
+				a.link(href='#') Личные данные
+			dd
+				a.link(href='#')
+					| Сообщения 
+					span.circle.f-red.sz-sm.fz-xs 2
+			dd
+				a.link(href='#') Контакты
+			dd
+				a.link(href='#') Настройки
+			dd
+				a.link(href='#') Пункт выдачи
+
+		dl.list.list-nav
+			dt.list-title.fz-xs.ttu Реферальная программа
+			dd
+				a.link(href='#') Реферальные ссылки
+			dd
+				a.link(href='#') Реферальные карты
+
+		dl.list.list-nav
+			dt.list-title.fz-xs.ttu Инфо
+			dd
+				a.link(href='#jq-page-news') Новости
+			dd
+				a.link(href='#jq-page-docs') Документы
+			dd
+				a.link(href='#jq-page-videos') Видео
+			dd
+				a.link(href='#jq-page-contacts-points') Контакты
+			dd
+				a.link(href='#jq-page-styleGuide') UI / Components
+		dl.list.list-nav.list-bottom
+			dt.is-hidden
+			dd
+				a.link.link-grey(href='#')
+					span.link-icon
+						i.ic.ic-help
+					span.link-text Задать вопрос
+			dd
+				a.link.link-grey(href='#')
+					span.link-icon
+						i.ic.ic-signout
+					span.link-text Выйти
+		.btn-wrap.w-100
+			a.btn.btn-green.btn-outline(href='#') Стать партнером
+

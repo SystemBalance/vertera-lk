@@ -1,0 +1,52 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		title Vertera - Personal account
+		meta(name='description', content='')
+		meta(name='format-detection', content='telephone=no')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		
+		// Template Basic Images Start
+		meta(property='og:image', content='path/to/image.jpg')
+		link(rel='icon', href='img/favicon/favicon.ico')
+		link(rel='apple-touch-icon', sizes='180x180', href='img/favicon/apple-touch-icon-180x180.png')
+		// Template Basic Images End
+
+		// Custom Browsers Color Start
+		meta(name='theme-color', content='#000')
+		// Custom Browsers Color End
+		link(rel='stylesheet', href='css/main.min.css')
+	body
+		block content
+
+		// SVG нужны для страниц с загруглением объектов (используется как путь)
+		// CornerRadius
+		svg.cornerExample(version='1.1', width='200', height='200', viewBox='0 0 200 200', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+			defs
+				clippath#cornerRadius
+					path(d='M0 100C0.564822 84.5643 0.847233 76.8464 2.116 70.2981C8.76459 35.9837 35.52 9.1065 69.8039 2.30217C76.3464 1.00368 84.0629 0.686232 99.4959 0.0513301L100.744 0L102.034 0.0530942C116.241 0.637539 123.344 0.929761 129.358 2.04337C164.996 8.64301 192.672 36.8784 198.557 72.6422C199.55 78.6769 199.7 85.7846 200 100V100V100C199.7 114.215 199.55 121.323 198.557 127.358C192.672 163.122 164.996 191.357 129.358 197.957C123.344 199.07 116.241 199.362 102.034 199.947L100.744 200L99.4959 199.949C84.0629 199.314 76.3464 198.996 69.8039 197.698C35.52 190.893 8.76459 164.016 2.116 129.702C0.847233 123.154 0.564822 115.436 0 100V100V100Z', fill='#C4C4C4')
+		
+		// CornerRadiusSmall
+		svg.cornerExample(version='1.1', width='64', height='65', viewBox='0 0 64 65', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+			defs
+				clippath#cornerRadiusSmall
+					path(d='M0 32.696C0.750965 20.6806 1.12645 14.6729 4.03169 10.242C5.61279 7.83061 7.69662 5.78964 10.1403 4.25897C14.6306 1.44641 20.6337 1.19628 32.64 0.696014V0.696014V0.696014C43.8601 1.16352 49.4702 1.39727 53.7083 3.82877C56.9082 5.66458 59.538 8.34966 61.3068 11.587C63.6496 15.8749 63.7664 21.4819 64 32.696V32.696V32.696C63.7664 43.9101 63.6496 49.5171 61.3068 53.805C59.538 57.0424 56.9082 59.7274 53.7083 61.5633C49.4702 63.9948 43.8601 64.2285 32.64 64.696V64.696V64.696C20.6337 64.1958 14.6306 63.9456 10.1403 61.1331C7.69662 59.6024 5.61279 57.5614 4.03169 55.15C1.12645 50.7192 0.750965 44.7115 0 32.696V32.696V32.696Z', fill='#C4C4C4')
+		
+		// Include JS Start
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+		script(src='libs/css-vars-ponyfill-master/dist/css-vars-ponyfill.min.js')
+		script(src='libs/baron-master/baron.min.js')
+		script(src='libs/shave-master/dist/jquery.shave.min.js')
+		script(src='libs/jquery.maskedinput.min.js')
+		script(src='libs/jQueryFormStyler-master/dist/jquery.formstyler.min.js')
+		script(src='libs/BeefUp-master/dist/js/jquery.beefup.min.js')
+		script(src='libs/air-datepicker-master/dist/js/datepicker.min.js')
+		script(src='libs/hc-sticky-master/dist/hc-sticky.js')
+		script(src='libs/Polyfills/ArrayFrom.js')
+		script(src='js/scripts.min.js')
+		script(src='https://api-maps.yandex.ru/2.1/?apikey=edc7c9fd-3fc1-483f-95f1-3d4a4704b78a&lang=ru_RU')
+		script(src='js/ymaps.js')
+		script(src='js/ymaps-alone.js')
+		// Include JS End

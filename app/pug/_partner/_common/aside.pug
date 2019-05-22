@@ -1,0 +1,50 @@
+#jq-orders-filter.panel.panel-toggle.panel-aside
+	.panel-head
+		.title.h2.c-dark-grey Фильтр парнера
+		a.hamburger.hamburger--spin.is-active.jq-togglePanel(href='#', data-action='close')
+			span.hamburger-box
+				span.hamburger-inner
+	.panel-content
+		// Контейнер для стилизации скролла
+		.baron.baron__root.baron__clipper._simple
+			.baron__scroller
+				// Your content here
+				form.form(action='#', autocomplete='off')
+					.form-group
+						label.form-group-label.w-100(for='numberField1') Номер
+						.input-group.w-100
+							input#numberField1.form-control(type='text')
+					.form-group
+						label.form-group-label.w-100(for='numberField') Дата создания
+						.input-group.input-group-double.w-100
+							.form-custom.form-datepicker.w-half
+								input.form-control.jq-datepicker(type='text', data-position='bottom right', placeholder='от')
+							.form-custom.form-datepicker.w-half
+								input.form-control.jq-datepicker(type='text', data-position='bottom right', placeholder='до')
+					.form-group
+						label.form-group-label.w-100(for='countryField8') Статус заказа
+						.input-group.w-100
+							select#countryField8.form-control.jq-select
+								option(value='Россия') Россия
+								option(value='Россия 1') Россия 1
+								option(value='Россия 2') Россия 2
+								option(value='Россия 3') Россия 3
+								option(value='Россия 4') Россия 4
+								option(value='Россия 5') Россия 5
+					.form-group
+						label.form-group-label.w-100(for='cityField3') Адрес получения
+						.input-group.w-100
+							select#cityField3.form-control.jq-select
+								option(value='Москва') Москва
+								option(value='Москва 1') Москва 1
+								option(value='Москва 2') Москва 2
+								option(value='Москва 3') Москва 3
+								option(value='Москва 4') Москва 4
+								option(value='Москва 5') Москва 5
+					.form-btn.offset-top.btn-wrap
+						button.btn.btn-green.btn-outline.w-100(type='submit') Применить
+			.baron__track
+				.baron__control.baron__up ▲
+				.baron__free
+					.baron__bar
+				.baron__control.baron__down ▼

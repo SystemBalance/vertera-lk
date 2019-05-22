@@ -1,0 +1,221 @@
+#jq-page-styleGuide.remove-this-wrapper-on-prod
+	.main-head.mb-md
+		.row.no-gutters
+			a.link.link-main.link-go(href='#')
+				.link-icon
+					.circle.circle-outline.sz-md
+						i.ic.ic-angle-left
+				span.link-text.h6.c-dark-grey Назад
+		.row.no-gutters
+			.main-head-title.w-100
+				h2.h2 UI / Components
+	.style-guide
+		._banners
+			br
+			h3.h3.w-100 Banners
+			.banners
+				.item(style="background-image: url('img/banners/banner-1.jpg');")
+					.item-title.h3
+						| Мы обновили 
+						br
+						| наш бренд!
+					.item-subtitle.fz-sm Посмотрите нашу презентацию
+					.item-controls
+						a.btn.btn-main.btn-outline(href='#') Подробнее
+				.item.c-white(style="background-image: url('img/banners/banner-2.jpg');")
+					.item-title.h3
+						| Новая продукция 
+						br
+						| для вас!
+					.item-subtitle.fz-sm Все новинки в нашем каталоге
+					.item-controls
+						a.btn.btn-white.btn-outline(href='#') В каталог
+		._search
+			br
+			h3.h3.w-100 Tabs Inline
+			.tabs.tabs-inline
+				.tabs-nav.h6
+					ul
+						li.is-active
+							a.link.c-main(href='#tab-1') Официальные представительства
+						li
+							a.link.c-main(href='#tab-2') Региональные представительства
+						li
+							a.link.c-main(href='#tab-3') Пикап-центры
+			br
+			h3.h3.w-100 Tabs Tile
+			.tabs.tabs-tile
+				.tabs-nav
+					ul
+						li.is-active
+							a.link(href='#tab-1')
+								span.link-icon.h3
+									i.ic.ic-map-marker
+								span.link-text.h5 Адрес
+						li
+							a.link(href='#tab-2')
+								span.link-icon.h3
+									i.ic.ic-phone
+								span.link-text.h5 Телефон
+						li
+							a.link(href='#tab-3')
+								span.link-icon.h3
+									i.ic.ic-sent
+								span.link-text.h5 Электронная почта
+		._search
+			nav.search.search-free
+				br
+				h3.h3.w-100 Search Free
+				form.form
+					label.input-group.w-100.h4.ls
+						input.form-control(type='text', placeholder='Поиск представительства…')
+		._forms(style='max-width: 500px;')
+			br
+			h3.h3.w-100 Forms
+			form.form(action='#', autocomplete='off')
+				.form-group.is-valid
+					label.form-group-label.w-100(for='sg-nameValidField') Field is eror
+					.input-group.w-100
+						input#sg-nameValidField.form-control(type='text')
+				.form-group.is-error
+					label.form-group-label.w-100(for='sg-nameErrorField') Field is valid
+					.input-group.w-100
+						input#sg-nameErrorField.form-control(type='text')
+				.form-group
+					label.form-group-label.w-100(for='sg-nameField') Имя
+					.input-group.w-100
+						input#sg-nameField.form-control(type='text')
+				.form-group
+					label.form-group-label.w-100(for='sg-emailField') Электронная почта
+					.input-group.w-100
+						input#sg-emailField.form-control(type='email')
+				.form-group
+					label.form-group-label.w-100(for='sg-passField') Пароль
+					.input-group.w-100
+						input#sg-passField.form-control(type='email')
+				.form-custom.form-check
+					input#sg-defaultCheck1.form-check-input.form-custom-input(type='checkbox')
+					label.form-check-label.form-custom-label.h6(for='sg-defaultCheck1') Сделать основной почтой
+				.form-btn.double-col
+					button.btn.btn-green.btn-outline.wm-md(type='submit') Сохранить
+					button.btn.btn-red.btn-outline.wm-md(type='button') Удалить
+		._tiles
+			br
+			h3.h3.w-100 Tiles
+			.tiles
+				.tile
+					.tile-image
+						svg(version='1.1', width='64', height='64', viewBox='0 0 64 65', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+							image(x='0', y='0', width='64', height='65', clip-path='url(#cornerRadiusSmall)', style='image-rendering:optimizeQuality', preserveAspectRatio='none', xlink:href='img/phone-type-2.png')
+					.tile-info
+						.tile-info-pretitle.fz-xs.w-100.ls.ttu.c-medium-grey Основной
+						.tile-info-title.h4.w-100.ls.c-dark-grey +7 (916) 544-48-85
+						.tile-info-subtitle.fz-sm.w-100.c-medium-grey Мобильный
+				.tile
+					.tile-image
+						svg(version='1.1', width='64', height='64', viewBox='0 0 64 65', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+							image(x='0', y='0', width='64', height='65', clip-path='url(#cornerRadiusSmall)', style='image-rendering:optimizeQuality', preserveAspectRatio='none', xlink:href='img/phone-type.png')
+					.tile-info
+						.tile-info-pretitle.fz-xs.w-100.ls.ttu.c-medium-grey Дополнительный
+						.tile-info-title.h4.w-100.ls.c-dark-grey +7 (915) 488-55-65
+						.tile-info-subtitle.fz-sm.w-100.c-medium-grey Мобильный
+					.tile-controls
+						.control.h5
+							a.link.link-medium-grey(href='#jq-page-edit-tel')
+								span.link-icon
+									i.ic.ic-settings
+				.tile.tile-add
+					.tile-image
+						.corner.corner-outline.sz-md.c-green
+							i.ic.ic-plus
+					.tile-info
+						a.tile-info-title.fz-sm.w-100.c-black(href='#') Добавить новый номер
+				.tile
+					.tile-icon
+						i.ic.ic-wallet
+					.tile-info
+						.tile-info-title.h4.w-100.ls.c-dark-grey Обычный заказ
+		._forms
+			br
+			h3.h3.w-100 Radio Tiles
+			form.form(action='#')
+				.tiles.yellow-theme
+					.form-custom.form-radio.tile
+						input#defaultRadio6.form-radio-input.form-custom-input(type='radio')
+						label.form-radio-label.form-custom-label(for='defaultRadio6')
+							span.tile-icon
+								i.ic.ic-wallet
+							span.tile-info
+								span.tile-info-title.h5.w-100.ls.c-dark-grey Обычный заказ
+					.form-custom.form-radio.tile
+						input#defaultRadio7.form-radio-input.form-custom-input(type='radio')
+						label.form-radio-label.form-custom-label(for='defaultRadio7')
+							span.tile-icon
+								i.ic.ic-man
+							span.tile-info
+								span.tile-info-title.h5.w-100.ls.c-dark-grey «Бонус лояльности»
+					.form-custom.form-radio.tile
+						input#defaultRadio5.form-radio-input.form-custom-input(type='radio')
+						label.form-radio-label.form-custom-label(for='defaultRadio5')
+							span.tile-icon
+								i.ic.ic-certificate
+							span.tile-info
+								span.tile-info-title.h5.w-100.ls.c-dark-grey Использовать сертификат
+		._stroke
+			br
+			h3.h3.w-100 Stroke lines (8px padding default)
+			.stroke-lines
+				.item Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, dolor!
+				.item Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, dolor!
+				.item Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, dolor!
+			br
+			h3.h3.w-100 Stroke lines (12px padding large)
+			.stroke-lines.mb-md
+				.item Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, dolor!
+				.item Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, dolor!
+				.item Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, dolor!
+		._buttons
+			br
+			h3.h3.w-100 Buttons
+			a.btn.btn-green(href='#') Default green
+			a.btn.btn-green.btn-outline(href='#') Default outline green
+			br
+			a.btn.btn-red(href='#') Default red
+			a.btn.btn-red.btn-outline(href='#') Default outline red
+			.d-flex.align-items-center.flex-wrap
+				br
+				br
+				h3.h3.w-100 Buttons Play
+				a.play.sz-lg(href='#')
+					i.ic.ic-play
+				a.play.sz-md(href='#')
+					i.ic.ic-play
+				a.play.sz-sm(href='#')
+					i.ic.ic-play
+			br
+			h3.h3.w-100 Links "Go"
+			.btn-wrap
+				a.link.link-main.link-go(href='#')
+					.link-icon
+						.circle.circle-outline.sz-md
+							i.ic.ic-angle-left
+					span.link-text.h6.c-dark-grey Назад
+			.btn-wrap
+				a.link.link-main.link-go(href='#')
+					span.link-text.h6.c-dark-grey Вперед
+					span.link-icon
+						span.corner.corner-outline.sz-sm.c-green
+							i.ic.ic-plus
+		._typography
+			br
+			h3.h3.w-100 Typography
+			h1.h1 Header 1
+			h2.h2 Header 2
+			h3.h3 Header 3
+			h4.h4 Header 4
+			h5.h5 Header 5
+			h6.h6 Header 6
+			p.fz-sm Font size small
+			p.fz-xs Font size extra-small
+			p.ttu Text Uppercase
+			p.ls Text with letter-spacing 2px

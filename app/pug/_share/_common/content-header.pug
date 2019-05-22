@@ -1,0 +1,32 @@
+header.header
+	.topLine
+		.header-ham
+			a.hamburger.hamburger--spin.jq-toggleNavbar(href='#')
+				span.hamburger-box
+					span.hamburger-inner
+		.header-controls.h3
+			.item
+				a.link(href='#')
+					span.link-icon
+						i.ic.ic-circle-plus
+			.item
+				a.link(href='#')
+					span.link-icon
+						i.ic.ic-mail
+					span.circle.sz-xs.f-red
+			.item
+				a.link(href='#jq-page-cart')
+					span.link-icon
+						i.ic.ic-cart
+					span.circle.sz-xs.f-red.jq-counterAnimate
+		.header-user
+			.user
+				.user-info
+					.user-info-name.c-dark-grey.h5 Куклачёва Маргарита А.
+					.user-info-status.fz-sm
+						span.status
+							span.circle.sz-xxs.f-light-green
+							span.status-text.c-light-green В сети
+				a.user-photo(href='#')
+					svg(version='1.1', width='48', height='48', viewBox='0 0 200 200', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+						image(x='0', y='0', width='200', height='200', clip-path='url(#cornerRadius)', style='image-rendering:optimizeQuality', preserveAspectRatio='none', xlink:href='img/user-photo.png')

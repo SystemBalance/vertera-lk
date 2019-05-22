@@ -1,0 +1,121 @@
+mixin navbar(user)
+	.page-navbar
+		.navbar
+			.panel.panel-main
+				// Контейнер для стилизации скролла
+				.baron.baron__root.baron__clipper._simple
+					.baron__scroller
+						// Your content here
+						if user === 'client'
+							include ../../_client/_common/navbar
+						else
+							include ../../_partner/_common/navbar
+						
+					.baron__track
+						.baron__control.baron__up ▲
+						.baron__free
+							.baron__bar
+						.baron__control.baron__down ▼
+			
+			.panel.panel-toggle
+				.panel-head
+					.title.h3.c-dark-grey Выбор языка
+					a.hamburger.hamburger--spin.is-active.jq-togglePanel(href='#', data-action='close')
+						span.hamburger-box
+							span.hamburger-inner
+				.panel-content
+					// Контейнер для стилизации скролла
+					.baron.baron__root.baron__clipper._simple
+						.baron__scroller
+							// Your content here
+							ul.list.list-lang.h6
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name Русский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name английский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name болгарский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name венгерский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name греческий
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name испанский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name итальянский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name немецкий
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name польский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name португальский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name румынский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name французский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name чешский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name эстонский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name латышский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name литовский
+								li
+									a.link(href='#')
+										span.link-icon
+											i.lang-flag.flag-ru
+										span.lang-name турецкий
+						.baron__track
+							.baron__control.baron__up ▲
+							.baron__free
+								.baron__bar
+							.baron__control.baron__down ▼

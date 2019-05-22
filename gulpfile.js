@@ -1,15 +1,18 @@
-var syntax        = 'sass'; // Syntax: sass or scss;
+const syntax        = 'sass'; // Syntax: sass or scss;
 
-var gulp          = require('gulp'),
-		sass          = require('gulp-sass'),
-		browserSync   = require('browser-sync'),
-		concat        = require('gulp-concat'),
-		cleancss      = require('gulp-clean-css'),
-		rename        = require('gulp-rename'),
-		autoprefixer  = require('gulp-autoprefixer'),
-		notify        = require("gulp-notify"),
-		rsync         = require('gulp-rsync'),
-	  babel         = require('gulp-babel');
+const gulp 					= require('gulp');
+const sass          = require('gulp-sass');
+const browserSync   = require('browser-sync');
+const concat        = require('gulp-concat');
+const cleancss      = require('gulp-clean-css');
+const rename        = require('gulp-rename');
+const autoprefixer  = require('gulp-autoprefixer');
+const notify        = require("gulp-notify");
+const rsync         = require('gulp-rsync');
+const babel         = require('gulp-babel');
+const pug 					= require('gulp-pug');
+const gulpif 				= require('gulp-if');
+const emitty 				= require('emitty').setup('app/pug', 'pug');
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -23,6 +26,20 @@ gulp.task('browser-sync', function() {
 	})
 });
 
+gulp.task('templates', () =>
+	new Promise((resolve, reject) => {
+		emitty.scan(global.emittyChangedFile).then(() => {
+			gulp.src('app/pug/*.pug')
+				.pipe(gulpif(global.watch, emitty.filter(global.emittyChangedFile)))
+				.pipe(pug({ pretty: true }).on("error", notify.onError()))
+				.pipe(gulp.dest('app/'))
+				.on('end', resolve)
+				.on('error', reject)
+				.pipe(browserSync.reload({ stream: true }));				
+		});
+	})
+);
+
 gulp.task('styles', function() {
 	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
@@ -30,10 +47,10 @@ gulp.task('styles', function() {
 	.pipe(autoprefixer(['last 15 versions']))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
 	.pipe(gulp.dest('app/css'))
-	.pipe(browserSync.stream())
+	.pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('js', function() {
+gulp.task('scripts', function() {
 	return gulp.src([
 		'app/js/common.js'
 	])
@@ -60,10 +77,16 @@ gulp.task('rsync', function() {
 	}))
 });
 
-gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
-	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-	gulp.watch('app/*.html', browserSync.reload)
+gulp.task('watch', function() {
+	// Shows that run "watch" mode
+	global.watch = true;
+
+	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
+	gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
+	gulp.watch('app/pug/**/*.pug', gulp.series('templates'))
+		.on('all', (event, filepath) => {
+			global.emittyChangedFile = filepath;
+		});
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', gulp.parallel('templates', 'styles', 'scripts', 'browser-sync', 'watch'));

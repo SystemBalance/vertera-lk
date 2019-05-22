@@ -1,0 +1,18 @@
+mixin content(user)
+	.page-content
+		// Контейнер для стилизации скролла
+		.baron.baron__root.baron__clipper._simple
+			.baron__scroller
+				// Your content here
+				include content-header
+				main.main
+					if user === 'client'
+						include ../../_client/_pages/index
+					else
+						include ../../_partner/_pages/index
+			
+			.baron__track
+				.baron__control.baron__up ▲
+				.baron__free
+					.baron__bar
+				.baron__control.baron__down ▼

@@ -1,0 +1,76 @@
+// Your content here
+.panel-head
+	a.logo(href='#')
+		img.logo-img(src='img/logo.svg', alt='Vertera')
+	.lang.jq-togglePanel(data-action='open')
+		.link
+			span.link-icon
+				i.lang-flag.flag-ru
+
+.panel-content
+	nav.navbar-nav.h6
+		dl.list.list-nav
+			dt.list-title.fz-xs.ttu Заказы
+			dd
+				a.link(href='#jq-page-newOrder') Новый заказ
+			dd
+				a.link(href='#jq-page-cart')
+					| Корзина 
+					span.circle.f-red.sz-sm.fz-xs 12
+			dd
+				a.link(href='#jq-page-orders') История заказов
+		dl.list.list-nav
+			dt.list-title.fz-xs.ttu Профиль
+			dd
+				a.link(href='#jq-page-profile') Личные данные
+			dd
+				a.link(href='#jq-page-msg') Сообщение
+			dd
+				a.link(href='#jq-page-messages')
+					| Сообщения 
+					span.circle.f-red.sz-sm.fz-xs 2
+			dd
+				a.link(href='#jq-page-contacts') Контакты
+			dd
+				a.link(href='#jq-page-edit-mail') Изменить почту
+			dd
+				a.link(href='#jq-page-edit-tel') Изменить телефон
+			dd
+				a.link(href='#jq-page-settings') Настройки
+			dd
+				a.link(href='#jq-page-point') Пункт выдачи
+			dd
+				a.link(href='#jq-page-add-address') Пункт выдачи - добавить адрес
+			dd
+				a.link(href='#jq-page-attach') Пункт выдачи - start
+			dd
+				a.link(href='#jq-page-downtown') Пункты выдачи
+		dl.list.list-nav
+			dt.list-title.fz-xs.ttu Инфо
+			dd
+				a.link(href='#jq-page-news') Новости
+			dd
+				a.link(href='#jq-page-docs') Документы
+			dd
+				a.link(href='#jq-page-docs-products') Документы на продукцию
+			dd
+				a.link(href='#jq-page-videos') Видео
+			dd
+				a.link(href='#jq-page-contacts-points') Контакты
+			dd
+				a.link(href='#jq-page-styleGuide') UI / Components
+		dl.list.list-nav.list-bottom
+			dt.is-hidden
+			dd
+				a.link.link-grey(href='#')
+					span.link-icon
+						i.ic.ic-help
+					span.link-text Задать вопрос
+			dd
+				a.link.link-grey(href='#')
+					span.link-icon
+						i.ic.ic-signout
+					span.link-text Выйти
+		.btn-wrap.w-100
+			a.btn.btn-green.btn-outline(href='#') Стать партнером
+
