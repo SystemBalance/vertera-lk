@@ -23,7 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.ic-link:before {
+  content: "\e920";
+}
 .ic-address-phone:before {
   content: "\e91e";
 }

@@ -354,6 +354,21 @@ $(document).ready(function () {
 		})
 	}
 
+	var clipboard = new ClipboardJS('[data-clipboard-text]');
+
+	clipboard.on('success', function (e) {
+		// console.info('Action:', e.action);
+		// console.info('Text:', e.text);
+		// console.info('Trigger:', e.trigger);
+		if ($(e.trigger).hasClass('tile')) {
+			$(e.trigger).addClass('is-copied')
+			setTimeout(() => {
+				$(e.trigger).removeClass('is-copied')
+			}, 2000)
+		}
+		e.clearSelection();
+	});
+
 
 	
 	// --------------------------------------------------

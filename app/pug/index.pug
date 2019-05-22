@@ -1,13 +1,12 @@
 extends _layouts/home
 
 block content
-	- let mode = 'client' // partner
+	- let mode = 'partner' // client
 	include _share/_common/navbar
 	include _share/_common/content
 	include _share/_common/aside
 
-	
-	.page.page-client.navbar-is-open
+	.page.page-partner.navbar-is-open
 		+navbar(mode)
 		+content(mode)
 		+aside(mode)

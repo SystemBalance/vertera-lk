@@ -1,15 +1,9 @@
 .tiles
 	display: flex
-	align-items: flex-start
 	flex-wrap: wrap
 	margin-top: -24px
 	margin-left: -24px
 	width: calc(100% + 24px)
-	&.yellow-theme .tile
-		&.is-active
-			border-color: var(--yellow)
-			background-color: var(--yellow)
-			box-shadow: 0px 8px 32px rgba(0, 56, 71, 0.1), 0px 12px 16px rgba(0, 35, 55, 0.048)
 	.tile
 		width: 240px
 		height: 200px
@@ -31,6 +25,14 @@
 		&:hover
 			border-color: #fff
 			box-shadow: 0px 8px 32px rgba(0, 56, 71, 0.1), 0px 12px 16px rgba(0, 35, 55, 0.048)
+			.corner-outline
+				color: var(--white)
+				&:after
+					opacity: 1
+		&.is-copied
+			.tile-tip
+				opacity: 1
+				visibility: visible
 		&-image
 			margin-bottom: 14px
 			display: flex
@@ -45,6 +47,18 @@
 			height: 32px
 			font-size: 32px
 			line-height: 1
+			&.sz-lg
+				width: 80px
+				height: 80px
+				font-size: 80px
+				margin-bottom: 28px
+			&.sz-sm
+				width: 24px
+				height: 24px
+				font-size: 24px
+				margin-bottom: 16px
+			.ic
+				transition: color .25s ease
 		&-add
 			border: none
 			.tile-image
@@ -53,10 +67,16 @@
 				font-family: "Circle", sans-serif
 				font-weight: 300
 		&-info
+			display: block
+			width: 100%
+			&-title, &-pretitle, &-subtitle
+				display: block
+				width: 100%
+				transition: color .25s ease
 			&-pretitle
 				margin-bottom: 4px
 			&-subtitle
-				margin-top: 8px
+				margin-top: 4px
 			a.tile-info-title
 				position: static
 				&:before
@@ -66,6 +86,7 @@
 					left: 0
 					width: 100%
 					height: 100%
+					z-index: 1
 		&-controls
 			position: absolute
 			top: 0
@@ -73,3 +94,39 @@
 			padding: 12px
 			.control
 				line-height: 1
+		&-tip
+			display: block
+			position: absolute
+			left: 0
+			bottom: 32px
+			width: 100%
+			opacity: 0
+			visibility: hidden
+			transition: opacity .25s ease, visibility .25s ease
+	&.tiles-docs .tile
+		padding-top: 52px
+		padding-bottom: 52px
+	&.tiles-lg
+		.tile
+			width: calc(100% / 3 - 24px)
+			max-width: 328px
+			height: auto
+			padding: 58px 24px
+	&.dark-theme
+		.tile
+			&:hover
+				background-color: var(--main)
+				border-color: var(--main)
+				box-shadow: 0px 8px 32px rgba(0, 56, 71, 0.1), 0px 12px 16px rgba(0, 35, 55, 0.048)
+				transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease
+				.tile-icon
+					.ic
+						color: var(--stroke)
+				.tile-info
+					&-title, &-pretitle, &-subtitle
+						color: var(--white)
+	&.yellow-theme .tile
+		&.is-active
+			border-color: var(--yellow)
+			background-color: var(--yellow)
+			box-shadow: 0px 8px 32px rgba(0, 56, 71, 0.1), 0px 12px 16px rgba(0, 35, 55, 0.048)
