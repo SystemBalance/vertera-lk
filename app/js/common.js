@@ -4,18 +4,18 @@ let computedStyle = function (vElement) {
 	return window.getComputedStyle ? window.getComputedStyle(vElement, null) : vElement.currentStyle //IE 8 and less
 }
 let isVisible = function (vElement) {
-	return !(vElement.offsetWidth == 0 && vElement.offsetHeight == 0) && computedStyle(vElement).visibility != "hidden";
+	return !(vElement.offsetWidth == 0 && vElement.offsetHeight == 0) && computedStyle(vElement).visibility != "hidden"
 }
 
 function getAbsoluteHeight(el) {
 	// Get the DOM Node if you pass in a string
-	el = (typeof el === 'string') ? document.querySelector(el) : el;
+	el = (typeof el === 'string') ? document.querySelector(el) : el
 
-	var styles = window.getComputedStyle(el);
+	var styles = window.getComputedStyle(el)
 	var margin = parseFloat(styles['marginTop']) +
-		parseFloat(styles['marginBottom']);
+		parseFloat(styles['marginBottom'])
 
-	return Math.ceil(el.offsetHeight + margin);
+	return Math.ceil(el.offsetHeight + margin)
 }
 // --------------------------------------------------
 //      Переменная высоты шапки в css переменную
@@ -82,13 +82,15 @@ $(document).ready(function () {
 	// --------------------------------------------------
 	$(document).on('change keyup input click', '.counter input', function (e) {
 		if (this.value.match(/[^0-9]/g)) {
-			this.value = this.value.replace(/[^0-9]/g, '');
+			this.value = this.value.replace(/[^0-9]/g, '')
 		}
 	})
 
-	/* --- Counter -- Start ---*/
+	// --------------------------------------------------
+	//                     Counter
+	// --------------------------------------------------
 	$('.counter').each(function () {
-		const $this = $(this);
+		const $this = $(this)
 		const tip = $this.find('.counter-field-text')
 
 		$this.find('.counter-control').click(function () {
@@ -98,46 +100,60 @@ $(document).ready(function () {
 			if (handle.hasClass('minus')) {
 				// Если кликаем по минусу
 				if (val > 0) {
-					$this.find('input').val(parseInt(val) - 1);
+					$this.find('input').val(parseInt(val) - 1)
 				}
 
 				if (!val || val === 1) {
-					$this.find('input').val('1');
+					$this.find('input').val('1')
 				}
 				return false
 			} else if (handle.hasClass('plus')) {
 				// Если кликаем по плюсу
 				if (!val) {
-					$this.find('input').val('1');
+					$this.find('input').val('1')
 					return false
 				}
-				$this.find('input').val(parseInt(val) + 1);
+				$this.find('input').val(parseInt(val) + 1)
 				return false
 			}
-		});
+		})
 	})
-	/* --- Counter -- End ---*/
 
+	// --------------------------------------------------
+	//                Переключение табов
+	// --------------------------------------------------
 	$(".tabs-nav ul li a").click(function (e) {
-		e.preventDefault();
-		let linksAttr = $(this).attr("href");
+		e.preventDefault()
+		let linksAttr = $(this).attr("href")
 
-		let parentTabs = $(this).closest(".tabs");
-		let activeTab = $(this).parents("li");
-		let activeContent = parentTabs.find(linksAttr);
+		let parentTabs = $(this).closest(".tabs")
+		let activeTab = $(this).parents("li")
+		let activeContent = parentTabs.find(linksAttr)
 
-		parentTabs.find(".tabs-nav:first ul li").removeClass("is-active");
+		parentTabs.find(".tabs-nav:first ul li").removeClass("is-active")
 		activeTab.addClass("is-active")
 
-		$(".tabs-content>div").hide().addClass("is-hidden").removeClass("is-visible");
-		parentTabs.find(".tabs-content:first > div").hide().addClass("is-hidden").removeClass("is-visible");
-		activeContent.fadeIn('300');
+		$(".tabs-content>div").hide().addClass("is-hidden").removeClass("is-visible")
+		parentTabs.find(".tabs-content:first > div").hide().addClass("is-hidden").removeClass("is-visible")
+		activeContent.fadeIn('300')
 
 		setTimeout(() => {
-			activeContent.removeClass("is-hidden").addClass("is-visible");
-		}, 0);
-	});
+			activeContent.removeClass("is-hidden").addClass("is-visible")
+		}, 0)
+	})
 
+	// --------------------------------------------------
+	//            Удаление товаров в корзине
+	// --------------------------------------------------
+	$(document).stop(true).on('click', '.jq-cartRemoveItem', function (e) {
+		e.preventDefault()
+		const card = $(this).closest('.card')
+		card.fadeOut()
+	})
+	
+	// --------------------------------------------------
+	//   TriggerHandler в елементах списка сообщений
+	// --------------------------------------------------
 	$(document).stop(true).on('click', '.message-list .item *:not(.link)', function (e) {
 		e.preventDefault()
 		const item = $(this).closest('.item')
@@ -146,6 +162,9 @@ $(document).ready(function () {
 		return false
 	})
 
+	// --------------------------------------------------
+	// Обработка открытия/закрытия боковой панели (справа)
+	// --------------------------------------------------
 	$(document).stop(true).on('click', '.jq-togglePanel', function (e) {
 		e.preventDefault()
 		const panel = $(this).closest('.panel')
@@ -169,6 +188,9 @@ $(document).ready(function () {
 		}
 	}
 
+	// --------------------------------------------------
+	// Обработка открытия/закрытия боковой панели (слева)
+	// --------------------------------------------------
 	$(document).stop(true).on('click', '.jq-toggleNavbar', function (e) {
 		e.preventDefault()
 		if ($('.page').hasClass('panel-open')) {
@@ -186,7 +208,7 @@ $(document).ready(function () {
 	// --------------------------------------------------
 	$('body').on('click', '.jq-addToCart', function (e) {
 		e.preventDefault()
-		const $this = $(this);
+		const $this = $(this)
 		const tipText = $this.text()
 		const tipToggleText = $this.attr('data-toggle-text')
 
@@ -198,19 +220,26 @@ $(document).ready(function () {
 		}, 400)
 	})
 	
-
+	// --------------------------------------------------
+	//   Обработка эффекта radio (выбора) для плитки
+	// --------------------------------------------------
 	$(document).stop(true).on('click', '.tiles .tile', function (e) {
 		e.preventDefault()
 		$(this).closest('.tiles').find('.tile').removeClass('is-active')
 		$(this).addClass('is-active')
 	})
 
+	// --------------------------------------------------
+	//               Обработка выбора кнопки
+	// --------------------------------------------------
 	$(document).stop(true).on('click', '.jq-btnSelect', function (e) {
 		e.preventDefault()
 		$(this).addClass('is-selected')
 	})
 
-	// Отслеживание прокрутки контент части сайта
+	// --------------------------------------------------
+	//    Отслеживание прокрутки контент части сайта
+	// --------------------------------------------------
 	document.querySelector('.page-content .baron__scroller').addEventListener('scroll', function () {
 		if ($('.jq-sticky').exists() && Sticky) {
 			Sticky.refresh()
@@ -228,14 +257,14 @@ $(document).ready(function () {
 	// --------------------------------------------------
 	$('body').on('click', '.jq-viewMore', function (e) {
 		e.preventDefault()
-		const $this = $(this);
+		const $this = $(this)
 		const $grids = $this.closest('.grids')
 		const $btnMore = $this.closest('.btn-more')
 		const isHidden = $grids.find('.is-hidden').exists()
 		const countView = 4
 
 		if (isHidden > 0 && isHidden > countView) {
-			$btnMore.appendTo($grids);
+			$btnMore.appendTo($grids)
 		} else {
 			$btnMore.hide()
 		}
@@ -244,35 +273,11 @@ $(document).ready(function () {
 		}
 	})
 
-
-
-	// --------------------------------------------------
-	//   Проверка разрешения и изменения размера экрана
-	// --------------------------------------------------
-	function checkResizing() {
-		let mediaQuery = document.body.clientWidth
-
-		if (mediaQuery <= 767) {
-			// console.log('set phone js')
-		}
-	}
-	checkResizing()
-
-	/* --- при изменении размеров окна ---*/
-	$(window).resize(function () {
-		checkResizing()
-	})
-
-	/* --- при смене ориентации ---*/
-	window.addEventListener("orientationchange", function () {
-		checkResizing()
-	}, false)
-
 	// --------------------------------------------------
 	//           Подключение inline-плагинов
 	// --------------------------------------------------
 
-	// Стилизация скролла
+	/* --- Стилизация скролла ---*/
 	let scroller
 	$('.baron').each(function () {
 		scroller = baron({
@@ -282,11 +287,11 @@ $(document).ready(function () {
 		})
 	})
 
-	// Функция сокращения текста точками
+	/* --- Функция сокращения текста точками ---*/
 	function shaveInit() {
 		$('.jq-dotsMore:visible').each(function() {
 			const maxHeight = $(this).closest('div').height() + 1
-			$(this).shave(maxHeight);
+			$(this).shave(maxHeight)
 		})
 	}
 
@@ -294,14 +299,14 @@ $(document).ready(function () {
 		shaveInit()
 	}
 
-	// Иннициализация datepicker
+	/* --- Иннициализация datepicker ---*/
 	if ($(".jq-datepicker").exists()) {
 		$('.jq-datepicker').datepicker({
 			autoClose: true,
 		})
 	}
 
-	// Запрет на перетаскивание картинок и ссылок
+	/* --- Запрет на перетаскивание картинок и ссылок ---*/
 	$("img, a").on("dragstart", function (event) {
 		event.preventDefault()
 	})
@@ -323,7 +328,7 @@ $(document).ready(function () {
 		})
 	}
 
-	// Функция фиксирования блока при прокрутке
+	/* --- Функция фиксирования блока при прокрутке ---*/
 	var Sticky = new hcSticky('.jq-sticky', {
 		top: headerHeight + 16,
 		onStart: function(el) {
@@ -332,7 +337,7 @@ $(document).ready(function () {
 		}
 	})
 
-	// select jqStyler
+	/* --- select jqStyler ---*/
 	function selectStylerInit() {
 		if ($('.jq-select:visible').exists()) {
 			$('.jq-select:visible').styler()
@@ -340,7 +345,7 @@ $(document).ready(function () {
 	}
 	selectStylerInit()
 
-	// select jqStyler
+	/* --- beefup accordion ---*/
 	if ($('.beefup').exists()) {
 		$('.beefup').beefup({
 			animation: 'fade',
@@ -348,4 +353,28 @@ $(document).ready(function () {
     	closeSpeed: 0
 		})
 	}
+
+
+	
+	// --------------------------------------------------
+	//   Проверка разрешения и изменения размера экрана
+	// --------------------------------------------------
+	function checkResizing() {
+		let mediaQuery = document.body.clientWidth
+
+		if (mediaQuery <= 767) {
+			// console.log('set phone js')
+		}
+	}
+	checkResizing()
+
+	/* --- при изменении размеров окна ---*/
+	$(window).resize(function () {
+		checkResizing()
+	})
+
+	/* --- при смене ориентации ---*/
+	window.addEventListener("orientationchange", function () {
+		checkResizing()
+	}, false)
 })
