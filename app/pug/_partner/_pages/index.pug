@@ -1,4 +1,4 @@
-#jq-page-ref-links.remove-this-wrapper-on-prod.is-active
+#jq-page-ref-links.remove-this-wrapper-on-prod
 	.main-head.mb-md.pt-xs
 		.main-head-title
 			h2.h2 Реферальные ссылки
@@ -27,8 +27,105 @@
 				.tile-info-title.c-main.h6 https://os.verteraorganic.com/ref_cards.php
 			.tile-tip.c-medium-grey.fz-sm Скопировано в буфер!
 
+#jq-page-ref-cards.remove-this-wrapper-on-prod.is-active
+	.main-head.align-items-center.mb-md.pt-xs
+		.main-head-title
+			h2.h2 Рефералка в кармане
+		.main-head-info.h6
+			.link-wrap
+				a.link.link-main(href="#")
+					span.link-icon.h5: i.ic.ic-credit-card
+					span.link-text Что такое Vcard?
+			.link-wrap
+				a.link.link-main.jq-togglePanel(href="#", data-panel="jq-panel-info", data-target="aside-info", data-action="open")
+					span.link-icon.h5: i.ic.ic-tip
+					span.link-text Как это работает
 
+	section.sect.mt-xs
+		.main-head.mb-sm
+			.main-head-title
+				h3.h3 Купленные карты
+				span.circle.f-stroke.sz-md.h6.c-medium-grey 2
+		.table.stroke-lines
+			table
+				thead
+					tr.fz-xs.ttu.ls.c-medium-grey
+						th номер заказа
+						th Дата заказа
+						th наименование Товара
+						th Количество
+						th
+				tbody.h6.c-dark-grey
+					tr
+						td 1504590
+						td 01/05/2019
+						td 0632 – Пластиковая карта «Рефералка в кармане»
+						td 8
+						td.t-right
+							.btn-wrap
+								a.btn.btn-red.btn-outline.wm-xs(href='#') Отказаться
+					tr
+						td 1504590
+						td 01/05/2019
+						td 0632 – Пластиковая карта «Рефералка в кармане»
+						td 8
+						td.t-right
+							.btn-wrap
+								a.btn.btn-yellow.wm-xs(href='#')
+									span.btn-icon.fz-sm: ic.ic.ic-done
+									span.btn-text Выполнен
 
+	section.sect.mt-lg
+		.main-head.mb-sm
+			.main-head-title
+				h3.h3 Мои карты
+				span.circle.f-stroke.sz-md.h6.c-medium-grey 1
+		.table.stroke-lines
+			table
+				thead
+					tr.fz-xs.ttu.ls.c-medium-grey
+						th номер карты
+						th Дата привязки
+						th Фио партнера
+						th Дата регистрации
+						th
+				tbody.h6.c-dark-grey
+					tr
+						td 309 666 153 42
+						td 01/05/2019
+						td Константинопольский Констанин В.
+						td 11/06/2019
+						td.t-right
+							.btn-wrap
+								a.btn.btn-green.btn-outline.wm-xs(href='#') Подарить
+	
+	section.sect.mt-lg
+		.main-head.align-items-center.mb-sm
+			.main-head-title
+				h3.h3 Новые карты
+				span.circle.f-stroke.sz-md.h6.c-medium-grey 0
+			.main-head-info.h6.c-dark-grey.ff-default
+				.item Я подарил: 0
+				.item Мне подарили: 0
+		.container
+			.row
+				.col-5
+					//- form.form.d-inline-flex.jq-checkRefCard(action='#', autocomplete='off')
+					//- 	.form-group.flex-2
+					//- 		.input-group
+					//- 			input.form-control(type='text', placeholder='Для проверки введите 1 или 0')
+					//- 	.form-btn.btn-wrap
+					//- 		button.btn.btn-green.btn-outline.w-sm(type='submit') Проверить
+					form.form.d-inline-flex.jq-checkRefCard(action='#', autocomplete='off')
+						.form-group.flex-2
+							.input-group.input-group--append.w-100
+								input.form-control(type='text')
+								.input-group-append
+						.form-btn.btn-wrap
+							button.btn.btn-green.btn-outline.w-sm(type='submit') Проверить
+					.btn-wrap.mt-sm
+						a.btn.btn-green.btn-outline.wm-sm(href='#') Зарегистрировать
+					
 
 
 

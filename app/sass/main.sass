@@ -38,9 +38,12 @@ body
 	height: 100vh
 	overflow: hidden
 	position: relative
-	&.panel-aside-open
+	&.aside-open
 		.page-content
 			transform: translateX(-276px)
+		&.w-lg
+			.page-content
+				transform: translateX(-532px)
 	&.panel-open
 		.navbar .panel-toggle, .page-content
 			transform: translateX(224px)
@@ -59,6 +62,8 @@ body
 		z-index: 1
 		.panel
 			border: none
+		&.w-lg
+			width: 532px
 	&-navbar
 		position: absolute
 		top: 0
@@ -99,10 +104,26 @@ body
 						margin-top: 0
 				.link-go
 					margin-top: -8px
+				&-title
+					display: flex
+					align-items: center
+					.circle
+						margin-left: 12px
 				&-info
+					display: flex
+					align-items: center
+					flex-wrap: wrap
 					margin-left: auto
 					.total
 						padding-bottom: 4px
+					.item
+						margin-right: 24px
+						&:last-child
+							margin-right: 0
+					.link-wrap
+						margin-right: 32px
+						&:last-child
+							margin-right: 0
 			&-footer
 				display: flex
 				align-items: center

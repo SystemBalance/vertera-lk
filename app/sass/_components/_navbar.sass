@@ -4,7 +4,6 @@
 	width: 100%
 	height: 100%
 	max-height: 100vh
-
 	&-head
 		display: block
 		margin-bottom: 32px
@@ -13,7 +12,6 @@
 	&-nav
 		display: flex
 		flex-wrap: wrap
-		// flex-direction: column
 		width: 100%
 		height: auto
 		min-height: 100%
@@ -53,6 +51,8 @@
 		.btn-wrap
 			margin-top: 25px
 			margin-bottom: 40px
+
+
 .panel
 	display: flex
 	flex-direction: column
@@ -126,25 +126,34 @@
 				display: flex
 				align-items: center
 				transition: none
+				&-text
+					padding-top: 4px
+					padding-bottom: 4px
 				&-icon
 					display: flex
 					font-size: 16px
 					margin-right: 8px
-					position: relative
-					top: -1px
 			// Подсветка активного пункта
 			.link:hover, .is-active .link
 				background-color: var(--main)
 				color: var(--white)
 				transition: color .25s ease, background-color .25s ease
-		.btn-wrap .btn
-			width: 100%
 		.form
 			padding: 16px 24px
-		
+		.sect
+			.text
+				max-width: 440px
 	.baron
 		&._dragging .list li .link:hover
 			color: var(--main)
 			background-color: #fff !important
 		.baron__track
 			bottom: 40px
+
+.page-aside.w-lg
+	.panel-head
+		padding-top: 72px
+	.panel-head .hamburger
+		position: absolute
+		top: 24px
+		right: 24px

@@ -23,6 +23,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-cross-tip:before {
+  content: "\e923";
+}
+.ic-done:before {
+  content: "\e927";
+}
+.ic-tip:before {
+  content: "\e921";
+}
+.ic-credit-card:before {
+  content: "\e922";
+}
 .ic-link:before {
   content: "\e920";
 }
@@ -53,6 +65,9 @@
 .ic-angle-left:before {
   content: "\e917";
 }
+.ic-product:before {
+  content: "\e905";
+}
 .ic-map-marker:before {
   content: "\e900";
 }
@@ -67,9 +82,6 @@
 }
 .ic-plus:before {
   content: "\e904";
-}
-.ic-product:before {
-  content: "\e905";
 }
 .ic-science:before {
   content: "\e906";

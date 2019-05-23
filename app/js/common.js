@@ -169,18 +169,31 @@ $(document).ready(function () {
 		e.preventDefault()
 		const panel = $(this).closest('.panel')
 		const dataPanel = $(this).attr('data-panel')
-		const aside = panel.hasClass('panel-aside') || $(this).attr('data-target') === 'aside'
+
+		const typePanel =
+			(panel.hasClass('panel-aside-info') || $(this).attr('data-target') === 'aside-info') ? 'aside-info' :
+			(panel.hasClass('panel-aside') || $(this).attr('data-target') === 'aside') ? 'aside' :
+			'panel'
+		
 		const action = $(this).attr('data-action')
-		togglePanel(aside, action)
-		console.log(dataPanel)
+		togglePanel(typePanel, action)
 		if (dataPanel) {
 			$('.page-aside .panel').hide()
 			$('#' + dataPanel).show()
 		}
 	})
 
-	function togglePanel(aside, action) {
-		const className = aside ? 'panel-aside-open' : 'panel-open'
+	function togglePanel(typePanel, action) {
+		let className
+		if (typePanel === 'aside-info') {
+			className = 'aside-open w-lg'
+		} else if (typePanel === 'aside') {
+			className = typePanel + '-open'
+		} else {
+			className = 'panel-open'
+		}
+		console.log(className)
+
 		if (action === 'open') {
 			$('.page').addClass(className)
 		} else if (action === 'close') {
@@ -271,6 +284,37 @@ $(document).ready(function () {
 		if ($grids.exists()) {
 			$grids.find('.is-hidden:lt(' + countView + ')').removeClass('is-hidden').addClass('is-visible')
 		}
+	})
+
+	// --------------------------------------------------
+	//        Проверка на существ. реф. карты
+	// --------------------------------------------------
+	
+	$('body').on('submit', '.jq-checkRefCard', function (e) {
+		e.preventDefault()
+		const $this = $(this)
+		const parentGroup = $this.find('input').closest('.form-group')
+		const numCard = $this.find('input').val()
+		console.log(numCard)
+		if (numCard === '1') {
+			console.log('success')
+			parentGroup.removeClass('is-incorrect').addClass('is-correct')
+		} else if (numCard === '0') {
+			console.log('error')
+			parentGroup.removeClass('is-correct').addClass('is-incorrect')
+		}
+	})
+
+
+	// --------------------------------------------------
+	//   Сброс статуса поля ввода (correct/incorrect)
+	// --------------------------------------------------
+	// $(document).on('change keyup input click', '.counter input', function (e) {
+	$('body').on('change keyup input click', '.form-control', function (e) {
+		e.preventDefault()
+		const $this = $(this)
+		const parentGroup = $this.closest('.form-group')
+		parentGroup.removeClass('is-incorrect is-correct')
 	})
 
 	// --------------------------------------------------

@@ -90,6 +90,10 @@ label, p, dl, dd
 button.btn
 	line-height: 1 	// Important for button tag
 
+.container
+	padding: 0
+	margin: 0
+	max-width: 1032px
 
 
 .link
@@ -103,10 +107,16 @@ button.btn
 	&-text, &-icon
 		display: inline-block
 		vertical-align: middle
+		line-height: 1
 	&-text + .link-icon
 		margin-left: 8px
-	&-icon .ic
-		line-height: 1
+	&-icon + .link-text
+		margin-left: 8px
+	&-icon
+		position: relative
+		top: -1px
+		.ic
+			line-height: 1
 	&-green
 		color: var(--green)
 		&:focus
@@ -143,9 +153,9 @@ button.btn
 			vertical-align: middle
 		.link-icon
 			& + .link-text
-				margin-left: 12px
+				margin-left: 16px
 		.link-text + .link-icon
-			margin-left: 12px
+			margin-left: 16px
 		&:hover
 			.link-icon
 				.circle
@@ -174,6 +184,21 @@ button.btn
 	letter-spacing: 0.04em
 	font-family: "Circle", sans-serif
 	font-weight: 300
+	&-text, &-icon
+		display: inline-block
+		vertical-align: middle
+	&-text
+		line-height: 1
+	&-icon
+		width: 16px
+		height: 16px
+		line-height: 16px
+		position: relative
+		top: -1px
+	&-text + .btn-icon
+		margin-left: 8px
+	&-icon + .btn-text
+		margin-left: 8px
 	&-green
 		background-color: var(--green)
 		color: var(--white)
@@ -245,6 +270,12 @@ button.btn
 					color: var(--main)
 					background-color:var(--white)
 					background-color: var(--white)
+	&-yellow
+		color: var(--dark-grey)
+		background-color: var(--yellow)
+		&:focus, &:hover
+			color: var(--dark-grey)
+			background-color: var(--yellow)
 	&-outline
 		background-color: transparent
 		color: var(--dark-grey)
@@ -278,6 +309,8 @@ button.btn
 					opacity: 1
 					transform: translateX(0)
 					transition: transform .25s ease
+	&.wm-xs
+		min-width: 152px
 	&.wm-sm
 		min-width: 168px
 	&.wm-md
@@ -295,18 +328,16 @@ button.btn
 	flex-shrink: 0
 	border-radius: 50%
 	text-align: center
-	color: var(--white)
-	font-weight: bold
+	font-family: $default-font
 	background-repeat: no-repeat
 	background-position: center
 	background-size: cover
 	transition: border-color .25s ease, background-color .25s ease, color .25s ease
-	&.fz-xs
-		padding-top: 1px
+	padding-top: 1px
 	&-outline
 		border: 1px solid var(--green)
 		color: var(--green)
-	&.sz-md
+	&.sz-lg
 		width: 40px
 		height: 40px
 		line-height: 40px
@@ -316,9 +347,19 @@ button.btn
 			position: relative
 			top: -2px
 			left: -1px
+	&.sz-md
+		width: 24px
+		height: 24px
 	&.sz-sm
 		width: 16px
 		height: 16px
+		line-height: 16px
+		font-weight: bold
+		&.c-white
+			.hamburger.is-active .hamburger-inner,
+			.hamburger.is-active .hamburger-inner:after,
+			.hamburger.is-active .hamburger-inner:before
+				background-color: var(--white)
 	&.sz-xs
 		width: 8px
 		height: 8px
@@ -528,9 +569,6 @@ button.btn
 			color: var(--white)
 			&:after
 				opacity: 1
-			
-
-
 	&.sz-md
 		width: 48px
 		height: 48px

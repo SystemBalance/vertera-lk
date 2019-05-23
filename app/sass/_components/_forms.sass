@@ -4,13 +4,24 @@
 	line-height: 0
 	&-inline
 		display: inline-block
+		margin-top: -16px
 		width: auto
+	&.d-inline-flex
+		.form-group, .form-btn
+			width: auto
+		.form-group
+			margin-right: 9px
+		.form-btn
+			margin-top: 0
 	&-group
 		display: block
 		width: 100%
 		margin-top: 16px
 		&:first-child
 			margin-top: 0
+		&.is-incorrect .input-group-append:before, 
+		&.is-correct .input-group-append:after
+			opacity: 1
 		&.is-error
 			.form-control
 				border-color: var(--red)
@@ -56,7 +67,7 @@
 			display: flex
 			align-items: center	
 			.form-control
-				padding-right: 38px
+				padding-right: 40px
 		&-append
 			position: absolute
 			top: 1px
@@ -68,6 +79,23 @@
 			align-items: center
 			justify-content: center
 			background-color: #fff
+			border-radius: 0 4px 4px 0
+			&:before, &:after
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				width: 40px
+				height: 100%
+				background-repeat: no-repeat
+				background-position: center
+				background-size: 16px
+				opacity: 0
+				transition: opacity .25s ease
+			&:before
+				background-image: url('../img/icons/ic-incorrect.svg')
+			&:after
+				background-image: url('../img/icons/ic-correct.svg')
 		&-double
 			display: flex
 			align-items: flex-start
