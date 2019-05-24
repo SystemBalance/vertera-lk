@@ -137,7 +137,7 @@ select.jq-select
 .jq-selectbox__select
 	color: inherit
 	font-size: 14px
-	padding-left: 16px
+	padding-left: 12px
 	padding-right: 40px
 .jq-selectbox .placeholder
 	color: var(--medium-grey)
@@ -301,16 +301,16 @@ table.dataTable thead .sorting_desc,
 table.dataTable thead .sorting
 	background: none
 	position: relative
+	white-space: nowrap
 	&:after
 		content: '\e926'
-		position: absolute
+		position: relative
 		display: inline-block
 		vertical-align: middle
 		font-size: 5px
 		color: var(--medium-grey)
 		margin-left: 5px
-		top: 4px
-		transition: .25s ease
+		top: -2px
 		font-family: vertera!important;
 		speak: none;
 		font-style: normal;
@@ -321,11 +321,12 @@ table.dataTable thead .sorting
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 table.dataTable thead .sorting:after
-	opacity: 0
+	display: none
 table.dataTable thead .sorting_desc:after
 	transform: scaleY(-1)
-	top: 5px
-
+	top: -1px
+table.dataTable, table.dataTable td, table.dataTable th
+	box-sizing: border-box
 table.dataTable tbody tr.shown td
 	border-bottom-color: transparent
 table.dataTable .details-row .details-container thead th
@@ -333,5 +334,6 @@ table.dataTable .details-row .details-container thead th
 table.dataTable .details-row .details-container tbody td
 	padding-top: 0
 	border-bottom: none
-table.dataTable .details-row
-	table-layout: fixed !important
+table.dataTable tbody td.col-btn
+	width: 170px
+	padding-left: 18px

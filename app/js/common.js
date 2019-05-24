@@ -437,15 +437,8 @@ $(document).ready(function () {
 		}
 		e.clearSelection();
 	})
-
-	// $('#table_id').DataTable({
-	// 	paging: false,
-	// 	searching: false,
-	// 	info: false
-	// })
-
   
-	var data = [{
+	var refCardsData = [{
 			"number": "15917125",
 			"date": "01/05/2019 в 22:30",
 			"type": "Бонус наставника",
@@ -493,25 +486,26 @@ $(document).ready(function () {
 				"text": "Задача организации в особенности же общая концепция сложившегося положения укрепляет нас, в нашем стремлении улучшения правильных направлений развития.Задача организации в особенности же новая модель организационной деятельности способствует подготовке и реализации соответствующих моделей активизации.Не следует, однако, забывать, что новая модель организационной деятельности создает все необходимые предпосылки"
 			}
 		}
-	];
+	]
 	
 	function format (data) {
 		return '<div class="details-container">'+
 				'<table width="100%" cellpadding="0" cellspacing="0" border="0" class="details-table">'+
 					'<thead>'+
 						'<tr class="fz-xs ttu ls c-medium-grey">'+
-							'<th class="title">Назначение</th>'+
+							'<th colspan="8" class="title">Назначение</th>'+
 						'</tr>'+
 					'</thead>'+
 					'<tbody>' +
 						'<tr>'+
-							'<td>'+data.nested.text+'</td>'+
+							'<td colspan="8">'+data.nested.text+'</td>'+
 						'</tr>'+
 					'</tbody>'+
 				'</table>'+
 			'</div>';
-	};
-	var table = $('.datatables').DataTable({
+	}
+
+	var table = $('#refCardsTable').DataTable({
 		// config
 		info: false,
 		searching: false,
@@ -537,8 +531,8 @@ $(document).ready(function () {
 				width: "86px"
 			}
 		],
-		data : data,
-	});
+		data : refCardsData,
+	})
 
 	$('.datatables tbody').on('click', 'td.details-control .btn', function () {
 		var tr = $(this).closest('tr'),
@@ -554,6 +548,15 @@ $(document).ready(function () {
 			tr.addClass('shown')
 		}
 	})
+
+	$('.jq-datatables').DataTable({
+		// config
+		info: false,
+		searching: false,
+		paging: false,
+		autoWidth: false,
+	})
+	
 	 
 
 

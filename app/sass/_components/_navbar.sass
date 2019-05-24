@@ -70,13 +70,12 @@
 		z-index: 10
 		transition: transform .25s ease
 		.panel-head
-			padding: 24px 16px 8px 16px
+			padding: 24px 16px
 		.panel-content
-			padding-left: 20px
-			padding-right: 20px
+			padding: 0 16px
 			.baron
-				margin: 0 -20px
-				width: calc(100% + 40px)
+				margin: 0 -16px
+				width: calc(100% + 32px)
 				.list
 					padding-bottom: 40px
 					li .link
@@ -110,7 +109,7 @@
 		flex-direction: column
 		flex: 2
 		flex-shrink: 0
-		padding: 16px 24px 0
+		padding: 16px 24px
 		.list
 			// Общие стили для ссылок в навигации панели
 			li
@@ -139,7 +138,8 @@
 				color: var(--white)
 				transition: color .25s ease, background-color .25s ease
 		.form
-			padding: 16px 24px
+			padding-left: 16px
+			padding-right: 16px
 		.sect
 			.text
 				max-width: 440px

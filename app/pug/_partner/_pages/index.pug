@@ -120,8 +120,60 @@
 					.btn-wrap.mt-sm
 						a.btn.btn-green.btn-outline.wm-sm(href='#') Зарегистрировать
 
+#jq-page-transactions-control.remove-this-wrapper-on-prod.is-active
+	.main-head.mb-md.pt-xs
+		.main-head-title
+			h2.h2 Управление счетами
 
-#jq-page-ref-cards.remove-this-wrapper-on-prod.is-active
+	table.table.stroke-lines.datatables.jq-datatables
+		thead
+			tr.fz-xs.ttu.ls.c-medium-grey
+				th номер
+				th Назавание
+				th Тип
+				th Владелец
+				th(data-class-name="t-right") Остаток
+				th(data-class-name="t-right") Дебет
+				th(data-class-name="t-right") Кредит
+				th(data-class-name="t-right") Валюта
+				th(data-class-name="col-btn t-right")
+		tbody.h6.c-dark-grey.ff-default
+			tr
+				td 50278
+				td Основной счет
+				td Бонусный
+				td Малышева Т. Н.
+				td 13 000,34
+				td 0,00
+				td 24 000,50
+				td ₽ (руб)
+				td 
+					.btn-wrap
+						.btn.wm-xs.c-dark-grey Основной
+			tr
+				td 71999
+				td Кредитный счет «Вертера Банк»
+				td Бонусный
+				td Надервель К. А.
+				td 768,28
+				td 700,28
+				td 68,00
+				td $ (usd)
+				td
+					.btn-wrap
+						a.btn.btn-green.btn-outline.wm-xs.jq-btnSelect(href='#') Сделать основным
+	.main-footer
+		.link-wrap
+			a.link.link-main.link-go(href='#jq-page-create-transaction')
+				span.link-icon
+					span.corner.corner-outline.sz-sm.c-green
+						i.ic.ic-plus
+				span.link-text.h6.c-dark-grey Создать новый счет
+		.btn-wrap.ml-auto
+			a.btn.btn-green.btn-outline.wm-md(href='#jq-page-transactions-operations') Просмотр операций по счетам
+
+// Внутренние
+#jq-page-transactions-operations.remove-this-wrapper-on-prod
 	.main-head.mb-md.pt-xs
 		.row.no-gutters
 			a.link.link-main.link-go(href='#')
@@ -138,7 +190,7 @@
 						span.link-text Фильтр
 						span.link-icon
 							i.ic.ic-filter.h3
-	table.table.stroke-lines.datatables
+	table#refCardsTable.table.stroke-lines.datatables
 		thead
 			tr.fz-xs.ttu.ls.c-medium-grey
 				th номер
@@ -151,6 +203,46 @@
 				th
 		tbody.h6.c-dark-grey.ff-default
 
-
+#jq-page-create-transaction.remove-this-wrapper-on-prod
+	.main-head.mb-sm.pt-xs
+		.row.no-gutters
+			a.link.link-main.link-go(href='#')
+				.link-icon
+					.circle.circle-outline.sz-lg
+						i.ic.ic-angle-left
+				span.link-text.h6.c-dark-grey Назад
+		.row.no-gutters
+			.main-head-title.w-100
+				h2.h2 Создать новый счет
+	.profile
+		.profile-edit
+			form.form(action='#', autocomplete='off')
+				.form-group
+					label.form-group-label.w-100(for='nameTransaction') название счета
+					.input-group.w-100
+						input#nameTransaction.form-control(type='text')
+				.form-group
+					label.form-group-label.w-100(for='typeTransaction') Тип счета
+					.input-group.w-100
+						select#typeTransaction.form-control.jq-select
+							option(value='Основной') Основной
+							option(value='Россия 1') Россия 1
+							option(value='Россия 2') Россия 2
+							option(value='Россия 3') Россия 3
+							option(value='Россия 4') Россия 4
+							option(value='Россия 5') Россия 5
+				.form-group
+					label.form-group-label.w-100(for='currTransaction') Выберите вылюту
+					.input-group.w-100
+						select#currTransaction.form-control.jq-select
+							option(value='₽ (Рублевый)') ₽ (Рублевый)
+							option(value='Россия 1') Россия 1
+							option(value='Россия 2') Россия 2
+							option(value='Россия 3') Россия 3
+							option(value='Россия 4') Россия 4
+							option(value='Россия 5') Россия 5
+				.form-btn.double-col.mt-lg
+					button.btn.btn-green.btn-outline.wm-md(type='submit') Создать
+					button.btn.btn-red.btn-outline.wm-md(type='button') Отмена
 
 include ../../_share/_partials/UI
