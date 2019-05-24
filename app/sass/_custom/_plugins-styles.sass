@@ -1,6 +1,7 @@
 .hamburger
 	line-height: 0
 	padding: 2px
+	transition: none
 .hamburger-box
 	width: 20px
 	height: 20px
@@ -8,8 +9,10 @@
 	width: 100%
 	height: 1px
 	background-color: var(--main)
+	transition: background-color .25s ease
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
 	background-color: var(--main)
+	transition: background-color .25s ease
 .hamburger.is-active:hover, .hamburger:hover
 	opacity: 1
 .hamburger-inner:before
@@ -270,3 +273,65 @@ select.jq-select
 						margin-right: 8px
 				&-text
 					color: var(--dark-grey)
+
+// --------------------------------------------------
+//                DateTable styles
+// --------------------------------------------------
+table.dataTable thead td, table.dataTable thead th
+	padding: 0
+	border-bottom: none
+	padding-bottom: 12px
+table.dataTable tfoot th, table.dataTable thead th
+	font-weight: 500
+table.dataTable tbody td, table.dataTable tbody th
+	padding: 8px 0
+table.dataTable tbody tr
+	background-color: transparent
+table.dataTable.no-footer
+	border-bottom: none
+table.dataTable tbody td.details-control .btn
+	width: 32px
+	height: 32px
+	line-height: 32px
+	padding: 0
+table.dataTable tbody td.details-control .btn .ic
+	font-size: 6px
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting
+	background: none
+	position: relative
+	&:after
+		content: '\e926'
+		position: absolute
+		display: inline-block
+		vertical-align: middle
+		font-size: 5px
+		color: var(--medium-grey)
+		margin-left: 5px
+		top: 4px
+		transition: .25s ease
+		font-family: vertera!important;
+		speak: none;
+		font-style: normal;
+		font-weight: 400;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+table.dataTable thead .sorting:after
+	opacity: 0
+table.dataTable thead .sorting_desc:after
+	transform: scaleY(-1)
+	top: 5px
+
+table.dataTable tbody tr.shown td
+	border-bottom-color: transparent
+table.dataTable .details-row .details-container thead th
+	padding-top: 4px
+table.dataTable .details-row .details-container tbody td
+	padding-top: 0
+	border-bottom: none
+table.dataTable .details-row
+	table-layout: fixed !important

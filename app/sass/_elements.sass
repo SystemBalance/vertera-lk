@@ -208,22 +208,28 @@ button.btn
 		&:hover
 			@media only screen and (min-width: 1025px)
 				background-color: var(--green)
-		&.is-selected
-			color: var(--white)
-			background-color: var(--green)
 		&.btn-outline
 			color: var(--dark-grey)
 			border-color: var(--green)
 			&:after
 				background-color: var(--green)
 			&:focus
-				color: var(--white)
+				color: var(--dark-grey)
 				border-color: var(--green)
+				background-color: transparent
 			&:hover
 				color: var(--dark-grey)
 				@media only screen and (min-width: 1025px)
 					color: var(--white)
 					border-color: var(--medium-grey)
+		&.is-selected
+			color: var(--white)
+			background-color: var(--green)
+			border-color: var(--green)
+			&:hover, &:focus, &:active
+				color: var(--white)
+				background-color: var(--green)
+				border-color: var(--green)
 	&-red
 		background-color: var(--red)
 		color: var(--white)

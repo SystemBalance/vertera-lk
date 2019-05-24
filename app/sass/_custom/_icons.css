@@ -23,6 +23,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-dt-angle-down:before {
+  content: "\e926";
+}
 .ic-cross-tip:before {
   content: "\e923";
 }

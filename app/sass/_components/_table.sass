@@ -1,13 +1,20 @@
 .table
 	width: 100%
-	table
-		width: 100%
-		thead, tbody
-			th, td
-				vertical-align: middle
-		thead tr th
-			padding-bottom: 8px
-			font-weight: 500
-		tbody
-			font-family: "Ptrootui", sans-serif
-			font-weight: normal
+	
+table
+	width: 100%
+	table-layout: auto
+	border-collapse: collapse
+	thead, tbody
+		th, td
+			vertical-align: middle
+	thead tr th
+		padding-bottom: 12px
+		font-weight: 500
+	tbody
+		font-family: "Ptrootui", sans-serif
+		font-weight: normal
+		table
+			table-layout: fixed
+
+			

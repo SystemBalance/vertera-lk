@@ -27,7 +27,7 @@
 				.tile-info-title.c-main.h6 https://os.verteraorganic.com/ref_cards.php
 			.tile-tip.c-medium-grey.fz-sm Скопировано в буфер!
 
-#jq-page-ref-cards.remove-this-wrapper-on-prod.is-active
+#jq-page-ref-cards.remove-this-wrapper-on-prod
 	.main-head.align-items-center.mb-md.pt-xs
 		.main-head-title
 			h2.h2 Рефералка в кармане
@@ -55,7 +55,7 @@
 						th наименование Товара
 						th Количество
 						th
-				tbody.h6.c-dark-grey
+				tbody.h6.c-dark-grey.ff-default
 					tr
 						td 1504590
 						td 01/05/2019
@@ -89,7 +89,7 @@
 						th Фио партнера
 						th Дата регистрации
 						th
-				tbody.h6.c-dark-grey
+				tbody.h6.c-dark-grey.ff-default
 					tr
 						td 309 666 153 42
 						td 01/05/2019
@@ -119,7 +119,37 @@
 							button.btn.btn-green.btn-outline.w-sm(type='submit') Проверить
 					.btn-wrap.mt-sm
 						a.btn.btn-green.btn-outline.wm-sm(href='#') Зарегистрировать
-					
+
+
+#jq-page-ref-cards.remove-this-wrapper-on-prod.is-active
+	.main-head.mb-md.pt-xs
+		.row.no-gutters
+			a.link.link-main.link-go(href='#')
+				.link-icon
+					.circle.circle-outline.sz-lg
+						i.ic.ic-angle-left
+				span.link-text.h6.c-dark-grey Назад
+		.row.no-gutters.align-items-center
+			.main-head-title
+				h2.h2 Операции по счетам
+			.main-head-info
+				.btn-wrap
+					a.link.h6.jq-togglePanel(href='#', data-panel='jq-transactions-filter', data-target='aside', data-action='open')
+						span.link-text Фильтр
+						span.link-icon
+							i.ic.ic-filter.h3
+	table.table.stroke-lines.datatables
+		thead
+			tr.fz-xs.ttu.ls.c-medium-grey
+				th номер
+				th Дата
+				th Тип
+				th(data-class-name="t-right") Со счета
+				th(data-class-name="t-right") На счет
+				th(data-class-name="t-right") Сумма
+				th(data-class-name="t-right") Валюта
+				th
+		tbody.h6.c-dark-grey.ff-default
 
 
 

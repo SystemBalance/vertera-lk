@@ -48,7 +48,6 @@
                           <dd><a class="link" href="#">Управление счетами</a></dd>
                           <dd><a class="link" href="#">Бинар</a></dd>
                           <dd><a class="link" href="#">Структура</a></dd>
-                          <dd><a class="link" href="#">Список клиентов</a></dd>
                           <dd><a class="link" href="#">Прайс-листы</a></dd>
                         </dl>
                         <dl class="list list-nav">
@@ -197,7 +196,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="remove-this-wrapper-on-prod is-active" id="jq-page-ref-cards">
+                  <div class="remove-this-wrapper-on-prod" id="jq-page-ref-cards">
                     <div class="main-head align-items-center mb-md pt-xs">
                       <div class="main-head-title">
                         <h2 class="h2">Рефералка в кармане</h2>
@@ -224,7 +223,7 @@
                               <th></th>
                             </tr>
                           </thead>
-                          <tbody class="h6 c-dark-grey">
+                          <tbody class="h6 c-dark-grey ff-default">
                             <tr>
                               <td>1504590</td>
                               <td>01/05/2019</td>
@@ -265,7 +264,7 @@
                               <th></th>
                             </tr>
                           </thead>
-                          <tbody class="h6 c-dark-grey">
+                          <tbody class="h6 c-dark-grey ff-default">
                             <tr>
                               <td>309 666 153 42</td>
                               <td>01/05/2019</td>
@@ -308,6 +307,37 @@
                         </div>
                       </div>
                     </section>
+                  </div>
+                  <div class="remove-this-wrapper-on-prod is-active" id="jq-page-ref-cards">
+                    <div class="main-head mb-md pt-xs">
+                      <div class="row no-gutters"><a class="link link-main link-go" href="#">
+                          <div class="link-icon">
+                            <div class="circle circle-outline sz-lg"><i class="ic ic-angle-left"></i></div>
+                          </div><span class="link-text h6 c-dark-grey">Назад</span></a></div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="main-head-title">
+                          <h2 class="h2">Операции по счетам</h2>
+                        </div>
+                        <div class="main-head-info">
+                          <div class="btn-wrap"><a class="link h6 jq-togglePanel" href="#" data-panel="jq-transactions-filter" data-target="aside" data-action="open"><span class="link-text">Фильтр</span><span class="link-icon"><i class="ic ic-filter h3"></i></span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <table class="table stroke-lines datatables">
+                      <thead>
+                        <tr class="fz-xs ttu ls c-medium-grey">
+                          <th>номер</th>
+                          <th>Дата</th>
+                          <th>Тип</th>
+                          <th data-class-name="t-right">Со счета</th>
+                          <th data-class-name="t-right">На счет</th>
+                          <th data-class-name="t-right">Сумма</th>
+                          <th data-class-name="t-right">Валюта</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody class="h6 c-dark-grey ff-default"></tbody>
+                    </table>
                   </div>
                   <div class="remove-this-wrapper-on-prod" id="jq-page-styleGuide">
                     <div class="main-head mb-md">
@@ -622,6 +652,89 @@
               </div>
             </div>
           </div>
+          <div class="page-aside">
+            <div class="panel panel-toggle panel-aside" id="jq-transactions-filter">
+              <div class="panel-head">
+                <div class="title h2 c-dark-grey">Фильтр</div><a class="hamburger hamburger--spin is-active jq-togglePanel" href="#" data-action="close"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
+              </div>
+              <div class="panel-content">
+                <!-- Контейнер для стилизации скролла-->
+                <div class="baron baron__root baron__clipper _simple">
+                  <div class="baron__scroller">
+                    <!-- Your content here-->
+                    <form class="form" action="#" autocomplete="off">
+                      <div class="form-group">
+                        <label class="form-group-label w-100" for="numberField1">Номер</label>
+                        <div class="input-group w-100">
+                          <input class="form-control" id="numberField1" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group-label w-100" for="numberField">Дата создания</label>
+                        <div class="input-group input-group-double w-100">
+                          <div class="form-custom form-datepicker w-half">
+                            <input class="form-control jq-datepicker" type="text" data-position="bottom right" placeholder="от">
+                          </div>
+                          <div class="form-custom form-datepicker w-half">
+                            <input class="form-control jq-datepicker" type="text" data-position="bottom right" placeholder="до">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group-label w-100" for="countryField8">Статус</label>
+                        <div class="input-group w-100">
+                          <select class="form-control jq-select" id="countryField8">
+                            <option value="Россия">Россия</option>
+                            <option value="Россия 1">Россия 1</option>
+                            <option value="Россия 2">Россия 2</option>
+                            <option value="Россия 3">Россия 3</option>
+                            <option value="Россия 4">Россия 4</option>
+                            <option value="Россия 5">Россия 5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group-label w-100" for="cityField3">С счета</label>
+                        <div class="input-group w-100">
+                          <select class="form-control jq-select" id="cityField3">
+                            <option value="Москва">Москва</option>
+                            <option value="Москва 1">Москва 1</option>
+                            <option value="Москва 2">Москва 2</option>
+                            <option value="Москва 3">Москва 3</option>
+                            <option value="Москва 4">Москва 4</option>
+                            <option value="Москва 5">Москва 5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-group-label w-100" for="cityField3">на счет</label>
+                        <div class="input-group w-100">
+                          <select class="form-control jq-select" id="cityField3">
+                            <option value="Москва">Москва</option>
+                            <option value="Москва 1">Москва 1</option>
+                            <option value="Москва 2">Москва 2</option>
+                            <option value="Москва 3">Москва 3</option>
+                            <option value="Москва 4">Москва 4</option>
+                            <option value="Москва 5">Москва 5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-btn offset-top btn-wrap">
+                        <button class="btn btn-green btn-outline w-100" type="submit">Применить</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="baron__track">
+                    <div class="baron__control baron__up">▲</div>
+                    <div class="baron__free">
+                      <div class="baron__bar"></div>
+                    </div>
+                    <div class="baron__control baron__down">▼</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
     <!-- SVG нужны для страниц с загруглением объектов (используется как путь)-->
     <!-- CornerRadius-->
@@ -652,6 +765,8 @@
     <script src="libs/hc-sticky-master/dist/hc-sticky.js"></script>
     <script src="libs/Polyfills/ArrayFrom.js"></script>
     <script src="libs/clipboard.js-master/dist/clipboard.min.js"></script>
+    <script src="libs/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="libs/DataTables/Responsive-2.2.2/js/dataTables.responsive.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=edc7c9fd-3fc1-483f-95f1-3d4a4704b78a&amp;lang=ru_RU"></script>
     <script src="js/ymaps.js"></script>
