@@ -245,7 +245,7 @@
 					button.btn.btn-green.btn-outline.wm-md(type='submit') Создать
 					button.btn.btn-red.btn-outline.wm-md(type='button') Отмена
 
-#jq-page-tree-sponsor.remove-this-wrapper-on-prod.is-active
+#jq-page-tree-sponsor.remove-this-wrapper-on-prod
 	.main-head.mb-md.pt-xs
 		.main-head-title
 			h2.h2 Дерево спонсора
@@ -253,6 +253,7 @@
 	.d-flex.align-items-center.pb-md
 		.h6.ff-default.c-dark-grey Найдено человек: 2
 		.ml-auto.fz-sm.c-medium-grey Расчет данных на 26/04/2019 20:16:00
+	
 	table.table.table-lg.datatables.jq-datatables
 		thead
 			tr.fz-xs.ttu.ls.c-medium-grey
@@ -296,5 +297,37 @@
 				td 312,02
 				td 123 000,00
 
+#jq-page-price-list.remove-this-wrapper-on-prod.is-active
+	.main-head.mb-md.pt-xs
+		.main-head-title
+			h2.h2 Прайс-листы
+	.tiles.dark-theme
+		a.tile(href="#")
+			span.tile-icon
+				i.lang-flag.flag-ru
+			span.tile-info.ls
+				span.tile-info-title.c-main.h5.ls Российская Федерация
+				span.tile-info-subtitle.c-medium-grey.ttu.fz-xs 4 прайс-листа
+		
+		a.tile(href="#")
+			span.tile-icon
+				i.lang-flag.flag-kazakh
+			span.tile-info.ls
+				span.tile-info-title.c-main.h5.ls Казахстан
+				span.tile-info-subtitle.c-medium-grey.ttu.fz-xs 2 прайс-листа
+
+		a.tile(href="#")
+			span.tile-icon
+				i.lang-flag.flag-kyrgyz
+			span.tile-info.ls
+				span.tile-info-title.c-main.h5.ls Киргизия
+				span.tile-info-subtitle.c-medium-grey.ttu.fz-xs 3 прайс-листа
+
+		a.tile(href="#")
+			span.tile-icon
+				i.lang-flag.flag-bel
+			span.tile-info.ls
+				span.tile-info-title.c-main.h5.ls Республика Беларусь
+				span.tile-info-subtitle.c-medium-grey.ttu.fz-xs 4 прайс-листа
 
 include ../../_share/_partials/UI

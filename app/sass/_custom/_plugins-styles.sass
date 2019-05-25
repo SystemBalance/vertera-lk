@@ -5,11 +5,14 @@
 .hamburger-box
 	width: 20px
 	height: 20px
+.hamburger--spin .hamburger-inner,
+.hamburger--spin .hamburger-inner:before,
+.hamburger--spin .hamburger-inner:after,
+	transition: background-color .25s ease
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
 	width: 100%
 	height: 1px
 	background-color: var(--main)
-	transition: background-color .25s ease
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
 	background-color: var(--main)
 	transition: background-color .25s ease

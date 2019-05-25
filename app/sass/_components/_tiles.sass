@@ -5,7 +5,8 @@
 	margin-left: -24px
 	width: calc(100% + 24px)
 	.tile
-		width: 240px
+		width: calc(100% / 4 - 24px)
+		max-width: 240px
 		height: 200px
 		display: flex
 		flex-direction: column
@@ -59,6 +60,9 @@
 				margin-bottom: 16px
 			.ic
 				transition: color .25s ease
+			.lang-flag
+				width: inherit
+				height: inherit
 		&-add
 			border: none
 			.tile-image
@@ -130,3 +134,24 @@
 			border-color: var(--yellow)
 			background-color: var(--yellow)
 			box-shadow: 0px 8px 32px rgba(0, 56, 71, 0.1), 0px 12px 16px rgba(0, 35, 55, 0.048)
+
+
+
+
+
+
+
+// --------------------------------------------------
+//                      MEDIA
+// --------------------------------------------------
+@media only screen and (max-width : 1299px)
+	.tiles .tile
+		width: calc(100% / 3 - 24px)
+		max-width: none
+@media only screen and (max-width : 1023px)
+	.tiles .tile
+		width: calc(100% / 2 - 24px)
+		max-width: none
+@media only screen and (max-width : 767px)
+	.tiles .tile
+		width: 240px
