@@ -283,8 +283,13 @@ table.dataTable thead td, table.dataTable thead th
 	padding-bottom: 12px
 table.dataTable tfoot th, table.dataTable thead th
 	font-weight: 500
+	padding-right: 10px
+	&:last-child
+		padding-right: 0
 table.dataTable tbody td, table.dataTable tbody th
 	padding: 8px 0
+table.table-lg.dataTable tbody td
+	padding: 16px 0
 table.dataTable tbody tr
 	background-color: transparent
 table.dataTable.no-footer
@@ -304,13 +309,13 @@ table.dataTable thead .sorting
 	white-space: nowrap
 	&:after
 		content: '\e926'
-		position: relative
+		position: absolute
 		display: inline-block
 		vertical-align: middle
 		font-size: 5px
 		color: var(--medium-grey)
 		margin-left: 5px
-		top: -2px
+		top: 4px
 		font-family: vertera!important;
 		speak: none;
 		font-style: normal;
@@ -324,7 +329,7 @@ table.dataTable thead .sorting:after
 	display: none
 table.dataTable thead .sorting_desc:after
 	transform: scaleY(-1)
-	top: -1px
+	top: 5px
 table.dataTable, table.dataTable td, table.dataTable th
 	box-sizing: border-box
 table.dataTable tbody tr.shown td

@@ -120,7 +120,7 @@
 					.btn-wrap.mt-sm
 						a.btn.btn-green.btn-outline.wm-sm(href='#') Зарегистрировать
 
-#jq-page-transactions-control.remove-this-wrapper-on-prod.is-active
+#jq-page-transactions-control.remove-this-wrapper-on-prod
 	.main-head.mb-md.pt-xs
 		.main-head-title
 			h2.h2 Управление счетами
@@ -244,5 +244,57 @@
 				.form-btn.double-col.mt-lg
 					button.btn.btn-green.btn-outline.wm-md(type='submit') Создать
 					button.btn.btn-red.btn-outline.wm-md(type='button') Отмена
+
+#jq-page-tree-sponsor.remove-this-wrapper-on-prod.is-active
+	.main-head.mb-md.pt-xs
+		.main-head-title
+			h2.h2 Дерево спонсора
+
+	.d-flex.align-items-center.pb-md
+		.h6.ff-default.c-dark-grey Найдено человек: 2
+		.ml-auto.fz-sm.c-medium-grey Расчет данных на 26/04/2019 20:16:00
+	table.table.table-lg.stroke-lines.datatables.jq-datatables
+		thead
+			tr.fz-xs.ttu.ls.c-medium-grey
+				th Участник
+				th Спонсор
+				th Уровень
+				th ФИО
+				th Ранг
+				th ОК
+				th РК
+				th(data-class-name="t-right") BPV
+				th(data-class-name="t-right") ГО BVP
+				th(data-class-name="t-right") CVP
+				th(data-class-name="t-right") ГО PK
+				th(data-class-name="t-right") ГО OK
+		tbody.fz-sm.c-dark-grey.ff-default
+			tr
+				td 122758
+				td 1919
+				td 2
+				td Константинопльский К. К.
+				td Красный Бриллиант 3 карата
+				td Изумруд
+				td Рубин
+				td 27,18
+				td 44 138,30
+				td 0,00
+				td 245,00
+				td 51 000,00
+			tr
+				td 122758
+				td 2234
+				td 3
+				td Надервель К. А.
+				td Черный Бриллиант 2 карата
+				td Гранат
+				td Бриллиант
+				td 20,15
+				td 32 220,30
+				td 0,00
+				td 312,02
+				td 123 000,00
+
 
 include ../../_share/_partials/UI
