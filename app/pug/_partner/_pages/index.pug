@@ -302,32 +302,155 @@
 		.main-head-title
 			h2.h2 Прайс-листы
 	.tiles.dark-theme
-		a.tile(href="#")
+		a.tile(href="#jq-page-price-rf")
 			span.tile-icon
 				i.lang-flag.flag-ru
 			span.tile-info.ls
 				span.tile-info-title.c-main.h5.ls Российская Федерация
 				span.tile-info-subtitle.c-medium-grey.ttu.fz-xs 4 прайс-листа
 		
-		a.tile(href="#")
+		a.tile(href="#jq-page-price-rf")
 			span.tile-icon
 				i.lang-flag.flag-kazakh
 			span.tile-info.ls
 				span.tile-info-title.c-main.h5.ls Казахстан
 				span.tile-info-subtitle.c-medium-grey.ttu.fz-xs 2 прайс-листа
 
-		a.tile(href="#")
+		a.tile(href="#jq-page-price-rf")
 			span.tile-icon
 				i.lang-flag.flag-kyrgyz
 			span.tile-info.ls
 				span.tile-info-title.c-main.h5.ls Киргизия
 				span.tile-info-subtitle.c-medium-grey.ttu.fz-xs 3 прайс-листа
 
-		a.tile(href="#")
+		a.tile(href="#jq-page-price-rf")
 			span.tile-icon
 				i.lang-flag.flag-bel
 			span.tile-info.ls
 				span.tile-info-title.c-main.h5.ls Республика Беларусь
 				span.tile-info-subtitle.c-medium-grey.ttu.fz-xs 4 прайс-листа
+
+#jq-page-price-rf.remove-this-wrapper-on-prod
+	.main-head.mb-sm.pt-xs
+		.row.no-gutters
+			a.link.link-main.link-go(href='#')
+				.link-icon
+					.circle.circle-outline.sz-lg
+						i.ic.ic-angle-left
+				span.link-text.h6.c-dark-grey Назад
+		.row.no-gutters
+			.main-head-title.w-100
+				h2.h2 Прайс-листы Российская Федерация
+	.docs
+		.docs-list.stroke-lines.offset-lg
+			.item
+				.item-title
+					a.link(href='#jq-page-price-partners')
+						span.link-icon.h2
+							i.ic.ic-file-price
+						span.link-text.h5 Прайс-лист для партнеров
+				.item-controls
+					a.btn.btn-green.btn-outline.h-sm(href='#') Скачать
+			.item
+				.item-title
+					a.link(href='#jq-page-price-partners')
+						span.link-icon.h2
+							i.ic.ic-file-price
+						span.link-text.h5 Прайс-лист для партнеров по акции 2 + 1
+				.item-controls
+					a.btn.btn-green.btn-outline.h-sm(href='#') Скачать
+			.item
+				.item-title
+					a.link(href='#jq-page-price-partners')
+						span.link-icon.h2
+							i.ic.ic-file-price
+						span.link-text.h5 Прайс-лист для партнеров по акции 1 + 1
+				.item-controls
+					a.btn.btn-green.btn-outline.h-sm(href='#') Скачать
+			.item
+				.item-title
+					a.link(href='#jq-page-price-partners')
+						span.link-icon.h2
+							i.ic.ic-file-price
+						span.link-text.h5 Прайс-лист для клиентов
+				.item-controls
+					a.btn.btn-green.btn-outline.h-sm(href='#') Скачать
+
+#jq-page-price-partners.remove-this-wrapper-on-prod
+	.main-head.mb-sm.pt-xs
+		.row.no-gutters
+			a.link.link-main.link-go(href='#')
+				.link-icon
+					.circle.circle-outline.sz-lg
+						i.ic.ic-angle-left
+				span.link-text.h6.c-dark-grey Назад
+		.row.no-gutters
+			.main-head-title.w-100
+				h2.h2 Прайс-лист для партнеров
+	table.table.table-lg.datatables.jq-datatables
+		thead
+			tr.fz-xs.ttu.ls.c-medium-grey
+				th Артикул
+				th Наименование продукции
+				th(data-class-name="t-right") Цена, ₽
+				th(data-class-name="t-right") Только CPV
+				th(data-class-name="t-right") Только BPV
+				th(data-class-name="t-right") CPV + BPV
+				th(data-class-name="t-right") В упаковке
+		tbody.h6.c-dark-grey.ff-default
+			tr
+				td 700
+				td Вертера Гель
+				td 1 600
+				td 18
+				td 8,98
+				td 30,00 +50,00
+				td 8 шт х 7 шт по 5 гр
+			tr
+				td 701
+				td Пластиковая карта «Рефералка в кармане»
+				td 1 850
+				td 18
+				td 8,98
+				td 30,00 +50,00
+				td 8 шт х 7 шт по 5 гр
+			tr
+				td 702-704
+				td Вертера Форте со вкусами
+				td 1 850
+				td 18
+				td 8,98
+				td 30,00 +50,00
+				td 8 шт х 7 шт по 5 гр
+			tr
+				td 702-704
+				td Вертера Форте со вкусами
+				td 1 850
+				td 18
+				td 8,98
+				td 30,00 +50,00
+				td 8 шт х 7 шт по 5 гр
+			tr
+				td 702-704
+				td Вертера Форте со вкусами
+				td 1 850
+				td 18
+				td 8,98
+				td 30,00 +50,00
+				td 8 шт х 7 шт по 5 гр
+			tr
+				td 702-704
+				td Вертера Форте со вкусами
+				td 1 850
+				td 18
+				td 8,98
+				td 30,00 +50,00
+				td 8 шт х 7 шт по 5 гр
+	.main-footer
+		.btn-wrap
+			a.btn.btn-green.btn-outline.w-lg(href='#') Скачать прайс-лист		
+				
+
+
 
 include ../../_share/_partials/UI

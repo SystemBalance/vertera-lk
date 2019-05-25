@@ -23,6 +23,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+.ic-file-price:before {
+  content: "\e928";
+}
 .ic-dt-angle-down:before {
   content: "\e926";
 }
