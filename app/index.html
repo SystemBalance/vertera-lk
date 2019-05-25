@@ -211,7 +211,7 @@
                           <h3 class="h3">Купленные карты</h3><span class="circle f-stroke sz-md h6 c-medium-grey">2</span>
                         </div>
                       </div>
-                      <div class="table stroke-lines">
+                      <div class="table">
                         <table>
                           <thead>
                             <tr class="fz-xs ttu ls c-medium-grey">
@@ -252,7 +252,7 @@
                           <h3 class="h3">Мои карты</h3><span class="circle f-stroke sz-md h6 c-medium-grey">1</span>
                         </div>
                       </div>
-                      <div class="table stroke-lines">
+                      <div class="table">
                         <table>
                           <thead>
                             <tr class="fz-xs ttu ls c-medium-grey">
@@ -313,7 +313,7 @@
                         <h2 class="h2">Управление счетами</h2>
                       </div>
                     </div>
-                    <table class="table stroke-lines datatables jq-datatables">
+                    <table class="table datatables jq-datatables">
                       <thead>
                         <tr class="fz-xs ttu ls c-medium-grey">
                           <th>номер</th>
@@ -379,7 +379,7 @@
                         </div>
                       </div>
                     </div>
-                    <table class="table stroke-lines datatables" id="refCardsTable">
+                    <table class="table datatables" id="refCardsTable">
                       <thead>
                         <tr class="fz-xs ttu ls c-medium-grey">
                           <th>номер</th>
@@ -460,7 +460,7 @@
                       <div class="h6 ff-default c-dark-grey">Найдено человек: 2</div>
                       <div class="ml-auto fz-sm c-medium-grey">Расчет данных на 26/04/2019 20:16:00</div>
                     </div>
-                    <table class="table table-lg stroke-lines datatables jq-datatables">
+                    <table class="table table-lg datatables jq-datatables">
                       <thead>
                         <tr class="fz-xs ttu ls c-medium-grey">
                           <th>Участник</th>
@@ -536,6 +536,92 @@
                             <div class="item-controls"><a class="btn btn-white btn-outline" href="#">В каталог</a></div>
                           </div>
                         </div>
+                      </div>
+                      <div class="_table"><br>
+                        <h3 class="h3 w-100 pb-sm">Default Table</h3>
+                        <table class="table datatables jq-datatables">
+                          <thead>
+                            <tr class="fz-xs ttu ls c-medium-grey">
+                              <th>Номер заказа</th>
+                              <th>Дата создания</th>
+                              <th>Адрес получения</th>
+                              <th>Сумма</th>
+                              <th>Статус</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody class="h6 c-dark-grey ff-default">
+                            <tr>
+                              <td>1516076</td>
+                              <td>24/04/19</td>
+                              <td>Санкт-Петербург, пр-т Кости Константинольского, 15, оф. 16</td>
+                              <td>2 800 ₽</td>
+                              <td>Новый</td>
+                              <td class="t-right">
+                                <div class="btn-wrap"><a class="btn btn-green btn-outline wm-xs" href="#">Редактировать</a></div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>1516076</td>
+                              <td>24/04/19</td>
+                              <td>Москва, ул. Кабанбай батыра, 97, оф. 18</td>
+                              <td>5 146 ₽</td>
+                              <td>Выполнен</td>
+                              <td class="t-right">
+                                <div class="btn-wrap"><a class="btn btn-green btn-outline wm-xs" href="#">Повторить заказ</a></div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table><br>
+                        <h3 class="h3 w-100 pb-sm">Table-lg with large padding and small font-size</h3>
+                        <table class="table table-lg datatables jq-datatables">
+                          <thead>
+                            <tr class="fz-xs ttu ls c-medium-grey">
+                              <th>Участник</th>
+                              <th>Спонсор</th>
+                              <th>Уровень</th>
+                              <th>ФИО</th>
+                              <th>Ранг</th>
+                              <th>ОК</th>
+                              <th>РК</th>
+                              <th data-class-name="t-right">BPV</th>
+                              <th data-class-name="t-right">ГО BVP</th>
+                              <th data-class-name="t-right">CVP</th>
+                              <th data-class-name="t-right">ГО PK</th>
+                              <th data-class-name="t-right">ГО OK</th>
+                            </tr>
+                          </thead>
+                          <tbody class="fz-sm c-dark-grey ff-default">
+                            <tr>
+                              <td>122758</td>
+                              <td>1919</td>
+                              <td>2</td>
+                              <td>Константинопльский К. К.</td>
+                              <td>Красный Бриллиант 3 карата</td>
+                              <td>Изумруд</td>
+                              <td>Рубин</td>
+                              <td>27,18</td>
+                              <td>44 138,30</td>
+                              <td>0,00</td>
+                              <td>245,00</td>
+                              <td>51 000,00</td>
+                            </tr>
+                            <tr>
+                              <td>122758</td>
+                              <td>2234</td>
+                              <td>3</td>
+                              <td>Надервель К. А.</td>
+                              <td>Черный Бриллиант 2 карата</td>
+                              <td>Гранат</td>
+                              <td>Бриллиант</td>
+                              <td>20,15</td>
+                              <td>32 220,30</td>
+                              <td>0,00</td>
+                              <td>312,02</td>
+                              <td>123 000,00</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div class="_search"><br>
                         <h3 class="h3 w-100">Tabs Inline</h3>

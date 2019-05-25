@@ -30,6 +30,83 @@
 					.item-subtitle.fz-sm Все новинки в нашем каталоге
 					.item-controls
 						a.btn.btn-white.btn-outline(href='#') В каталог
+		._table
+			br
+			h3.h3.w-100.pb-sm Default Table
+			table.table.datatables.jq-datatables
+				thead
+					tr.fz-xs.ttu.ls.c-medium-grey
+						th Номер заказа
+						th Дата создания
+						th Адрес получения
+						th Сумма
+						th Статус
+						th
+				tbody.h6.c-dark-grey.ff-default
+					tr
+						td 1516076
+						td 24/04/19
+						td Санкт-Петербург, пр-т Кости Константинольского, 15, оф. 16
+						td 2 800 ₽
+						td Новый
+						td.t-right
+							.btn-wrap
+								a.btn.btn-green.btn-outline.wm-xs(href='#') Редактировать
+					tr
+						td 1516076
+						td 24/04/19
+						td Москва, ул. Кабанбай батыра, 97, оф. 18
+						td 5 146 ₽
+						td Выполнен
+						td.t-right
+							.btn-wrap
+								a.btn.btn-green.btn-outline.wm-xs(href='#') Повторить заказ
+
+			br
+			h3.h3.w-100.pb-sm Table-lg with large padding and small font-size
+			table.table.table-lg.datatables.jq-datatables
+				thead
+					tr.fz-xs.ttu.ls.c-medium-grey
+						th Участник
+						th Спонсор
+						th Уровень
+						th ФИО
+						th Ранг
+						th ОК
+						th РК
+						th(data-class-name="t-right") BPV
+						th(data-class-name="t-right") ГО BVP
+						th(data-class-name="t-right") CVP
+						th(data-class-name="t-right") ГО PK
+						th(data-class-name="t-right") ГО OK
+				tbody.fz-sm.c-dark-grey.ff-default
+					tr
+						td 122758
+						td 1919
+						td 2
+						td Константинопльский К. К.
+						td Красный Бриллиант 3 карата
+						td Изумруд
+						td Рубин
+						td 27,18
+						td 44 138,30
+						td 0,00
+						td 245,00
+						td 51 000,00
+					tr
+						td 122758
+						td 2234
+						td 3
+						td Надервель К. А.
+						td Черный Бриллиант 2 карата
+						td Гранат
+						td Бриллиант
+						td 20,15
+						td 32 220,30
+						td 0,00
+						td 312,02
+						td 123 000,00
+			
 		._search
 			br
 			h3.h3.w-100 Tabs Inline

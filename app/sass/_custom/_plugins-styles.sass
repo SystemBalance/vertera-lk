@@ -277,21 +277,24 @@ select.jq-select
 // --------------------------------------------------
 //                DateTable styles
 // --------------------------------------------------
-table.dataTable thead td, table.dataTable thead th
+table.dataTable tbody td
+	padding: 8px 0
+table.dataTable thead th
 	padding: 0
+	padding-bottom: 8px
+table.table-lg.dataTable tbody td
+	padding: 16px 0
+
+
+table.dataTable tbody tr
+	background-color: transparent
+table.dataTable thead td, table.dataTable thead th
 	border-bottom: none
-	padding-bottom: 12px
 table.dataTable tfoot th, table.dataTable thead th
 	font-weight: 500
 	padding-right: 10px
 	&:last-child
 		padding-right: 0
-table.dataTable tbody td, table.dataTable tbody th
-	padding: 8px 0
-table.table-lg.dataTable tbody td
-	padding: 16px 0
-table.dataTable tbody tr
-	background-color: transparent
 table.dataTable.no-footer
 	border-bottom: none
 table.dataTable tbody td.details-control .btn
