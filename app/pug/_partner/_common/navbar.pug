@@ -2,7 +2,7 @@
 .panel-head
 	a.logo(href='#')
 		img.logo-img(src='img/logo.svg', alt='Vertera')
-	.lang.jq-togglePanel(data-action='open')
+	.lang.jq-togglePanel(data-target='panelLang')
 		.link
 			span.link-icon
 				i.lang-flag.flag-ru
@@ -48,7 +48,7 @@
 		dl.list.list-nav
 			dt.list-title.fz-xs.ttu Профиль
 			dd
-				a.link(href='#') Личные данные
+				a.link(href='#jq-page-profile') Личные данные
 			dd
 				a.link(href='#')
 					| Сообщения 

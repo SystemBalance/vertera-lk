@@ -24,7 +24,9 @@
 }
 
 
-
+.ic-add:before {
+  content: "\e929";
+}
 .ic-file-price:before {
   content: "\e928";
 }

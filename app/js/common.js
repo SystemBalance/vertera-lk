@@ -75,11 +75,10 @@ $(document).ready(function () {
 
 		// Скрываем все страницы
 		$('[id^="jq-page-"]').removeClass('is-active')
+		// Скрываем открытую боковую панель
+		closeAllPanel()
 
-		// Найдем на открыв. странице кнопку назад
-		// если она есть, изменим ей ссылку
-		// console.log(currentPage)
-		
+	
 		if ( $(href).find('.link-go').exists() ) {
 			$(href).find('.main-head .link-go').attr('href', '#' + currentPage)
 		}
@@ -188,37 +187,39 @@ $(document).ready(function () {
 	$(document).stop(true).on('click', '.jq-togglePanel', function (e) {
 		e.preventDefault()
 		const panel = $(this).closest('.panel')
+		const targetPanel = $(this).attr('data-target')
+		const action = $(this).attr('data-action')
 		const dataPanel = $(this).attr('data-panel')
 
-		const typePanel =
-			(panel.hasClass('panel-aside-info') || $(this).attr('data-target') === 'aside-info') ? 'aside-info' :
-			(panel.hasClass('panel-aside') || $(this).attr('data-target') === 'aside') ? 'aside' :
-			'panel'
-		
-		const action = $(this).attr('data-action')
-		togglePanel(typePanel, action)
-		if (dataPanel) {
-			$('.page-aside .panel').hide()
-			$('#' + dataPanel).show()
+		// Обработчик для любой кнопки закрытия в панели
+		if (!targetPanel && action === 'close') {
+			closeAllPanel()
+			return 
+		}
+
+		// Если панель должна выезжать (как слева)
+		if ($('#' + targetPanel).hasClass('panel-toggle')) {
+			$('.page').addClass('panel-open')
+			$('#' + targetPanel).addClass('is-open')
+		} else { // Если aside (правая) панель
+			openAsidePanel($('#' + targetPanel))
 		}
 	})
 
-	function togglePanel(typePanel, action) {
-		let className
-		if (typePanel === 'aside-info') {
-			className = 'aside-open w-lg'
-		} else if (typePanel === 'aside') {
-			className = typePanel + '-open'
+	function openAsidePanel(panel) {
+		console.log(panel)
+		$('.page-aside .panel').hide()
+		panel.show()
+		if ( panel.hasClass('panel-lg') ) {
+			$('.page').addClass('aside-lg-open')
 		} else {
-			className = 'panel-open'
+			$('.page').addClass('aside-open')
 		}
-		console.log(className)
+	}
 
-		if (action === 'open') {
-			$('.page').addClass(className)
-		} else if (action === 'close') {
-			$('.page').removeClass(className)
-		}
+	function closeAllPanel() {
+		$('.page').removeClass('panel-open aside-open aside-lg-open')
+		$('.panel-toggle').removeClass('is-open')
 	}
 
 	// --------------------------------------------------

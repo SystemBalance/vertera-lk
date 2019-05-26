@@ -1,6 +1,7 @@
 mixin aside(user)
-	if user === 'client'
-		include ../../_client/_common/aside
-	else
-		include ../../_partner/_common/aside
+	.page-aside
+		if user === 'client'
+			include ../../_client/_common/aside
+		else
+			include ../../_partner/_common/aside
 	

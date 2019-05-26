@@ -1,11 +1,46 @@
 .profile
 	.user
 		display: flex
-		align-items: flex-start
 		flex-wrap: wrap
 		&-avatar
-			margin-right: 64px
-			margin-top: 8px
+			display: block
+			max-width: 200px
+			&.is-edit
+				.corner
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						background-color: rgba(38, 38, 38, 0.42)
+						border-radius: 86px
+						z-index: 1
+						transition: opacity .25s ease
+					&:after
+						content: '\e904'
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						width: 46px
+						height: 46px
+						font-size: 46px
+						color: var(--white)
+						font-family: vertera!important
+						speak: none
+						font-style: normal
+						font-weight: 400
+						font-variant: normal
+						text-transform: none
+						line-height: 1
+						-webkit-font-smoothing: antialiased
+						-moz-osx-font-smoothing: grayscale
+						z-index: 2
+					&:hover 
+						&:before
+							opacity: 0.8
 	&-edit
 		margin-top: 24px
 		.form

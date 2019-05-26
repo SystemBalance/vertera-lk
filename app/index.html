@@ -28,7 +28,7 @@
                     <!-- Your content here-->
                     <!-- Your content here-->
                     <div class="panel-head"><a class="logo" href="#"><img class="logo-img" src="img/logo.svg" alt="Vertera"></a>
-                      <div class="lang jq-togglePanel" data-action="open">
+                      <div class="lang jq-togglePanel" data-target="panelLang">
                         <div class="link"><span class="link-icon"><i class="lang-flag flag-ru"></i></span></div>
                       </div>
                     </div>
@@ -58,7 +58,7 @@
                         </dl>
                         <dl class="list list-nav">
                           <dt class="list-title fz-xs ttu">Профиль</dt>
-                          <dd><a class="link" href="#">Личные данные</a></dd>
+                          <dd><a class="link" href="#jq-page-profile">Личные данные</a></dd>
                           <dd><a class="link" href="#">Сообщения <span class="circle c-white f-red sz-sm fz-xs">2</span></a></dd>
                           <dd><a class="link" href="#">Контакты</a></dd>
                           <dd><a class="link" href="#">Настройки</a></dd>
@@ -95,7 +95,7 @@
                   </div>
                 </div>
               </div>
-              <div class="panel panel-toggle">
+              <div class="panel panel-toggle" id="panelLang">
                 <div class="panel-head">
                   <div class="title h3 c-dark-grey">Выбор языка</div><a class="hamburger hamburger--spin is-active jq-togglePanel" href="#" data-action="close"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
                 </div>
@@ -202,7 +202,7 @@
                       </div>
                       <div class="main-head-info h6">
                         <div class="link-wrap"><a class="link link-main" href="#"><span class="link-icon h5"><i class="ic ic-credit-card"></i></span><span class="link-text">Что такое Vcard?</span></a></div>
-                        <div class="link-wrap"><a class="link link-main jq-togglePanel" href="#" data-panel="jq-panel-info" data-target="aside-info" data-action="open"><span class="link-icon h5"><i class="ic ic-tip"></i></span><span class="link-text">Как это работает</span></a></div>
+                        <div class="link-wrap"><a class="link link-main jq-togglePanel" href="#" data-target="jq-panel-info"><span class="link-icon h5"><i class="ic ic-tip"></i></span><span class="link-text">Как это работает</span></a></div>
                       </div>
                     </div>
                     <section class="sect mt-xs">
@@ -375,7 +375,7 @@
                           <h2 class="h2">Операции по счетам</h2>
                         </div>
                         <div class="main-head-info">
-                          <div class="btn-wrap"><a class="link h6 jq-togglePanel" href="#" data-panel="jq-transactions-filter" data-target="aside" data-action="open"><span class="link-text">Фильтр</span><span class="link-icon"><i class="ic ic-filter h3"></i></span></a></div>
+                          <div class="btn-wrap"><a class="link link-filter h6 jq-togglePanel" href="#" data-target="jq-transactions-filter"><span class="link-text">Фильтр</span><span class="link-icon"><i class="ic ic-filter h3"></i></span></a></div>
                         </div>
                       </div>
                     </div>
@@ -509,7 +509,7 @@
                       </tbody>
                     </table>
                   </div>
-                  <div class="remove-this-wrapper-on-prod is-active" id="jq-page-price-list">
+                  <div class="remove-this-wrapper-on-prod" id="jq-page-price-list">
                     <div class="main-head mb-md pt-xs">
                       <div class="main-head-title">
                         <h2 class="h2">Прайс-листы</h2>
@@ -633,6 +633,117 @@
                     </table>
                     <div class="main-footer">
                       <div class="btn-wrap"><a class="btn btn-green btn-outline w-lg" href="#">Скачать прайс-лист		</a></div>
+                    </div>
+                  </div>
+                  <div class="remove-this-wrapper-on-prod is-active" id="jq-page-profile">
+                    <div class="main-head mb-md">
+                      <div class="main-head-title">
+                        <h2 class="h2">Личные данные</h2>
+                      </div>
+                    </div>
+                    <div class="profile">
+                      <div class="profile-user">
+                        <div class="user">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-3">
+                                <div class="user-avatar">
+                                  <div class="corner">
+                                    <svg version="1.1" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                      <image x="0" y="0" width="200" height="200" clip-path="url(#cornerRadius)" style="image-rendering:optimizeQuality" preserveAspectRatio="none" xlink:href="img/user-photo.png"></image>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div class="user-info">
+                                  <ul class="list">
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">ФИО</span><span class="item-text h4 c-dark-grey ls">Куклачёва Маргарита Аристарховна</span></li>
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Дата рождения</span><span class="item-text h4 c-dark-grey ls">28 декабря 1991 года</span></li>
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Пол</span><span class="item-text h4 c-dark-grey ls">Женский</span></li>
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Семейное положение</span><span class="item-text h4 c-dark-grey ls">Замужем</span></li>
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Язык</span><span class="item-text h4 c-dark-grey ls">Русский</span></li>
+                                  </ul>
+                                  <div class="btn-wrap mt-lg"><a class="btn btn-green btn-outline wm-sm" href="#jq-page-profile-edit">Редактировать</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="remove-this-wrapper-on-prod" id="jq-page-profile-edit">
+                    <div class="main-head mb-md pt-xs">
+                      <div class="row no-gutters"><a class="link link-main link-go" href="#">
+                          <div class="link-icon">
+                            <div class="circle circle-outline sz-lg"><i class="ic ic-angle-left"></i></div>
+                          </div><span class="link-text h6 c-dark-grey">Назад</span></a></div>
+                      <div class="row no-gutters">
+                        <div class="main-head-title w-100">
+                          <h2 class="h2">Редактировать профиль</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile">
+                      <div class="profile-user">
+                        <div class="user">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-3">
+                                <div class="user-avatar is-edit"><a class="corner" href="#">
+                                    <svg version="1.1" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                      <image x="0" y="0" width="200" height="200" clip-path="url(#cornerRadius)" style="image-rendering:optimizeQuality" preserveAspectRatio="none" xlink:href="img/user-photo.png"></image>
+                                    </svg></a>
+                                  <p class="w-100 mt-md fz-sm c-medium-grey">Рекомендуем размер изображения 500х500 px. Перетащите фотографию или выберите с компьютера</p>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="user-info">
+                                  <form class="form" action="#" autocomplete="off">
+                                    <div class="form-group">
+                                      <label class="form-group-label w-100" for="patronymicEdit">Фамилия</label>
+                                      <div class="input-group w-100">
+                                        <input class="form-control" id="patronymicEdit" type="text" value="Куклачева">
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="form-group-label w-100" for="nameEdit">Имя</label>
+                                      <div class="input-group w-100">
+                                        <input class="form-control" id="nameEdit" type="text" value="Маргарита">
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="form-group-label w-100" for="surnameEdit">Отчество</label>
+                                      <div class="input-group w-100">
+                                        <input class="form-control" id="surnameEdit" type="text" value="Александровна">
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="form-group-label w-100" for="sexEdit">Пол</label>
+                                      <div class="input-group w-100">
+                                        <select class="form-control jq-select" id="sexEdit">
+                                          <option value="Женский" selected="true">Женский</option>
+                                          <option value="Мужской">Мужской</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="form-group-label w-100" for="birthdayEdit">Дата рождения</label>
+                                      <div class="input-group w-100">
+                                        <div class="form-custom form-datepicker">
+                                          <input class="form-control jq-datepicker" id="birthdayEdit" type="text" data-view="years" data-position="bottom right" value="28.12.1988">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <div class="btn-wrap mt-lg"><a class="btn btn-green btn-outline wm-sm" href="#">Сохранить</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="remove-this-wrapper-on-prod" id="jq-page-styleGuide">
@@ -814,9 +925,11 @@
                               <input class="form-control" id="sg-passField" type="email">
                             </div>
                           </div>
-                          <div class="form-custom form-check">
-                            <input class="form-check-input form-custom-input" id="sg-defaultCheck1" type="checkbox">
-                            <label class="form-check-label form-custom-label h6" for="sg-defaultCheck1">Сделать основной почтой</label>
+                          <div class="form-group mt-md">
+                            <div class="form-custom form-check">
+                              <input class="form-check-input form-custom-input" id="sg-defaultCheck1" type="checkbox">
+                              <label class="form-check-label form-custom-label h6" for="sg-defaultCheck1">Сделать основной почтой</label>
+                            </div>
                           </div>
                           <div class="form-btn double-col mt-lg">
                             <button class="btn btn-green btn-outline wm-md" type="submit">Сохранить</button>
@@ -999,8 +1112,8 @@
               </div>
             </div>
           </div>
-          <div class="page-aside w-lg">
-            <div class="panel panel-aside" id="jq-panel-info">
+          <div class="page-aside">
+            <div class="panel panel-lg" id="jq-panel-info">
               <div class="panel-head">
                 <div class="title h2 c-dark-grey">Как пользоваться разделом</div><a class="hamburger hamburger--spin is-active jq-togglePanel" href="#" data-action="close"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
               </div>
@@ -1009,16 +1122,16 @@
                 <div class="baron baron__root baron__clipper _simple">
                   <div class="baron__scroller">
                     <!-- Your content here-->
-                    <section class="sect mb-lg">
-                      <h3 class="h3 w-100 mb-xs">Купленные карты</h3>
+                    <section class="sect mb-lg c-medium-grey">
+                      <h3 class="h3 w-100 mb-xs c-dark-grey">Купленные карты</h3>
                       <p class="text h6 pre-line">В этой секции отоброжаются все заказы, содержащие покупку карт и количество купленных карт</p>
                     </section>
-                    <section class="sect mb-lg">
-                      <h3 class="h3 w-100 mb-xs">Мои карты</h3>
+                    <section class="sect mb-lg c-medium-grey">
+                      <h3 class="h3 w-100 mb-xs c-dark-grey">Мои карты</h3>
                       <p class="text h6 pre-line">В этой секции отображаются все ваши карты и их состояние.</p>
                     </section>
-                    <section class="sect mb-lg">
-                      <h3 class="h3 w-100 mb-xs">Новые карты</h3>
+                    <section class="sect mb-lg c-medium-grey">
+                      <h3 class="h3 w-100 mb-xs c-dark-grey">Новые карты</h3>
                       <p class="text h6 pre-line">В этой секции вы можете добавить номера новых карт. <br><br>Для этого Вам нужно внести номера карт в поля (по одной карте в поле), нажать кнопку «Проверить» и если результат положительный, нажать кнопку «Зарегистрировать»</p>
                     </section>
                     <div class="btn-wrap"><a class="btn btn-green btn-outline wm-xs jq-togglePanel" href="#" data-action="close">Закрыть</a></div>
@@ -1033,9 +1146,7 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="page-aside">
-            <div class="panel panel-toggle panel-aside" id="jq-transactions-filter">
+            <div class="panel" id="jq-transactions-filter">
               <div class="panel-head">
                 <div class="title h2 c-dark-grey">Фильтр</div><a class="hamburger hamburger--spin is-active jq-togglePanel" href="#" data-action="close"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
               </div>

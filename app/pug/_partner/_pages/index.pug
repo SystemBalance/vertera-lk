@@ -37,7 +37,7 @@
 					span.link-icon.h5: i.ic.ic-credit-card
 					span.link-text Что такое Vcard?
 			.link-wrap
-				a.link.link-main.jq-togglePanel(href="#", data-panel="jq-panel-info", data-target="aside-info", data-action="open")
+				a.link.link-main.jq-togglePanel(href="#", data-target="jq-panel-info")
 					span.link-icon.h5: i.ic.ic-tip
 					span.link-text Как это работает
 
@@ -186,7 +186,7 @@
 				h2.h2 Операции по счетам
 			.main-head-info
 				.btn-wrap
-					a.link.h6.jq-togglePanel(href='#', data-panel='jq-transactions-filter', data-target='aside', data-action='open')
+					a.link.link-filter.h6.jq-togglePanel(href='#', data-target='jq-transactions-filter')
 						span.link-text Фильтр
 						span.link-icon
 							i.ic.ic-filter.h3
@@ -297,7 +297,7 @@
 				td 312,02
 				td 123 000,00
 
-#jq-page-price-list.remove-this-wrapper-on-prod.is-active
+#jq-page-price-list.remove-this-wrapper-on-prod
 	.main-head.mb-md.pt-xs
 		.main-head-title
 			h2.h2 Прайс-листы
@@ -450,7 +450,89 @@
 		.btn-wrap
 			a.btn.btn-green.btn-outline.w-lg(href='#') Скачать прайс-лист		
 				
+#jq-page-profile.remove-this-wrapper-on-prod.is-active
+	.main-head.mb-md
+		.main-head-title
+			h2.h2 Личные данные
+	.profile
+		.profile-user
+			.user
+				.container: .row
+					.col-3
+						.user-avatar
+							.corner
+								svg(version='1.1', width='200', height='200', viewBox='0 0 200 200', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+									image(x='0', y='0', width='200', height='200', clip-path='url(#cornerRadius)', style='image-rendering:optimizeQuality', preserveAspectRatio='none', xlink:href='img/user-photo.png')
+					.col-5
+						.user-info
+							ul.list
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu ФИО
+									span.item-text.h4.c-dark-grey.ls Куклачёва Маргарита Аристарховна
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu Дата рождения
+									span.item-text.h4.c-dark-grey.ls 28 декабря 1991 года
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu Пол
+									span.item-text.h4.c-dark-grey.ls Женский
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu Семейное положение
+									span.item-text.h4.c-dark-grey.ls Замужем
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu Язык
+									span.item-text.h4.c-dark-grey.ls Русский
+							.btn-wrap.mt-lg
+								a.btn.btn-green.btn-outline.wm-sm(href='#jq-page-profile-edit') Редактировать
 
+#jq-page-profile-edit.remove-this-wrapper-on-prod
+	.main-head.mb-md.pt-xs
+		.row.no-gutters
+			a.link.link-main.link-go(href='#')
+				.link-icon
+					.circle.circle-outline.sz-lg
+						i.ic.ic-angle-left
+				span.link-text.h6.c-dark-grey Назад
+		.row.no-gutters
+			.main-head-title.w-100
+				h2.h2 Редактировать профиль
+	.profile
+		.profile-user
+			.user
+				.container: .row
+					.col-3
+						.user-avatar.is-edit
+							a(href="#").corner
+								svg(version='1.1', width='200', height='200', viewBox='0 0 200 200', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+									image(x='0', y='0', width='200', height='200', clip-path='url(#cornerRadius)', style='image-rendering:optimizeQuality', preserveAspectRatio='none', xlink:href='img/user-photo.png')
+							p.w-100.mt-md.fz-sm.c-medium-grey Рекомендуем размер изображения 500х500 px. Перетащите фотографию или выберите с компьютера
+					.col-4
+						.user-info
+							form.form(action='#', autocomplete='off')
+								.form-group
+									label.form-group-label.w-100(for='patronymicEdit') Фамилия
+									.input-group.w-100
+										input#patronymicEdit.form-control(type='text', value='Куклачева')
+								.form-group
+									label.form-group-label.w-100(for='nameEdit') Имя
+									.input-group.w-100
+										input#nameEdit.form-control(type='text', value='Маргарита')
+								.form-group
+									label.form-group-label.w-100(for='surnameEdit') Отчество
+									.input-group.w-100
+										input#surnameEdit.form-control(type='text', value='Александровна')
+								.form-group
+									label.form-group-label.w-100(for='sexEdit') Пол
+									.input-group.w-100
+										select#sexEdit.form-control.jq-select
+											option(value='Женский', selected='true') Женский
+											option(value='Мужской') Мужской
+								.form-group
+									label.form-group-label.w-100(for='birthdayEdit') Дата рождения
+									.input-group.w-100
+										.form-custom.form-datepicker
+											input#birthdayEdit.form-control.jq-datepicker(type='text', data-view="years", data-position='bottom right', value='28.12.1988')
+							.btn-wrap.mt-lg
+								a.btn.btn-green.btn-outline.wm-sm(href='#') Сохранить
 
 
 include ../../_share/_partials/UI

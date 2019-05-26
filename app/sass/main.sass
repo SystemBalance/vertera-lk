@@ -38,34 +38,25 @@ body
 	height: 100vh
 	overflow: hidden
 	position: relative
+	&.panel-open
+		.page-content
+			transform: translateX(224px)
 	&.aside-open
 		.page-content
 			transform: translateX(-276px)
-			.main-head-info .jq-togglePanel
+			.main-head-info .link-filter
 				opacity: 0.5
-		&.w-lg
-			.page-content
-				transform: translateX(-532px)
-	&.panel-open
-		.navbar .panel-toggle, .page-content
-			transform: translateX(224px)
+	&.aside-lg-open
+		.page-content
+			transform: translateX(-532px)
+			
+	
 	&.navbar-is-open
 		.page-navbar
 			transform: translateX(0)
 		.page-content
 			width: calc(100% - 224px)
-	&-aside
-		position: fixed
-		top: 0
-		right: 0
-		width: 276px
-		height: 100vh
-		border-left: 1px solid var(--stroke)
-		z-index: 1
-		.panel
-			border: none
-		&.w-lg
-			width: 532px
+	
 	&-navbar
 		position: absolute
 		top: 0
@@ -136,7 +127,19 @@ body
 			max-width: 100% !important
 	&-navbar, &-content
 		transition: transform .25s ease, width .25s ease
-
+	&-aside
+		position: fixed
+		top: 0
+		right: 0
+		width: auto
+		height: 100vh
+		z-index: 1
+		.panel
+			width: 276px
+			border-right: none
+			border-left: 1px solid var(--stroke)
+			&-lg
+				width: 532px
 
 
 

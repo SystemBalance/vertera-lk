@@ -24,7 +24,7 @@
 				margin-top: 0
 			&-bottom
 				margin-top: auto
-				padding-top: 15px
+				padding-top: 16px
 			&-title
 				display: block
 				width: 100%
@@ -49,9 +49,8 @@
 				.circle
 					margin-left: auto
 		.btn-wrap
-			margin-top: 25px
+			margin-top: 24px
 			margin-bottom: 40px
-
 
 .panel
 	display: flex
@@ -62,6 +61,25 @@
 	border-right: 1px solid var(--stroke)
 	&-main
 		z-index: 11
+		.panel-head
+			padding: 16px
+			padding-left: 24px
+			.logo
+				display: inline-block
+				width: 132px
+				height: 32px
+				margin-right: auto
+				position: relative
+				top: 2px
+			.lang
+				padding: 8px
+				line-height: 0
+		.panel-content
+			padding: 16px 24px
+			.list
+				margin-left: 0
+				margin-right: 0
+				width: 100%
 	&-toggle
 		position: absolute
 		top: 0
@@ -69,34 +87,26 @@
 		border-right: 1px solid var(--stroke)
 		z-index: 10
 		transition: transform .25s ease
+		&.is-open
+			transform: translateX(224px)
+	&-lg
 		.panel-head
-			padding: 24px 16px
+			padding-top: 72px
+			.hamburger
+				position: absolute
+				top: 24px
+				right: 24px
 		.panel-content
-			padding: 0 16px
-			.baron
-				margin: 0 -16px
-				width: calc(100% + 32px)
-				.list
-					padding-bottom: 40px
-					li .link
-						padding: 0 16px
+			.sect
+				.text
+					max-width: 440px
+	
 	&-head
 		display: flex
 		align-items: center
-		padding: 16px 24px
-		padding-right: 16px
 		background-color: #fff
 		flex-shrink: 0
-		.logo
-			display: inline-block
-			width: 132px
-			height: 32px
-			margin-right: auto
-			position: relative
-			top: 2px
-		.lang
-			padding: 8px
-			line-height: 0
+		padding: 24px 16px
 		.title
 			flex: 2
 			margin-right: auto
@@ -109,9 +119,13 @@
 		flex-direction: column
 		flex: 2
 		flex-shrink: 0
-		padding: 16px 24px
+		.baron .baron__scroller
+			padding: 0 16px
 		.list
 			// Общие стили для ссылок в навигации панели
+			margin-left: -16px
+			margin-right: -16px	
+			width: calc(100% + 32px)
 			li
 				&:last-child .link
 					margin-bottom: 0
@@ -119,6 +133,7 @@
 					display: flex
 					align-items: center
 					margin-bottom: 8px
+					padding: 0 16px
 					&-icon
 						padding: 8px
 			.link
@@ -137,23 +152,9 @@
 				background-color: var(--main)
 				color: var(--white)
 				transition: color .25s ease, background-color .25s ease
-		.form
-			padding-left: 16px
-			padding-right: 16px
-		.sect
-			.text
-				max-width: 440px
 	.baron
 		&._dragging .list li .link:hover
 			color: var(--main)
 			background-color: #fff !important
 		.baron__track
 			bottom: 40px
-
-.page-aside.w-lg
-	.panel-head
-		padding-top: 72px
-	.panel-head .hamburger
-		position: absolute
-		top: 24px
-		right: 24px

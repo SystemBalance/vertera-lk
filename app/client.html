@@ -81,7 +81,7 @@
                   </div>
                 </div>
               </div>
-              <div class="panel panel-toggle">
+              <div class="panel panel-toggle" id="panelLang">
                 <div class="panel-head">
                   <div class="title h3 c-dark-grey">Выбор языка</div><a class="hamburger hamburger--spin is-active jq-togglePanel" href="#" data-action="close"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
                 </div>
@@ -451,22 +451,30 @@
                     <div class="profile">
                       <div class="profile-user">
                         <div class="user">
-                          <div class="user-avatar">
-                            <div class="corner">
-                              <svg version="1.1" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <image x="0" y="0" width="200" height="200" clip-path="url(#cornerRadius)" style="image-rendering:optimizeQuality" preserveAspectRatio="none" xlink:href="img/user-photo.png"></image>
-                              </svg>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-3">
+                                <div class="user-avatar">
+                                  <div class="corner">
+                                    <svg version="1.1" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                      <image x="0" y="0" width="200" height="200" clip-path="url(#cornerRadius)" style="image-rendering:optimizeQuality" preserveAspectRatio="none" xlink:href="img/user-photo.png"></image>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div class="user-info">
+                                  <ul class="list">
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">ФИО</span><span class="item-text h4 c-dark-grey ls">Куклачёва Маргарита Аристарховна</span></li>
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Дата рождения</span><span class="item-text h4 c-dark-grey ls">28 декабря 1991 года</span></li>
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Пол</span><span class="item-text h4 c-dark-grey ls">Женский</span></li>
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Семейное положение</span><span class="item-text h4 c-dark-grey ls">Замужем</span></li>
+                                    <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Язык</span><span class="item-text h4 c-dark-grey ls">Русский</span></li>
+                                  </ul>
+                                  <div class="btn-wrap mt-lg"><a class="btn btn-green btn-outline wm-sm" href="#">Редактировать</a></div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="user-info">
-                            <ul class="list">
-                              <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">ФИО</span><span class="item-text h4 c-dark-grey ls">Куклачёва Маргарита Аристарховна</span></li>
-                              <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Дата рождения</span><span class="item-text h4 c-dark-grey ls">28 декабря 1991 года</span></li>
-                              <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Пол</span><span class="item-text h4 c-dark-grey ls">Женский</span></li>
-                              <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Семейное положение</span><span class="item-text h4 c-dark-grey ls">Замужем</span></li>
-                              <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Язык</span><span class="item-text h4 c-dark-grey ls">Русский</span></li>
-                            </ul>
-                            <div class="btn-wrap mt-lg"><a class="btn btn-green btn-outline wm-sm" href="#jq-page-edit-pass">Редактировать</a></div>
                           </div>
                         </div>
                       </div>
@@ -553,9 +561,11 @@
                               <input class="form-control" id="codeField" type="text" placeholder="Код из СМС">
                             </div>
                           </div>
-                          <div class="form-custom form-check">
-                            <input class="form-check-input form-custom-input" id="defaultCheck1" type="checkbox">
-                            <label class="form-check-label form-custom-label h6" for="defaultCheck1">Сделать основной почтой</label>
+                          <div class="form-group mt-md">
+                            <div class="form-custom form-check">
+                              <input class="form-check-input form-custom-input" id="defaultCheck1" type="checkbox">
+                              <label class="form-check-label form-custom-label h6" for="defaultCheck1">Сделать основной почтой</label>
+                            </div>
                           </div>
                           <div class="form-btn double-col mt-lg">
                             <button class="btn btn-green btn-outline wm-md" type="submit">Сохранить</button>
@@ -601,9 +611,11 @@
                               <input class="form-control" id="codeField2" type="text" placeholder="Код из СМС">
                             </div>
                           </div>
-                          <div class="form-custom form-check">
-                            <input class="form-check-input form-custom-input" id="defaultCheck2" type="checkbox">
-                            <label class="form-check-label form-custom-label h6" for="defaultCheck2">Сделать основным номером</label>
+                          <div class="form-group mt-md">
+                            <div class="form-custom form-check">
+                              <input class="form-check-input form-custom-input" id="defaultCheck2" type="checkbox">
+                              <label class="form-check-label form-custom-label h6" for="defaultCheck2">Сделать основным номером</label>
+                            </div>
                           </div>
                           <div class="form-btn double-col mt-lg">
                             <button class="btn btn-green btn-outline wm-md" type="submit">Сохранить</button>
@@ -971,7 +983,7 @@
                           <h2 class="h2">Пункт выдачи</h2>
                         </div>
                         <div class="main-head-info">
-                          <div class="btn-wrap"><a class="link h6 jq-togglePanel" href="#" data-panel="jq-points-filter" data-target="aside" data-action="open"><span class="link-text">Фильтр</span><span class="link-icon"><i class="ic ic-filter h3"></i></span></a></div>
+                          <div class="btn-wrap"><a class="link link-filter h6 jq-togglePanel" href="#" data-target="jq-points-filter"><span class="link-text">Фильтр</span><span class="link-icon"><i class="ic ic-filter h3"></i></span></a></div>
                         </div>
                       </div>
                     </div>
@@ -1257,7 +1269,7 @@
                         <h2 class="h2">История заказов</h2>
                       </div>
                       <div class="main-head-info">
-                        <div class="btn-wrap"><a class="link h6 jq-togglePanel" href="#" data-panel="jq-orders-filter" data-target="aside" data-action="open"><span class="link-text">Фильтр</span><span class="link-icon"><i class="ic ic-filter h3"></i></span></a></div>
+                        <div class="btn-wrap"><a class="link link-filter h6 jq-togglePanel" href="#" data-target="jq-orders-filter"><span class="link-text">Фильтр</span><span class="link-icon"><i class="ic ic-filter h3"></i></span></a></div>
                       </div>
                     </div>
                     <div class="table">
@@ -2363,9 +2375,11 @@
                               <input class="form-control" id="sg-passField" type="email">
                             </div>
                           </div>
-                          <div class="form-custom form-check">
-                            <input class="form-check-input form-custom-input" id="sg-defaultCheck1" type="checkbox">
-                            <label class="form-check-label form-custom-label h6" for="sg-defaultCheck1">Сделать основной почтой</label>
+                          <div class="form-group mt-md">
+                            <div class="form-custom form-check">
+                              <input class="form-check-input form-custom-input" id="sg-defaultCheck1" type="checkbox">
+                              <label class="form-check-label form-custom-label h6" for="sg-defaultCheck1">Сделать основной почтой</label>
+                            </div>
                           </div>
                           <div class="form-btn double-col mt-lg">
                             <button class="btn btn-green btn-outline wm-md" type="submit">Сохранить</button>
@@ -2375,7 +2389,7 @@
                       </div>
                       <div class="_tiles"><br>
                         <h3 class="h3 w-100">Tiles</h3>
-                        <div class="tiles tiles-lg dark-theme mt-sm mb-sm"><a class="tile" href="#"><span class="tile-icon c-green sz-lg"><i class="ic ic-science"></i></span><span class="tile-info ls"><span class="tile-info-title c-main h5">Научная документация</span><span class="tile-info-pretitle c-medium-grey ttu fz-xs">25 документов</span></span></a><a class="tile" href="#"><span class="tile-icon c-green sz-lg"><i class="ic ic-product"></i></span><span class="tile-info ls"><span class="tile-info-title c-main h5">Документы на продукцию</span><span class="tile-info-pretitle c-medium-grey ttu fz-xs">340 документов</span></span></a><a class="tile" href="#"><span class="tile-icon c-green sz-lg"><i class="ic ic-law"></i></span><span class="tile-info ls"><span class="tile-info-title c-main h5">Документы для юрлиц</span><span class="tile-info-pretitle c-medium-grey ttu fz-xs">144 документа</span></span></a></div>
+                        <div class="tiles tiles-lg dark-theme mt-sm mb-sm"><a class="tile" href="#"><span class="tile-icon c-green sz-lg"><i class="ic ic-science"></i></span><span class="tile-info ls"><span class="tile-info-title c-main h5">Научная документация</span><span class="tile-info-subtitle c-medium-grey ttu fz-xs">25 документов</span></span></a><a class="tile" href="#"><span class="tile-icon c-green sz-lg"><i class="ic ic-product"></i></span><span class="tile-info ls"><span class="tile-info-title c-main h5">Документы на продукцию</span><span class="tile-info-subtitle c-medium-grey ttu fz-xs">340 документов</span></span></a><a class="tile" href="#"><span class="tile-icon c-green sz-lg"><i class="ic ic-law"></i></span><span class="tile-info ls"><span class="tile-info-title c-main h5">Документы для юрлиц</span><span class="tile-info-subtitle c-medium-grey ttu fz-xs">144 документа</span></span></a></div>
                         <div class="tiles tiles-lg dark-theme mt-sm mb-sm">
                           <div class="tile" data-clipboard-text="https://os.verteraorganic.com/reg/?ref=1919">
                             <div class="tile-icon c-main sz-sm"><i class="ic ic-link"></i></div>
@@ -2549,7 +2563,7 @@
             </div>
           </div>
           <div class="page-aside">
-            <div class="panel panel-toggle panel-aside" id="jq-orders-filter">
+            <div class="panel" id="jq-orders-filter">
               <div class="panel-head">
                 <div class="title h2 c-dark-grey">Фильтр</div><a class="hamburger hamburger--spin is-active jq-togglePanel" href="#" data-action="close"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
               </div>
@@ -2603,7 +2617,7 @@
                         </div>
                       </div>
                       <div class="form-btn mt-lg btn-wrap">
-                        <button class="btn btn-green btn-outline w-100" type="submit">Применить</button>
+                        <button class="btn btn-green btn-outline w-100 jq-togglePanel" type="submit" data-action="close">Применить</button>
                       </div>
                     </form>
                   </div>
@@ -2617,7 +2631,7 @@
                 </div>
               </div>
             </div>
-            <div class="panel panel-toggle panel-aside" id="jq-points-filter">
+            <div class="panel" id="jq-points-filter">
               <div class="panel-head">
                 <div class="title h2 c-dark-grey">Фильтр</div><a class="hamburger hamburger--spin is-active jq-togglePanel" href="#" data-action="close"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a>
               </div>
@@ -2660,7 +2674,7 @@
                         </div>
                       </div>
                       <div class="form-btn mt-lg btn-wrap">
-                        <button class="btn btn-green btn-outline w-100" type="submit">Применить</button>
+                        <button class="btn btn-green btn-outline w-100 jq-togglePanel" type="submit" data-action="close">Применить</button>
                       </div>
                     </form>
                   </div>

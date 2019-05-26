@@ -357,29 +357,33 @@
 	.profile
 		.profile-user
 			.user
-				.user-avatar
-					.corner
-						svg(version='1.1', width='200', height='200', viewBox='0 0 200 200', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-							image(x='0', y='0', width='200', height='200', clip-path='url(#cornerRadius)', style='image-rendering:optimizeQuality', preserveAspectRatio='none', xlink:href='img/user-photo.png')
-				.user-info
-					ul.list
-						li.item
-							span.item-name.fz-xs.c-medium-grey.ls.ttu ФИО
-							span.item-text.h4.c-dark-grey.ls Куклачёва Маргарита Аристарховна
-						li.item
-							span.item-name.fz-xs.c-medium-grey.ls.ttu Дата рождения
-							span.item-text.h4.c-dark-grey.ls 28 декабря 1991 года
-						li.item
-							span.item-name.fz-xs.c-medium-grey.ls.ttu Пол
-							span.item-text.h4.c-dark-grey.ls Женский
-						li.item
-							span.item-name.fz-xs.c-medium-grey.ls.ttu Семейное положение
-							span.item-text.h4.c-dark-grey.ls Замужем
-						li.item
-							span.item-name.fz-xs.c-medium-grey.ls.ttu Язык
-							span.item-text.h4.c-dark-grey.ls Русский
-					.btn-wrap.mt-lg
-						a.btn.btn-green.btn-outline.wm-sm(href='#jq-page-edit-pass') Редактировать
+				.container: .row
+					.col-3
+						.user-avatar
+							.corner
+								svg(version='1.1', width='200', height='200', viewBox='0 0 200 200', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+									image(x='0', y='0', width='200', height='200', clip-path='url(#cornerRadius)', style='image-rendering:optimizeQuality', preserveAspectRatio='none', xlink:href='img/user-photo.png')
+					.col-5
+						.user-info
+							ul.list
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu ФИО
+									span.item-text.h4.c-dark-grey.ls Куклачёва Маргарита Аристарховна
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu Дата рождения
+									span.item-text.h4.c-dark-grey.ls 28 декабря 1991 года
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu Пол
+									span.item-text.h4.c-dark-grey.ls Женский
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu Семейное положение
+									span.item-text.h4.c-dark-grey.ls Замужем
+								li.item
+									span.item-name.fz-xs.c-medium-grey.ls.ttu Язык
+									span.item-text.h4.c-dark-grey.ls Русский
+							.btn-wrap.mt-lg
+								a.btn.btn-green.btn-outline.wm-sm(href='#') Редактировать
+
 #jq-page-settings.remove-this-wrapper-on-prod
 	.main-head.mb-sm.pt-xs
 		.main-head-title
@@ -436,9 +440,10 @@
 					label.form-group-label.w-100(for='codeField') Подтверждение
 					.input-group.w-100
 						input#codeField.form-control(type='text', placeholder='Код из СМС')
-				.form-custom.form-check
-					input#defaultCheck1.form-check-input.form-custom-input(type='checkbox')
-					label.form-check-label.form-custom-label.h6(for='defaultCheck1') Сделать основной почтой
+				.form-group.mt-md
+					.form-custom.form-check
+						input#defaultCheck1.form-check-input.form-custom-input(type='checkbox')
+						label.form-check-label.form-custom-label.h6(for='defaultCheck1') Сделать основной почтой
 				.form-btn.double-col.mt-lg
 					button.btn.btn-green.btn-outline.wm-md(type='submit') Сохранить
 					button.btn.btn-red.btn-outline.wm-md(type='button') Удалить
@@ -470,9 +475,10 @@
 					label.form-group-label.w-100(for='codeField2') Подтверждение
 					.input-group.w-100
 						input#codeField2.form-control(type='text', placeholder='Код из СМС')
-				.form-custom.form-check
-					input#defaultCheck2.form-check-input.form-custom-input(type='checkbox')
-					label.form-check-label.form-custom-label.h6(for='defaultCheck2') Сделать основным номером
+				.form-group.mt-md
+					.form-custom.form-check
+						input#defaultCheck2.form-check-input.form-custom-input(type='checkbox')
+						label.form-check-label.form-custom-label.h6(for='defaultCheck2') Сделать основным номером
 				.form-btn.double-col.mt-lg
 					button.btn.btn-green.btn-outline.wm-md(type='submit') Сохранить
 					button.btn.btn-red.btn-outline.wm-md(type='button') Удалить
@@ -796,7 +802,7 @@
 				h2.h2 Пункт выдачи
 			.main-head-info
 				.btn-wrap
-					a.link.h6.jq-togglePanel(href='#', data-panel='jq-points-filter', data-target='aside', data-action='open')
+					a.link.link-filter.h6.jq-togglePanel(href='#', data-target='jq-points-filter')
 						span.link-text Фильтр
 						span.link-icon
 							i.ic.ic-filter.h3
@@ -1088,7 +1094,7 @@
 			h2.h2 История заказов
 		.main-head-info
 			.btn-wrap
-				a.link.h6.jq-togglePanel(href='#', data-panel='jq-orders-filter', data-target='aside', data-action='open')
+				a.link.link-filter.h6.jq-togglePanel(href='#', data-target='jq-orders-filter')
 					span.link-text Фильтр
 					span.link-icon
 						i.ic.ic-filter.h3
