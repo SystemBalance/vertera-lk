@@ -172,7 +172,6 @@
 		.btn-wrap.ml-auto
 			a.btn.btn-green.btn-outline.wm-md(href='#jq-page-transactions-operations') Просмотр операций по счетам
 
-// Внутренние
 #jq-page-transactions-operations.remove-this-wrapper-on-prod
 	.main-head.mb-md.pt-xs
 		.row.no-gutters
@@ -450,7 +449,7 @@
 		.btn-wrap
 			a.btn.btn-green.btn-outline.w-lg(href='#') Скачать прайс-лист		
 				
-#jq-page-profile.remove-this-wrapper-on-prod.is-active
+#jq-page-profile.remove-this-wrapper-on-prod
 	.main-head.mb-md
 		.main-head-title
 			h2.h2 Личные данные
@@ -533,6 +532,156 @@
 											input#birthdayEdit.form-control.jq-datepicker(type='text', data-view="years", data-position='bottom right', value='28.12.1988')
 							.btn-wrap.mt-lg
 								a.btn.btn-green.btn-outline.wm-sm(href='#') Сохранить
+
+#jq-page-analytics.remove-this-wrapper-on-prod.is-active
+	.main-head.mb-md
+		.main-head-title
+			h2.h2 Аналитика
+	.chart
+		.chart-head
+			.chart-head-filter
+				form.form.form-inline(action='#')
+					.form-group.form-group-inline
+						label.form-group-label(for='countryField4') Расчет за период
+						.input-group.input-group-double
+							.form-custom.form-datepicker.w-half
+								input.form-control.jq-datepicker(type='text', data-position='bottom right', placeholder='от')
+							.form-custom.form-datepicker.w-half
+								input.form-control.jq-datepicker(type='text', data-position='bottom right', placeholder='до')
+			.chart-head-legend
+		.chart-canvas
+			canvas#myChart
+	section.sect.mt-lg
+		.main-head.mb-sm
+			.main-head-title
+				h3.h3 Доходы
+		table.table.table-lg.datatables.jq-datatables
+			thead
+				tr.fz-xs.ttu.ls.c-medium-grey
+					th(class="no-sort")
+					th(class="no-sort") ОК
+					th(data-class-name="t-right no-sort") КАБ
+					th(data-class-name="t-right no-sort") БКБ
+					th(data-class-name="t-right no-sort") ЛБ
+					th(data-class-name="t-right no-sort") LSBB
+					th(data-class-name="t-right no-sort") ИБ
+					th(data-class-name="t-right no-sort") МБЧБ
+					th(data-class-name="t-right no-sort") БТМ
+					th(data-class-name="t-right no-sort") БИКб
+					th(data-class-name="t-right no-sort") ббзп
+					th(data-class-name="t-right no-sort") ББН
+					th(data-class-name="t-right no-sort") итого
+			tbody.fz-sm.c-dark-grey.ff-default
+				tr
+					td Январь 2019
+					td Бриллиант 2 карата
+					td 2 000,00
+					td 865,34
+					td 3 494,23
+					td 727,67
+					td 26,49
+					td 1 148,51
+					td 1 284,37
+					td 13 110,00
+					td 45,72
+					td 0,00
+					td 22 702,33
+				tr
+					td Январь 2019
+					td Бриллиант 2 карата
+					td 2 000,00
+					td 865,34
+					td 3 494,23
+					td 727,67
+					td 26,49
+					td 1 148,51
+					td 1 284,37
+					td 13 110,00
+					td 45,72
+					td 0,00
+					td 22 702,33
+				tr
+					td Январь 2019
+					td Бриллиант 2 карата
+					td 2 000,00
+					td 865,34
+					td 3 494,23
+					td 727,67
+					td 26,49
+					td 1 148,51
+					td 1 284,37
+					td 13 110,00
+					td 45,72
+					td 0,00
+					td 22 702,33
+				tr
+					td Январь 2019
+					td Бриллиант 2 карата
+					td 2 000,00
+					td 865,34
+					td 3 494,23
+					td 727,67
+					td 26,49
+					td 1 148,51
+					td 1 284,37
+					td 13 110,00
+					td 45,72
+					td 0,00
+					td 22 702,33
+				tr
+					td Январь 2019
+					td Бриллиант 2 карата
+					td 2 000,00
+					td 865,34
+					td 3 494,23
+					td 727,67
+					td 26,49
+					td 1 148,51
+					td 1 284,37
+					td 13 110,00
+					td 45,72
+					td 0,00
+					td 22 702,33
+				tr
+					td: b Всего
+					td: b 
+					td: b 6 000,00
+					td: b 1 873,30
+					td: b 8 778,33
+					td: b 1 567,67
+					td: b 99,44
+					td: b 2 790,38
+					td: b 1 284,37
+					td: b 68 830,00
+					td: b 355,72
+					td: b 0,00
+					td: b 90 644,27
+	section.sect.mt-lg
+		.main-head.mb-sm
+			.main-head-title
+				h3.h3 Бинарный бонус за приглашение
+		table.table.table-lg.datatables.jq-datatables
+			thead
+				tr.fz-xs.ttu.ls.c-medium-grey
+					th(class="no-sort")
+					th(class="no-sort") Описание
+					th(data-class-name="t-right no-sort") Сумма
+		
+			tbody.h6.c-dark-grey.ff-default
+				tr
+					td 01/05/2019 в 22:30
+					td Доход за приглашение по заказу №1234 партнера 321
+					td $ 13.25 
+				tr
+					td 01/05/2019 в 22:30
+					td Выплата дохода за приглашение по заказу №312 партнера 124
+					td $ 8.82
+				tr
+					td.h4.ls Итого
+					td 
+					td.h4.ls $ 22.17
+
+			
 
 
 include ../../_share/_partials/UI

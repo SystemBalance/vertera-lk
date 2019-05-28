@@ -1,15 +1,12 @@
 @import "vars"
 @import "fonts"
 @import "libs"
-
 html, body
 	display: block
 	height: 100%
-	
 html
 	font-size: 10px
 	scroll-behavior: smooth
-
 body
 	min-width: 320px
 	font-size: 16px
@@ -49,8 +46,6 @@ body
 	&.aside-lg-open
 		.page-content
 			transform: translateX(-532px)
-			
-	
 	&.navbar-is-open
 		.page-navbar
 			transform: translateX(0)
@@ -135,9 +130,9 @@ body
 		height: 100vh
 		z-index: 1
 		.panel
-			width: 276px
-			border-right: none
 			border-left: 1px solid var(--stroke)
+			border-right: 0
+			width: 276px
 			&-lg
 				width: 532px
 

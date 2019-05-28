@@ -44,7 +44,7 @@
                         <dl class="list list-nav">
                           <dt class="list-title fz-xs ttu">Мой бизнес</dt>
                           <dd><a class="link" href="#">Доход</a></dd>
-                          <dd><a class="link" href="#">Аналитика</a></dd>
+                          <dd><a class="link" href="#jq-page-analytics">Аналитика</a></dd>
                           <dd><a class="link" href="#jq-page-transactions-control">Управление счетами</a></dd>
                           <dd><a class="link" href="#">Бинар</a></dd>
                           <dd><a class="link" href="#jq-page-tree-sponsor">Структура</a></dd>
@@ -363,7 +363,6 @@
                       <div class="btn-wrap ml-auto"><a class="btn btn-green btn-outline wm-md" href="#jq-page-transactions-operations">Просмотр операций по счетам</a></div>
                     </div>
                   </div>
-                  <!-- Внутренние-->
                   <div class="remove-this-wrapper-on-prod" id="jq-page-transactions-operations">
                     <div class="main-head mb-md pt-xs">
                       <div class="row no-gutters"><a class="link link-main link-go" href="#">
@@ -635,7 +634,7 @@
                       <div class="btn-wrap"><a class="btn btn-green btn-outline w-lg" href="#">Скачать прайс-лист		</a></div>
                     </div>
                   </div>
-                  <div class="remove-this-wrapper-on-prod is-active" id="jq-page-profile">
+                  <div class="remove-this-wrapper-on-prod" id="jq-page-profile">
                     <div class="main-head mb-md">
                       <div class="main-head-title">
                         <h2 class="h2">Личные данные</h2>
@@ -745,6 +744,187 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="remove-this-wrapper-on-prod is-active" id="jq-page-analytics">
+                    <div class="main-head mb-md">
+                      <div class="main-head-title">
+                        <h2 class="h2">Аналитика</h2>
+                      </div>
+                    </div>
+                    <div class="chart">
+                      <div class="chart-head">
+                        <div class="chart-head-filter">
+                          <form class="form form-inline" action="#">
+                            <div class="form-group form-group-inline">
+                              <label class="form-group-label" for="countryField4">Расчет за период</label>
+                              <div class="input-group input-group-double">
+                                <div class="form-custom form-datepicker w-half">
+                                  <input class="form-control jq-datepicker" type="text" data-position="bottom right" placeholder="от">
+                                </div>
+                                <div class="form-custom form-datepicker w-half">
+                                  <input class="form-control jq-datepicker" type="text" data-position="bottom right" placeholder="до">
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="chart-head-legend"></div>
+                      </div>
+                      <div class="chart-canvas">
+                        <canvas id="myChart"></canvas>
+                      </div>
+                    </div>
+                    <section class="sect mt-lg">
+                      <div class="main-head mb-sm">
+                        <div class="main-head-title">
+                          <h3 class="h3">Доходы</h3>
+                        </div>
+                      </div>
+                      <table class="table table-lg datatables jq-datatables">
+                        <thead>
+                          <tr class="fz-xs ttu ls c-medium-grey">
+                            <th class="no-sort"></th>
+                            <th class="no-sort">ОК</th>
+                            <th data-class-name="t-right no-sort">КАБ</th>
+                            <th data-class-name="t-right no-sort">БКБ</th>
+                            <th data-class-name="t-right no-sort">ЛБ</th>
+                            <th data-class-name="t-right no-sort">LSBB</th>
+                            <th data-class-name="t-right no-sort">ИБ</th>
+                            <th data-class-name="t-right no-sort">МБЧБ</th>
+                            <th data-class-name="t-right no-sort">БТМ</th>
+                            <th data-class-name="t-right no-sort">БИКб</th>
+                            <th data-class-name="t-right no-sort">ббзп</th>
+                            <th data-class-name="t-right no-sort">ББН</th>
+                            <th data-class-name="t-right no-sort">итого</th>
+                          </tr>
+                        </thead>
+                        <tbody class="fz-sm c-dark-grey ff-default">
+                          <tr>
+                            <td>Январь 2019</td>
+                            <td>Бриллиант 2 карата</td>
+                            <td>2 000,00</td>
+                            <td>865,34</td>
+                            <td>3 494,23</td>
+                            <td>727,67</td>
+                            <td>26,49</td>
+                            <td>1 148,51</td>
+                            <td>1 284,37</td>
+                            <td>13 110,00</td>
+                            <td>45,72</td>
+                            <td>0,00</td>
+                            <td>22 702,33</td>
+                          </tr>
+                          <tr>
+                            <td>Январь 2019</td>
+                            <td>Бриллиант 2 карата</td>
+                            <td>2 000,00</td>
+                            <td>865,34</td>
+                            <td>3 494,23</td>
+                            <td>727,67</td>
+                            <td>26,49</td>
+                            <td>1 148,51</td>
+                            <td>1 284,37</td>
+                            <td>13 110,00</td>
+                            <td>45,72</td>
+                            <td>0,00</td>
+                            <td>22 702,33</td>
+                          </tr>
+                          <tr>
+                            <td>Январь 2019</td>
+                            <td>Бриллиант 2 карата</td>
+                            <td>2 000,00</td>
+                            <td>865,34</td>
+                            <td>3 494,23</td>
+                            <td>727,67</td>
+                            <td>26,49</td>
+                            <td>1 148,51</td>
+                            <td>1 284,37</td>
+                            <td>13 110,00</td>
+                            <td>45,72</td>
+                            <td>0,00</td>
+                            <td>22 702,33</td>
+                          </tr>
+                          <tr>
+                            <td>Январь 2019</td>
+                            <td>Бриллиант 2 карата</td>
+                            <td>2 000,00</td>
+                            <td>865,34</td>
+                            <td>3 494,23</td>
+                            <td>727,67</td>
+                            <td>26,49</td>
+                            <td>1 148,51</td>
+                            <td>1 284,37</td>
+                            <td>13 110,00</td>
+                            <td>45,72</td>
+                            <td>0,00</td>
+                            <td>22 702,33</td>
+                          </tr>
+                          <tr>
+                            <td>Январь 2019</td>
+                            <td>Бриллиант 2 карата</td>
+                            <td>2 000,00</td>
+                            <td>865,34</td>
+                            <td>3 494,23</td>
+                            <td>727,67</td>
+                            <td>26,49</td>
+                            <td>1 148,51</td>
+                            <td>1 284,37</td>
+                            <td>13 110,00</td>
+                            <td>45,72</td>
+                            <td>0,00</td>
+                            <td>22 702,33</td>
+                          </tr>
+                          <tr>
+                            <td><b>Всего</b></td>
+                            <td><b> </b></td>
+                            <td><b>6 000,00</b></td>
+                            <td><b>1 873,30</b></td>
+                            <td><b>8 778,33</b></td>
+                            <td><b>1 567,67</b></td>
+                            <td><b>99,44</b></td>
+                            <td><b>2 790,38</b></td>
+                            <td><b>1 284,37</b></td>
+                            <td><b>68 830,00</b></td>
+                            <td><b>355,72</b></td>
+                            <td><b>0,00</b></td>
+                            <td><b>90 644,27</b></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </section>
+                    <section class="sect mt-lg">
+                      <div class="main-head mb-sm">
+                        <div class="main-head-title">
+                          <h3 class="h3">Бинарный бонус за приглашение</h3>
+                        </div>
+                      </div>
+                      <table class="table table-lg datatables jq-datatables">
+                        <thead>
+                          <tr class="fz-xs ttu ls c-medium-grey">
+                            <th class="no-sort"></th>
+                            <th class="no-sort">Описание</th>
+                            <th data-class-name="t-right no-sort">Сумма</th>
+                          </tr>
+                        </thead>
+                        <tbody class="h6 c-dark-grey ff-default">
+                          <tr>
+                            <td>01/05/2019 в 22:30</td>
+                            <td>Доход за приглашение по заказу №1234 партнера 321</td>
+                            <td>$ 13.25 </td>
+                          </tr>
+                          <tr>
+                            <td>01/05/2019 в 22:30</td>
+                            <td>Выплата дохода за приглашение по заказу №312 партнера 124</td>
+                            <td>$ 8.82</td>
+                          </tr>
+                          <tr>
+                            <td class="h4 ls">Итого</td>
+                            <td> </td>
+                            <td class="h4 ls">$ 22.17</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </section>
                   </div>
                   <div class="remove-this-wrapper-on-prod" id="jq-page-styleGuide">
                     <div class="main-head mb-md">
@@ -1264,6 +1444,11 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=edc7c9fd-3fc1-483f-95f1-3d4a4704b78a&amp;lang=ru_RU"></script>
     <script src="js/ymaps.js"></script>
     <script src="js/ymaps-alone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/0.6.3/chartjs-plugin-zoom.js"></script>
+    <script src="js/chartjs.js"></script>
     <!-- Include JS End-->
   </body>
 </html>

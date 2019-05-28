@@ -556,6 +556,11 @@ $(document).ready(function () {
 		searching: false,
 		paging: false,
 		autoWidth: false,
+		order: [],
+		columnDefs: [{
+			targets: 'no-sort',
+			orderable: false,
+		}]
 	})
 	
 	 
