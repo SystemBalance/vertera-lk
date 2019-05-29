@@ -1163,6 +1163,68 @@
 					td.t-right
 						.btn-wrap
 							a.btn.btn-green.btn-outline.wm-xs(href='#') Повторить заказ
+#jq-page-payment.remove-this-wrapper-on-prod
+	.main-head.mb-md
+		.main-head-title
+			h2.h2 Оплата заказа
+	.payment.mb-md
+		ul.list
+			li.item
+				span.item-name.fz-xs.c-medium-grey.ls.ttu Адрес точки выдачи
+				span.item-text.h4.c-dark-grey.ls 8000906, Россия, Москва, пр-т Ленина, 15, оф. 16
+			li.item
+				span.item-name.fz-xs.c-medium-grey.ls.ttu Тип доставки
+				span.item-text.h4.c-dark-grey.ls Курьер
+			li.item
+				span.item-name.fz-xs.c-medium-grey.ls.ttu Адрес для доставки курьера
+				span.item-text.h4.c-dark-grey.ls Россия, 123456, Москва, ул. Гончарова 26, кв. 101
+			li.item
+				span.item-name.fz-xs.c-medium-grey.ls.ttu Получатель
+				span.item-text.h4.c-dark-grey.ls Кургина Анна Васильевна
+			li.item
+				ul.list.list-triple
+					li.item
+						span.item-name.fz-xs.c-medium-grey.ls.ttu Итоговая сумма заказа
+						span.item-text.h4.c-dark-grey.ls 5 346 ₽
+					li.item
+						span.item-name.fz-xs.c-medium-grey.ls.ttu Тип оплаты
+						span.item-text.h4.c-dark-grey.ls Безналичные
+					li.item
+						span.item-name.fz-xs.c-medium-grey.ls.ttu Оплата при получении
+						span.item-text.h4.c-dark-grey.ls 1070 ₽
+		hr.divider
+		.row
+			.col.row8
+				.fz-xs.c-medium-grey.ls.ttu Итоговая сумма заказа
+				.h3.c-dark-grey.ls 5 346 ₽
+			.col.row4
+				a.btn.btn-green.btn-outline.wm-sm(href='#jq-page-paymentSystem') Оплатить
+
+#jq-page-paymentSystem.remove-this-wrapper-on-prod
+	.main-head.mb-md
+		.main-head-title
+			h2.h2 Выбор платежной системы
+	form.form(action='#')
+		.tiles.yellow-theme
+			.form-custom.form-radio.tile
+				input#defaultRadio3.form-radio-input.form-custom-input(type='radio')
+				label.form-radio-label.form-custom-label(for='defaultRadio3')
+					span.tile-icon
+						i.ic.ic-paypal
+					span.tile-info
+						span.tile-info-title.h5.w-100.ls.c-dark-grey PayPal
+			.form-custom.form-radio.tile
+				input#defaultRadio4.form-radio-input.form-custom-input(type='radio')
+				label.form-radio-label.form-custom-label(for='defaultRadio4')
+					span.tile-icon
+						i.ic.ic-mastercard
+						| &nbsp;
+						i.ic.ic-visa
+					span.tile-info
+						span.tile-info-title.h5.w-100.ls.c-dark-grey Банковская карта
+		.form-btn.mt-lg.btn-wrap
+			// <button type="submit" class="btn btn-green btn-outline wm-sm">Далее</button>
+			a.btn.btn-green.btn-outline.wm-sm(href='#jq-page-choice-terms') Далее
 #jq-page-add-address.remove-this-wrapper-on-prod
 	.main-head.mb-md
 		.row.no-gutters

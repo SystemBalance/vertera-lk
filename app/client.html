@@ -39,6 +39,8 @@
                           <dd><a class="link" href="#jq-page-newOrder">Новый заказ</a></dd>
                           <dd><a class="link" href="#jq-page-cart">Корзина <span class="circle c-white f-red sz-sm fz-xs">12</span></a></dd>
                           <dd><a class="link" href="#jq-page-orders">История заказов</a></dd>
+                          <dd><a class="link" href="#jq-page-payment">Оплата заказа</a></dd>
+                          <dd><a class="link" href="#jq-page-paymentSystem">Выбор платежной системы</a></dd>
                         </dl>
                         <dl class="list list-nav">
                           <dt class="list-title fz-xs ttu">Профиль</dt>
@@ -1348,6 +1350,58 @@
                         </tbody>
                       </table>
                     </div>
+                  </div>
+                  <div class="remove-this-wrapper-on-prod" id="jq-page-payment">
+                    <div class="main-head mb-md">
+                      <div class="main-head-title">
+                        <h2 class="h2">Оплата заказа</h2>
+                      </div>
+                    </div>
+                    <div class="payment mb-md">
+                      <ul class="list">
+                        <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Адрес точки выдачи</span><span class="item-text h4 c-dark-grey ls">8000906, Россия, Москва, пр-т Ленина, 15, оф. 16</span></li>
+                        <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Тип доставки</span><span class="item-text h4 c-dark-grey ls">Курьер</span></li>
+                        <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Адрес для доставки курьера</span><span class="item-text h4 c-dark-grey ls">Россия, 123456, Москва, ул. Гончарова 26, кв. 101</span></li>
+                        <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Получатель</span><span class="item-text h4 c-dark-grey ls">Кургина Анна Васильевна</span></li>
+                        <li class="item">
+                          <ul class="list list-triple">
+                            <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Итоговая сумма заказа</span><span class="item-text h4 c-dark-grey ls">5 346 ₽</span></li>
+                            <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Тип оплаты</span><span class="item-text h4 c-dark-grey ls">Безналичные</span></li>
+                            <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Оплата при получении</span><span class="item-text h4 c-dark-grey ls">1070 ₽</span></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <hr class="divider">
+                      <div class="row">
+                        <div class="col row8">
+                          <div class="fz-xs c-medium-grey ls ttu">Итоговая сумма заказа</div>
+                          <div class="h3 c-dark-grey ls">5 346 ₽</div>
+                        </div>
+                        <div class="col row4"><a class="btn btn-green btn-outline wm-sm" href="#jq-page-paymentSystem">Оплатить</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="remove-this-wrapper-on-prod" id="jq-page-paymentSystem">
+                    <div class="main-head mb-md">
+                      <div class="main-head-title">
+                        <h2 class="h2">Выбор платежной системы</h2>
+                      </div>
+                    </div>
+                    <form class="form" action="#">
+                      <div class="tiles yellow-theme">
+                        <div class="form-custom form-radio tile">
+                          <input class="form-radio-input form-custom-input" id="defaultRadio3" type="radio">
+                          <label class="form-radio-label form-custom-label" for="defaultRadio3"><span class="tile-icon"><i class="ic ic-paypal"></i></span><span class="tile-info"><span class="tile-info-title h5 w-100 ls c-dark-grey">PayPal</span></span></label>
+                        </div>
+                        <div class="form-custom form-radio tile">
+                          <input class="form-radio-input form-custom-input" id="defaultRadio4" type="radio">
+                          <label class="form-radio-label form-custom-label" for="defaultRadio4"><span class="tile-icon"><i class="ic ic-mastercard"></i>&nbsp;<i class="ic ic-visa"></i></span><span class="tile-info"><span class="tile-info-title h5 w-100 ls c-dark-grey">Банковская карта</span></span></label>
+                        </div>
+                      </div>
+                      <div class="form-btn mt-lg btn-wrap">
+                        <!-- <button type="submit" class="btn btn-green btn-outline wm-sm">Далее</button>--><a class="btn btn-green btn-outline wm-sm" href="#jq-page-choice-terms">Далее</a>
+                      </div>
+                    </form>
                   </div>
                   <div class="remove-this-wrapper-on-prod" id="jq-page-add-address">
                     <div class="main-head mb-md">

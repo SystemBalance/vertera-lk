@@ -23,6 +23,62 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'vertera2';
+  src:
+    url('../fonts/IconsPack/vertera2.ttf?kqbqm8') format('truetype'),
+    url('../fonts/IconsPack/vertera2.woff?kqbqm8') format('woff'),
+    url('../fonts/IconsPack/vertera2.svg?kqbqm8#vertera2') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.ic-mastercard:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'vertera2' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e92a";
+}
+.ic-paypal:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'vertera2' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e92b";
+}
+.ic-visa:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'vertera2' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e92c";
+}
 
 .ic-add:before {
   content: "\e929";
