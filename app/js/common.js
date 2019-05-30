@@ -333,6 +333,49 @@ $(document).ready(function () {
 
 
 	// --------------------------------------------------
+	//        Смена типа доставки на странице оплаты
+	// --------------------------------------------------
+
+	$('body').on('change','#deliveryType',function (e) {
+		if($(this).val() == 2){
+			$('#deliveryAddress').hide();
+			$('#deliveryContact').hide();
+			let cost = parseFloat($('#preTotalCost').data('full-cost')) - parseFloat($(this).data('delivery-cost'));
+
+			$('#preTotalCost').text(cost.toLocaleString()+" ₽");
+			$('#totalCost').text(cost.toLocaleString()+" ₽");
+		} else {
+			$('#deliveryAddress').show();
+			$('#deliveryContact').show();
+			let cost = parseFloat($('#preTotalCost').data('full-cost'));
+
+			$('#preTotalCost').text(cost.toLocaleString()+" ₽");
+			$('#totalCost').text(cost.toLocaleString()+" ₽");
+		}
+	});
+
+	// --------------------------------------------------
+	//        Смена типа оплаты на странице оплаты
+	// --------------------------------------------------
+	$('body').on('change','#paymentType',function (e) {
+		if($(this).val() == 2){
+			// $('#deliveryPayment').hide();
+			// $('#deliveryPaymentDivider').hide();
+			$('#paymentOnReceive').hide();
+			$('#paymentButton').hide();
+			$('#paymentFormButton').show();
+		} else {
+			// $('#deliveryPayment').show();
+			// $('#deliveryPaymentDivider').show();
+			$('#paymentOnReceive').show();
+			$('#paymentButton').show();
+			$('#paymentFormButton').hide();
+		}
+	});
+
+
+
+	// --------------------------------------------------
 	//   Сброс статуса поля ввода (correct/incorrect)
 	// --------------------------------------------------
 	// $(document).on('change keyup input click', '.counter input', function (e) {

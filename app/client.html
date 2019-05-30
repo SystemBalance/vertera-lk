@@ -1357,29 +1357,72 @@
                         <h2 class="h2">Оплата заказа</h2>
                       </div>
                     </div>
-                    <div class="payment mb-md">
+                    <form class="payment mb-md form">
                       <ul class="list">
                         <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Адрес точки выдачи</span><span class="item-text h4 c-dark-grey ls">8000906, Россия, Москва, пр-т Ленина, 15, оф. 16</span></li>
-                        <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Тип доставки</span><span class="item-text h4 c-dark-grey ls">Курьер</span></li>
-                        <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Адрес для доставки курьера</span><span class="item-text h4 c-dark-grey ls">Россия, 123456, Москва, ул. Гончарова 26, кв. 101</span></li>
-                        <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Получатель</span><span class="item-text h4 c-dark-grey ls">Кургина Анна Васильевна</span></li>
                         <li class="item">
-                          <ul class="list list-triple">
-                            <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Итоговая сумма заказа</span><span class="item-text h4 c-dark-grey ls">5 346 ₽</span></li>
-                            <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Тип оплаты</span><span class="item-text h4 c-dark-grey ls">Безналичные</span></li>
-                            <li class="item"><span class="item-name fz-xs c-medium-grey ls ttu">Оплата при получении</span><span class="item-text h4 c-dark-grey ls">1070 ₽</span></li>
-                          </ul>
+                          <div class="group-wrap">
+                            <div class="form-group">
+                              <label class="form-group-label" for="deliveryType">Тип доставки</label>
+                              <div class="input-group">
+                                <select class="form-control jq-select w360" id="deliveryType" name="delivery-type" data-delivery-cost="300">
+                                  <option value="1">Курьер</option>
+                                  <option value="2">Самовывоз</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item" id="deliveryAddress">
+                          <div class="group-wrap">
+                            <div class="form-group">
+                              <label class="form-group-label" for="deliveryType">Адрес для доставки курьера</label>
+                              <div class="input-group">
+                                <input class="form-control jq-input w360" name="delivery-address" value="Россия, 123456, Москва, ул. Гончарова 26, кв. 101">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="item" id="deliveryContact">
+                          <div class="group-wrap">
+                            <div class="form-group">
+                              <label class="form-group-label" for="deliveryType">Получатель</label>
+                              <div class="input-group">
+                                <input class="form-control jq-input w360" name="delivery-contact" value="Кургина Анна Васильевна">
+                              </div>
+                            </div>
+                          </div>
                         </li>
                       </ul>
-                      <hr class="divider">
-                      <div class="row">
-                        <div class="col row8">
-                          <div class="fz-xs c-medium-grey ls ttu">Итоговая сумма заказа</div>
-                          <div class="h3 c-dark-grey ls">5 346 ₽</div>
+                      <div class="row mt-sm">
+                        <div class="col-4"><span class="item-name w-100 fz-xs c-medium-grey ls ttu">Итоговая сумма заказа</span><span class="item-text w-100 mt-xs h4 c-dark-grey ls" id="preTotalCost" data-full-cost="5346">5 346 ₽</span></div>
+                        <div class="col-4">
+                          <div class="group-wrap">
+                            <div class="form-group">
+                              <label class="form-group-label" for="paymentType">Тип оплаты</label>
+                              <div class="input-group">
+                                <select class="form-control jq-select" id="paymentType" name="paymentType">
+                                  <option value="1">Безналичные</option>
+                                  <option value="2">Наличные</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="col row4"><a class="btn btn-green btn-outline wm-sm" href="#jq-page-paymentSystem">Оплатить</a></div>
+                        <div class="col-4" id="paymentOnReceive">
+                          <div class="item-name w-100 fz-xs c-medium-grey ls ttu">Оплата при получении</div>
+                          <div class="item-text w-100 mt-xs h4 c-dark-grey ls">1070 ₽</div>
+                        </div>
                       </div>
-                    </div>
+                      <hr class="divider" id="deliveryPaymentDivider">
+                      <div class="row" id="deliveryPayment">
+                        <div class="col-8">
+                          <div class="fz-xs c-medium-grey ls ttu">Итоговая сумма заказа</div>
+                          <div class="h3 c-dark-grey ls" id="totalCost">5 346 ₽</div>
+                        </div>
+                        <div class="col-4 right"><a class="btn btn-green btn-outline wm-sm" id="paymentButton" href="#jq-page-paymentSystem">Оплатить</a><a class="btn btn-green btn-outline wm-sm" id="paymentFormButton" style="display: none;">Сформировать</a></div>
+                      </div>
+                    </form>
                   </div>
                   <div class="remove-this-wrapper-on-prod" id="jq-page-paymentSystem">
                     <div class="main-head mb-md">

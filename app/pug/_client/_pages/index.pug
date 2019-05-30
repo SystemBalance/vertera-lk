@@ -1167,38 +1167,54 @@
 	.main-head.mb-md
 		.main-head-title
 			h2.h2 Оплата заказа
-	.payment.mb-md
+	form.payment.mb-md.form
 		ul.list
 			li.item
 				span.item-name.fz-xs.c-medium-grey.ls.ttu Адрес точки выдачи
 				span.item-text.h4.c-dark-grey.ls 8000906, Россия, Москва, пр-т Ленина, 15, оф. 16
 			li.item
-				span.item-name.fz-xs.c-medium-grey.ls.ttu Тип доставки
-				span.item-text.h4.c-dark-grey.ls Курьер
-			li.item
-				span.item-name.fz-xs.c-medium-grey.ls.ttu Адрес для доставки курьера
-				span.item-text.h4.c-dark-grey.ls Россия, 123456, Москва, ул. Гончарова 26, кв. 101
-			li.item
-				span.item-name.fz-xs.c-medium-grey.ls.ttu Получатель
-				span.item-text.h4.c-dark-grey.ls Кургина Анна Васильевна
-			li.item
-				ul.list.list-triple
-					li.item
-						span.item-name.fz-xs.c-medium-grey.ls.ttu Итоговая сумма заказа
-						span.item-text.h4.c-dark-grey.ls 5 346 ₽
-					li.item
-						span.item-name.fz-xs.c-medium-grey.ls.ttu Тип оплаты
-						span.item-text.h4.c-dark-grey.ls Безналичные
-					li.item
-						span.item-name.fz-xs.c-medium-grey.ls.ttu Оплата при получении
-						span.item-text.h4.c-dark-grey.ls 1070 ₽
-		hr.divider
-		.row
-			.col.row8
+				.group-wrap
+					.form-group
+						label.form-group-label(for='deliveryType') Тип доставки
+						.input-group
+							select#deliveryType.form-control.jq-select.w360(name='delivery-type', data-delivery-cost='300')
+								option(value='1') Курьер
+								option(value='2') Самовывоз
+			li.item#deliveryAddress
+				.group-wrap
+					.form-group
+						label.form-group-label(for='deliveryType') Адрес для доставки курьера
+						.input-group
+							input.form-control.jq-input.w360(name='delivery-address', value='Россия, 123456, Москва, ул. Гончарова 26, кв. 101')
+			li.item#deliveryContact
+				.group-wrap
+					.form-group
+						label.form-group-label(for='deliveryType') Получатель
+						.input-group
+							input.form-control.jq-input.w360(name='delivery-contact', value='Кургина Анна Васильевна')
+		.row.mt-sm
+			.col-4
+				span.item-name.w-100.fz-xs.c-medium-grey.ls.ttu Итоговая сумма заказа
+				span.item-text.w-100.mt-xs.h4.c-dark-grey.ls#preTotalCost(data-full-cost='5346') 5 346 ₽
+			.col-4
+				.group-wrap
+					.form-group
+						label.form-group-label(for='paymentType') Тип оплаты
+						.input-group
+							select#paymentType.form-control.jq-select(name='paymentType')
+								option(value='1') Безналичные
+								option(value='2') Наличные
+			.col-4#paymentOnReceive
+				.item-name.w-100.fz-xs.c-medium-grey.ls.ttu Оплата при получении
+				.item-text.w-100.mt-xs.h4.c-dark-grey.ls 1070 ₽
+		hr.divider#deliveryPaymentDivider
+		.row#deliveryPayment
+			.col-8
 				.fz-xs.c-medium-grey.ls.ttu Итоговая сумма заказа
-				.h3.c-dark-grey.ls 5 346 ₽
-			.col.row4
-				a.btn.btn-green.btn-outline.wm-sm(href='#jq-page-paymentSystem') Оплатить
+				.h3.c-dark-grey.ls#totalCost 5 346 ₽
+			.col-4.right
+				a.btn.btn-green.btn-outline.wm-sm#paymentButton(href='#jq-page-paymentSystem') Оплатить
+				a.btn.btn-green.btn-outline.wm-sm#paymentFormButton(style='display: none;') Сформировать
 
 #jq-page-paymentSystem.remove-this-wrapper-on-prod
 	.main-head.mb-md
